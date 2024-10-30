@@ -1,0 +1,49 @@
+/* CSS Variables */
+:root {
+    --night: #12130fff;
+    --viridian: #5b9279ff;
+    --celadon: #8fcb9bff;
+    --platinum: #eae6e5ff;
+    --cinereous: #8f8073ff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--platinum);
+    color: var(--night);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--viridian);
+    padding: 1rem;
+}
+
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--cinereous);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--viridian);
+    color: var(--platinum);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
