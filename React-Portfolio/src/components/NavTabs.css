@@ -1,0 +1,77 @@
+/* Navbar styles */
+:root {
+    --night: #12130fff;
+    --viridian: #5b9279ff;
+    --celadon: #8fcb9bff;
+    --platinum: #eae6e5ff;
+    --cinereous: #8f8073ff;
+}
+.navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1040;
+  }
+  
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+  
+  .navbar-toggler,
+  .close-button {
+    position: relative;
+    z-index: 1060;
+    background: none;
+    border: none;
+  }
+  
+  .navbar-toggler {
+    top: 10px;
+    right: 15px;
+  }
+  
+  .close-button {
+    top: 8px;
+    right: -205px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    margin-left: 15px;
+  }
+  
+  /* Navigation List Styles */
+  nav ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column; /* Vertical layout */
+      padding: 0;
+  }
+  
+  .nav-item {
+      padding: 5px; /* Optional padding */
+  }
+  
+  .nav-link {
+      color: var(--platinum);
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+      color: var(--celadon);
+  }
+  
+  .nav-link.active {
+      font-weight: bold;
+      color: var(--celadon); /* Ensure it’s visible */
+      background-color: var(--viridian); /* Optional: add background */
+  }
+  
