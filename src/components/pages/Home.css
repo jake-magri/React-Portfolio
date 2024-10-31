@@ -1,0 +1,25 @@
+.about-cards {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 0 15px; /* Add horizontal padding to create margin from the edges */
+}
+.about-text-card,
+.outer-image-card {
+  margin: 0 15px; /* Create space between the two cards */
+}
+
+.about-image {
+    max-height: 500px; 
+    width: auto;
+}
+
+.inner-image-box {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    max-height: 500px; /* Set a max height for the image box */
+    overflow: hidden; /* Hide overflow to prevent large images from affecting layout */
+}
+/* img {
+    position: relative;
+} */
