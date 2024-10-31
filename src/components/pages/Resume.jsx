@@ -1,4 +1,4 @@
-export default function Blog() {
+export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
