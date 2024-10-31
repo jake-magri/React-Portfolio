@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import NavTabs from './NavTabs';
+import NavTabs from './header and navtabs/NavTabs';
 import Home from './pages/AboutMe';
 import About from './pages/Projects';
 import Blog from './pages/Resume';
 import Contact from './pages/Contact';
+import Footer from './footer/Footer';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -26,10 +27,9 @@ export default function PortfolioContainer() {
 
   return (
     <div>
-      {/* // TODO: Add a comment describing what we are passing as props */}
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line */}
       <main className="mx-3">{renderPage()}</main>
+      <Footer/>
     </div>
   );
 }
