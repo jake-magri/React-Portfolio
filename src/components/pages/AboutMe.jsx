@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Home.css';
+import './AboutMe.css';
 
 export default function Home() {
   return (
