@@ -1,20 +1,33 @@
 export default function Contact() {
   return (
     <div>
-      <h1>Contact Page</h1>
+      <h1>Let's Build The Future!</h1>
       <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
+      Ready to bring your project to life? Let's create something amazing together.
       </p>
+      <form>
+        <p>
+          <label for="name">Name:</label>
+        </p>
+        <p>
+          <input type="text" id="name" name="user_name" />
+        </p>
+        <p>
+          <label for="mail">Email:</label>
+        </p>
+        <p>
+          <input type="email" id="mail" name="user_email" />
+        </p>
+        <p>
+          <label for="msg">Message:</label>
+        </p>
+        <p>
+          <textarea id="msg" name="user_message"></textarea>
+        </p>
+        <p class="button">
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   );
 }
