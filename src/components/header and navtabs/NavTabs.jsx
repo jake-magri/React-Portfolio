@@ -1,6 +1,6 @@
 import './NavTabs.css';
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavTabs() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,16 +57,16 @@ function NavTabs() {
         </button>
         <ul className="nav flex-column">
           <li className="nav-item">
-          <Link className='nav-link' to="/">About Me</Link>
+          <NavLink className='nav-link' to="/">About Me</NavLink>
           </li>
           <li className="nav-item ">
-          <Link className='nav-link' to="/portfolio">Portfolio</Link>
+          <NavLink className='nav-link' to="/portfolio">Portfolio</NavLink>
           </li>
           <li className="nav-item">
-          <Link className='nav-link' to="/resume">Resume</Link>
+          <NavLink className='nav-link' to="/resume">Resume</NavLink>
           </li>
           <li className="nav-item">
-          <Link className='nav-link' to="/contact">Contact</Link>
+          <NavLink className='nav-link' to="/contact">Contact</NavLink>
           </li>
         </ul>
       </div>

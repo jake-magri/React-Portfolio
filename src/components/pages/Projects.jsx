@@ -21,31 +21,31 @@ export default function Projects() {
             <div className='col-sm'>
               <ProjectCard title="Color Racer"
                 image={colorRacerImage}
-                deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1" />
+                deployedUrl="https://mr-mikeross.github.io/Color-Racer/"
+                githubUrl="https://github.com/Mr-MikeRoss/Color-Racer" />
             </div>
             <div className='col-sm'><ProjectCard title="React Emoji Search"
                 image={emojiSearchImage}
                 deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1"/></div>
+                githubUrl="https://github.com/jake-magri/Emoji-Search-App-Using-React.js"/></div>
             <div className='col-sm'><ProjectCard title="Employee Tracker CLI"
                 image={employeeTrackerImage}
                 deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1"/></div>
+                githubUrl="https://github.com/jake-magri/Employee-Tracker"/></div>
           </div>
           <div className="row gx-4">
             <div className='col-sm'><ProjectCard title="Readme Generator"
                 image={readmeGeneratorImage}
                 deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1"/></div>
+                githubUrl="https://github.com/jake-magri/Professional-README-Generator"/></div>
             <div className='col-sm'><ProjectCard title="Vehicle Builder"
                 image={vehicleBuilderImage}
                 deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1"/></div>
+                githubUrl="https://github.com/jake-magri/Vehicle-Builder"/></div>
             <div className='col-sm'><ProjectCard title="Weather Dashboard"
                 image={weatherDashboardImage}
-                deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/user/project1"/></div>
+                deployedUrl="https://weather-dashboard-jm.onrender.com/"
+                githubUrl="https://github.com/jake-magri/Weather-Dashboard"/></div>
           </div>
         </div>
       </div>
