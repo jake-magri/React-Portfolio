@@ -28,7 +28,7 @@ function NavTabs() {
   }, []);
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-light custom-dark-green">
       <div className="d-flex justify-content-between w-100">
         <span className="navbar-brand">Jake Magri</span>
         {!isMenuOpen && (

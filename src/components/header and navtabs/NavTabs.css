@@ -5,7 +5,7 @@
     right: 0;
     width: 250px;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #1a4331;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 1040;
@@ -22,10 +22,14 @@
     background: none;
     border: none;
   }
-  
+
   .navbar-toggler {
     top: 0px;
     right: 15px;
+  }
+
+  .navbar-toggler-icon{
+    color: white;
   }
   
   .close-button {
@@ -38,6 +42,7 @@
   
   .navbar-brand {
     margin-left: 15px;
+    color: white;
   }
   
   /* Navigation List Styles */
@@ -66,4 +71,9 @@
       font-weight: bold;
       color: var(--celadon); /* Ensure it’s visible */
       background-color: var(--viridian); 
+  }
+  
+  .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #1a4331 !important;
   }
