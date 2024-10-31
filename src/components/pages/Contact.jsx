@@ -32,27 +32,27 @@ export default function Contact() {
       </p>
       <form onSubmit={handleSubmit} onMouseExit={handleMouseExit}>
         <p>
-          <label for="name">Name:</label>
+          <label htmlFor="name">Name:</label>
         </p>
         <p>
           <input type="text" id="name" name="user_name" />
         </p>
         <p>
-          <label for="mail">Email:</label>
+          <label htmlFor="mail">Email:</label>
         </p>
         <p>
           <input type="email" id="mail" name="user_email" />
         </p>
         <p>
-          <label for="msg">Message:</label>
+          <label htmlFor="msg">Message:</label>
         </p>
         <p>
           <textarea id="msg" name="user_message"></textarea>
         </p>
-        <p class="button">
+        <p className="button">
           <button type="submit">Send</button>
         </p>
       </form>
     </div>
   );
-}
+};
