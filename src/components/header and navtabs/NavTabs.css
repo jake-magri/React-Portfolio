@@ -1,11 +1,4 @@
 /* Navbar styles */
-:root {
-    --night: #12130fff;
-    --viridian: #5b9279ff;
-    --celadon: #8fcb9bff;
-    --platinum: #eae6e5ff;
-    --cinereous: #8f8073ff;
-}
 .navbar-collapse {
     position: fixed;
     top: 0;
@@ -66,7 +59,7 @@
   }
   
   .nav-link:hover {
-      color: var(--celadon);
+      color: var(--celadon) !important;
   }
   
   .nav-link.active {
