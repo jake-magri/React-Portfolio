@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AboutMe.css';
 
-export default function Home() {
+export default function AboutMe() {
   return (
     <div className="container">
       <div className="row about-cards">

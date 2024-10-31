@@ -72,5 +72,5 @@
   .nav-link.active {
       font-weight: bold;
       color: var(--celadon); /* Ensure it’s visible */
-      background-color: var(--viridian); /* Optional: add background */
+      background-color: var(--viridian); 
   }
