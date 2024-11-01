@@ -34,16 +34,24 @@ section {
     transition: transform 0.2s;
 }
 
-section:hover {
-    transform: scale(1.02);
-}
-
 footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--viridian);
     color: var(--platinum);
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+footer a {
+    color: #e6e7eb;
+}
+
+footer a:hover {
+    color: #8fc39a;
+}
+
+section:hover {
+    transform: scale(1.02);
 }

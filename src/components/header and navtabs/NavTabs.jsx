@@ -38,7 +38,8 @@ function NavTabs() {
             aria-label="Toggle navigation"
             onClick={toggleMenu}
           >
-            <span className="navbar-toggler-icon"></span>
+            {/* <span className="navbar-toggler-icon"></span> */}
+            <img className='nav-bar-button-icon' src="https://img.icons8.com/?size=100&id=120374&format=png&color=FFFFFF"></img>
           </button>
         )}
       </div>
