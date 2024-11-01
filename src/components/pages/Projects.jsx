@@ -19,6 +19,7 @@ export default function Projects() {
         <div className="container">
           <div className="row gx-4">
             <div className='col-sm'>
+              {/* pass props to ProjectCard components */}
               <ProjectCard title="Color Racer"
                 image={colorRacerImage}
                 deployedUrl="https://mr-mikeross.github.io/Color-Racer/"

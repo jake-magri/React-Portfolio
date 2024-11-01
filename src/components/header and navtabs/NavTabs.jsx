@@ -6,6 +6,7 @@ function NavTabs() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Create a ref for the navbar menu
 
+  // displays and hides the side navbar
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -21,7 +22,7 @@ function NavTabs() {
     // Add event listener for clicks
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Cleanup event listener on unmount
+    // Remove event listener on unmount
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -36,7 +37,7 @@ function NavTabs() {
             className="navbar-toggler"
             type="button"
             aria-label="Toggle navigation"
-            onClick={toggleMenu}
+            onClick={toggleMenu} // attached toggle menu to navbar toggler button
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -45,16 +46,17 @@ function NavTabs() {
       <div
         className={`navbar-collapse ${isMenuOpen ? 'show' : ''}`}
         id="navbarNav"
-        ref={menuRef} // Attach the ref here
+        ref={menuRef} // Attached the ref here
       >
         <button
           className="close-button"
           type="button"
           aria-label="Close navigation"
-          onClick={toggleMenu}
+          onClick={toggleMenu} // toggle menu also is called on close button Click
         >
           ×
         </button>
+        {/* Return Nav bar links with client side routing */}
         <ul className="nav flex-column">
           <li className="nav-item">
           <NavLink className='nav-link' to="/">About Me</NavLink>

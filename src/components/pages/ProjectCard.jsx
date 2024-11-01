@@ -1,12 +1,14 @@
 import React from 'react';
 import './ProjectCard.css';
 
+// define project card component
 const ProjectCard = ({
   title = "Project Name",
   image = "/api/placeholder/400/300",
   deployedUrl = "#",
   githubUrl = "#"
 }) => {
+  // returns JSX with props in the containers
   return (
     <div className="project-card">
       <div className="project-card__image-container">

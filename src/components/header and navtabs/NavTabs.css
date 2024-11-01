@@ -54,7 +54,7 @@
   }
   
   .nav-item {
-      padding: 5px; /* Optional padding */
+      padding: 5px;
   }
   
   .nav-link {
@@ -69,7 +69,7 @@
   
   .nav-link.active {
       font-weight: bold;
-      color: var(--celadon); /* Ensure it’s visible */
+      color: var(--celadon); /* Ensure it’s visibly selected */
       background-color: var(--viridian); 
   }
   
