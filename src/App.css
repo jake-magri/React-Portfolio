@@ -34,10 +34,6 @@ section {
     transition: transform 0.2s;
 }
 
-section:hover {
-    transform: scale(1.02);
-}
-
 footer {
     text-align: center;
     padding: 1rem;

@@ -21,6 +21,7 @@
     z-index: 1060;
     background: none;
     border: none;
+    color: white;
   }
 
   .navbar-toggler {
@@ -76,4 +77,9 @@
   .bg-light {
     --bs-bg-opacity: 1;
     background-color: #1a4331 !important;
+  }
+
+  .nav-bar-button-icon {
+    width: 30px;
+    height: 30px;
   }
