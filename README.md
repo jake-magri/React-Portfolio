@@ -16,7 +16,7 @@ Single-page application portfolio website build using react, bootstrap, with cli
 
 ## Installation
 
-This application is deployed on Netlify.
+This application is deployed on Netlify. [Click to access.](https://jake-magri.netlify.app/)
 
 ## Usage
 
