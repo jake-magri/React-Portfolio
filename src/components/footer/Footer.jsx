@@ -3,6 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
+      {/* A paragraph element with contact links in the footer component */}
       <p>
         <a href='https://github.com/jake-magri'
           target="_blank"
