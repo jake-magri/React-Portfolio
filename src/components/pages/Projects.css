@@ -12,3 +12,13 @@
   gap: 1.5rem; /* Space between cards */
   margin-top: 2rem;
 }
+
+.portfolio-header {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-header__p {
+  display: flex;
+  justify-content: center;
+}

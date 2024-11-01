@@ -15,6 +15,8 @@ const ProjectCard = ({
         <img
           src={image}
           alt={title}
+          // incorporated block element modifier naming convention for detailed styling and organization
+          // https://getbem.com/
           className="project-card__image"
         />
       </div>

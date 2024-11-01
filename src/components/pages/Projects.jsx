@@ -10,8 +10,8 @@ import weatherDashboardImage from '../../assets/images/weather-dashboard.png'
 export default function Projects() {
   return (
     <div>
-      <h1>Portfolio</h1>
-      <p>
+      <h1 className ='portfolio-header'>Portfolio</h1>
+      <p className ='portfolio-header__p'>
         Successful projects that I am proud of.
       </p>
       {/* Add Project Container below header informtion */}
