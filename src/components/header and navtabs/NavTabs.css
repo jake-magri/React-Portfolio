@@ -55,11 +55,7 @@
   }
   
   .nav-item {
-<<<<<<< HEAD
-      padding: 5px; /* Optional padding */
-=======
       padding: 5px;
->>>>>>> 47d3a97f057c3c56a34bf98beea8dc0cacb5dbae
   }
   
   .nav-link {
@@ -74,11 +70,7 @@
   
   .nav-link.active {
       font-weight: bold;
-<<<<<<< HEAD
-      color: var(--celadon); /* Ensure it’s visible */
-=======
       color: var(--celadon); /* Ensure it’s visibly selected */
->>>>>>> 47d3a97f057c3c56a34bf98beea8dc0cacb5dbae
       background-color: var(--viridian); 
   }
   

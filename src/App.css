@@ -40,24 +40,16 @@ footer {
     background-color: var(--viridian);
     color: var(--platinum);
     position: fixed;
-<<<<<<< HEAD
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #e6e7eb;
-}
-
-footer a:hover {
-    color: #8fc39a;
-}
-
-section:hover {
-    transform: scale(1.02);
-=======
     bottom: 0px;
     width: 100%;
     height: 8vh;
->>>>>>> 47d3a97f057c3c56a34bf98beea8dc0cacb5dbae
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--celadon);
 }
