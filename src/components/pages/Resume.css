@@ -3,7 +3,7 @@
     height: 200px;
 } */
 
-.resume-header, .resume-header__p, a {
+.resume-header, .resume-header__p, .resume-header__a {
     display: flex;
   justify-content: center;
 }
