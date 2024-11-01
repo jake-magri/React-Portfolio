@@ -21,7 +21,7 @@ This application is deployed on Netlify.
 ## Usage
 
 ### Video Demo
-![Video demo of application.](assets/videos/)
+https://github.com/user-attachments/assets/44f3d799-085c-4de4-819c-bf6b99974dce
 
 ### Usage Information
 Click on the top right hamburger icon to view the navbar and select other pages.
