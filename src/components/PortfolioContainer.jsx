@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import NavTabs from './header and navtabs/NavTabs';
-import Footer from './footer/Footer';
+import Footer from './footer/Footer.jsx';
 
 export default function PortfolioContainer() {
   return (
