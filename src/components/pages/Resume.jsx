@@ -10,7 +10,7 @@ export default function Resume() {
       <a className='resume-header__a' href="src/assets/documents/Software_Development_Resume.pdf" download="Jake-Magri.pdf"
             target="_blank"
             rel="noopener noreferrer">Download Resume PDF</a>
-      <p className='resume-header__p'>Skills: HTML, CSS, JS, Node.js, TS, SQL, C#, Python</p>
+      <p className='resume-header__p'>Skills: HTML, CSS, React, JS, Node.js, TS, Express, SQL, C#, Python</p>
       </div>
     </div>
   );
