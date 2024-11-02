@@ -15,7 +15,7 @@ Single-page application portfolio website build using react, bootstrap, with cli
 - [Questions](#questions)
 
 ## Installation
-
+Deployment Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/86a59d4a-b509-49eb-a492-827887d88856/deploy-status)](https://app.netlify.com/sites/jake-magri/deploys)   
 This application is deployed on Netlify. [Click to access.](https://jake-magri.netlify.app/)
 
 ## Usage
