@@ -1,11 +1,11 @@
 import ProjectCard from "./ProjectCard";
 import './Projects.css';
-import colorRacerImage from '../../assets/images/color-racer.jpg';
-import emojiSearchImage from '../../assets/images/Emoji-Search.jpg';
-import employeeTrackerImage from '../../assets/images/Employee-Tracker.png';
-import readmeGeneratorImage from '../../assets/images/professional-readme-generator.png';
-import vehicleBuilderImage from '../../assets/images/vehicle-builder.png';
-import weatherDashboardImage from '../../assets/images/weather-dashboard.png'
+import colorRacerImage from '../../../assets/images/color-racer.jpg';
+import emojiSearchImage from '../../../assets/images/Emoji-Search.jpg';
+import employeeTrackerImage from '../../../assets/images/Employee-Tracker.png';
+import readmeGeneratorImage from '../../../assets/images/professional-readme-generator.png';
+import vehicleBuilderImage from '../../../assets/images/vehicle-builder.png';
+import weatherDashboardImage from '../../../assets/images/weather-dashboard.png'
 
 export default function Projects() {
   return (
