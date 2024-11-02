@@ -6,15 +6,17 @@ function NavTabs() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Create a ref for the navbar menu
 
+  //
+
   // displays and hides the side navbar
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Handle clicks outside the menu
+  // Handle clicks outside the menu with useRef to directly access the dom - https://react.dev/reference/react/useRef
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Close the menu if the click is outside of it
     }
   };
 

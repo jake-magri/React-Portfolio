@@ -8,7 +8,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AboutMe from './components/pages/AboutMe.jsx';
 import Contact from './components/pages/Contact.jsx';
-import Projects from './components/pages/Projects.jsx';
+import Projects from './components/pages/Projects-Page/Projects.jsx';
 import Resume from './components/pages/Resume.jsx';
 
 // create routes with browserRouter
