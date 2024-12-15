@@ -4,6 +4,10 @@
 } */
 
 .resume-header, .resume-header__p, .resume-header__a {
-    display: flex;
+  display: flex;
   justify-content: center;
+}
+
+.resume-main-container__div {
+  padding-bottom: 50px;
 }
