@@ -3,7 +3,7 @@ import './Projects.css';
 import colorRacerImage from '../../../assets/images/color-racer.jpg';
 import emojiSearchImage from '../../../assets/images/Emoji-Search.jpg';
 import employeeTrackerImage from '../../../assets/images/Employee-Tracker.png';
-import readmeGeneratorImage from '../../../assets/images/professional-readme-generator.png';
+import voltUndergroundImage from '../../../assets/images/volt-underground.png';
 import vehicleBuilderImage from '../../../assets/images/vehicle-builder.png';
 import weatherDashboardImage from '../../../assets/images/weather-dashboard.png'
 
@@ -25,7 +25,7 @@ export default function Projects() {
                 deployedUrl="https://mr-mikeross.github.io/Color-Racer/"
                 githubUrl="https://github.com/Mr-MikeRoss/Color-Racer" />
             </div>
-            <div className='col-sm'><ProjectCard title="React Emoji Search"
+            <div className='col-sm'><ProjectCard title="Hi, Pub!"
                 image={emojiSearchImage}
                 deployedUrl="https://example.com/project1"
                 githubUrl="https://github.com/jake-magri/Emoji-Search-App-Using-React.js"/></div>
@@ -35,10 +35,10 @@ export default function Projects() {
                 githubUrl="https://github.com/jake-magri/Employee-Tracker"/></div>
           </div>
           <div className="row gx-4">
-            <div className='col-sm'><ProjectCard title="Readme Generator"
-                image={readmeGeneratorImage}
-                deployedUrl="https://example.com/project1"
-                githubUrl="https://github.com/jake-magri/Professional-README-Generator"/></div>
+            <div className='col-sm'><ProjectCard title="Volt Underground"
+                image={voltUndergroundImage}
+                deployedUrl="https://volt-underground.onrender.com/"
+                githubUrl="https://github.com/parsamh8/Volt-Underground"/></div>
             <div className='col-sm'><ProjectCard title="Vehicle Builder"
                 image={vehicleBuilderImage}
                 deployedUrl="https://example.com/project1"
