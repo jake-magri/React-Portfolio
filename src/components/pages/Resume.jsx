@@ -5,19 +5,21 @@ export default function Resume() {
     <div className='resume-main-container__div'>
       <h1 className='resume-header'>Resume</h1>
 
-      <div>
-        <a 
-          className='resume-header__a' 
-          href="/assets/documents/jake-magri-resume.pdf" 
-          download="Jake-Magri.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download Resume PDF
-        </a>
+      <div className='skills-link'>
         <p className='resume-header__p'>
-          Skills: HTML, CSS, React, JS, Node.js, TS, Express, SQL, C#, Python
+        Skilled in building dynamic web applications using React, Node.js, Express.js, TypeScript, and Java, with experience in AWS, PostgreSQL, MongoDB, and creating responsive, mobile-first user interfaces.
         </p>
+        
+        <a 
+          className='resume-header__a'
+          href="/assets/documents/jake-magri-resume.pdf" 
+          download="Jake-Magri.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer">
+        <button>
+          Download Resume PDF
+        </button>
+        </a>
       </div>
 
       <iframe 

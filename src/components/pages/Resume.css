@@ -3,11 +3,44 @@
     height: 200px;
 } */
 
-.resume-header, .resume-header__p, .resume-header__a {
-  display: flex;
-  justify-content: center;
-}
-
 .resume-main-container__div {
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+div.skills-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  background-color: #8fc39a;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 9px;
+}
+
+button:hover {
+background-color: #88bd97;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+transform: scale(1.05);
+}
+
+.resume-header__p {
+  margin-bottom: 3px;
+}
+
+/* transition: all 0.2s ease-in-out;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button:hover {
+background: linear-gradient(135deg, #0d0b6d, #26022d);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+transform: scale(1.05); */
