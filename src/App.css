@@ -26,13 +26,6 @@ main {
     padding: 2rem;
 }
 
-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: var(--cinereous);
-    transition: transform 0.2s;
-}
 
 footer {
     text-align: center;
