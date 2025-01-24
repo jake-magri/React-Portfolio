@@ -17,12 +17,12 @@ const BlogCard = ({ title, image, excerpt, readMoreUrl }) => {
         <p className="blog-card__excerpt">{excerpt}</p>
 
         <div className="blog-card__link-container">
-          <a
-            href={readMoreUrl}
+        <NavLink
+            to={readMoreUrl}
             className="blog-card__read-more"
           >
             Read More
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
