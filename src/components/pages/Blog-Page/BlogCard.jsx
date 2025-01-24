@@ -1,5 +1,6 @@
 import React from 'react';
 import './BlogCard.css';
+import { NavLink } from 'react-router-dom';
 
 const BlogCard = ({ title, image, excerpt, readMoreUrl }) => {
   return (
