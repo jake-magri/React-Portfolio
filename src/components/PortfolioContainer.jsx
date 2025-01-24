@@ -7,7 +7,7 @@ export default function PortfolioContainer() {
   return (
     <div>
       <NavTabs />
-      <main className="mx-3">
+      <main className="mx-auto">
         <Outlet/>
         </main>
       <Footer/>

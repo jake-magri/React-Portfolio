@@ -9,7 +9,7 @@ export default function AboutMe() {
         {/* About section */}
         <div className="col about-text-card">
           <h1 className="about-header">Crafting Next Generation Digital Experiences</h1>
-          <section className="about-summary">
+          <section className="about-summary text-lg">
           <p>Hi there! I'm Jake, a certified Full Stack Developer from UNC Charlotte with a background in Management Information Systems. I specialize in creating dynamic web and desktop applications that blend functionality with striking design.</p>
 
           <p>With expertise in TypeScript, Node.js, PostgreSQL, and GraphQL, I'm passionate about building scalable, high-performing solutions. My experience also includes release coordination, streamlining deployments, and enhancing efficiency across tools like ServiceNow, Jira, and GitLab CI/CD pipelines.</p>

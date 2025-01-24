@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <div>
       <h1 className='contact-header'>Let's Build The Future!</h1>
-      <p className='contact-header__p'>
+      <p className='contact-header__p text-lg'>
         Ready to bring your project to life? Let's create something amazing together.
       </p>
       <form className='contact-form' onSubmit={handleSubmit}>

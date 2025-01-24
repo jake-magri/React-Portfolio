@@ -8,8 +8,11 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AboutMe from './components/pages/AboutMe.jsx';
 import Contact from './components/pages/Contact.jsx';
+import Blog from './components/pages/Blog-Page/Blog.jsx';
+import Resources from './components/pages/Resources.jsx';
 import Projects from './components/pages/Projects-Page/Projects.jsx';
 import Resume from './components/pages/Resume.jsx';
+import BlogPost from './components/pages/Blog-Page/BlogPost.jsx';
 
 // create routes with browserRouter
 const router = createBrowserRouter([
@@ -30,9 +33,18 @@ const router = createBrowserRouter([
                 element: <Resume />,
             },
             {
+                path: 'blog', 
+                element: <Blog />,
+            },
+            {
+                path: 'resources', 
+                element: <Resources />,
+            },
+            {
                 path: 'contact', 
                 element: <Contact />,
             },
+            { path: 'blogs/:slug', element: <BlogPost /> }, // Dynamic route for individual blog posts
         ],
     }
 ]);

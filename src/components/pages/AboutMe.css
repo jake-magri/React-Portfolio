@@ -1,8 +1,9 @@
+@import "tailwindcss";
+
 .about-cards {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    padding: 0 15px; /* Add horizontal padding to create margin from the edges */
 }
 .about-text-card,
 .outer-image-card {
@@ -23,3 +24,10 @@
 /* img {
     position: relative;
 } */
+p {
+    color: #6b7280; /* Gray text */
+}
+
+.about-header {
+    margin-bottom: 5vh;
+}

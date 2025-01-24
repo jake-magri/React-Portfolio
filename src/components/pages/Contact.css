@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .contact-header,
 .contact-header__p,
 .contact-form {
@@ -59,4 +61,5 @@
   border-radius: 4px; 
   background-color: #8fc39a;
   color: white; 
+  transition: all 0.2s ease-in-out;
 } 

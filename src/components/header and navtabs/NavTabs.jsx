@@ -62,13 +62,19 @@ function NavTabs() {
         {/* Return Nav bar links with client side routing */}
         <ul className="nav flex-column">
           <li className="nav-item">
-          <NavLink className='nav-link' to="/">About Me</NavLink>
-          </li>
-          <li className="nav-item ">
-          <NavLink className='nav-link' to="/portfolio">Portfolio</NavLink>
+          <NavLink className='nav-link' to="/">About</NavLink>
           </li>
           <li className="nav-item">
-          <NavLink className='nav-link' to="/resume">Resume</NavLink>
+          <NavLink className='nav-link' to="/resume">Experience</NavLink>
+          </li>
+          <li className="nav-item ">
+          <NavLink className='nav-link' to="/portfolio">Projects</NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink className='nav-link' to="/blog">Blogs</NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink className='nav-link' to="/resources">Resources</NavLink>
           </li>
           <li className="nav-item">
           <NavLink className='nav-link' to="/contact">Contact</NavLink>

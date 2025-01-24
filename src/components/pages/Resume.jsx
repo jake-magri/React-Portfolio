@@ -6,7 +6,7 @@ export default function Resume() {
       <h1 className='resume-header'>Resume</h1>
 
       <div className='skills-link'>
-        <p className='resume-header__p'>
+        <p className='resume-header__p text-lg'>
         Skilled in building dynamic web applications using React, Node.js, Express.js, TypeScript, and Java, with experience in AWS, PostgreSQL, MongoDB, and creating responsive, mobile-first user interfaces.
         </p>
         
@@ -16,7 +16,7 @@ export default function Resume() {
           download="Jake-Magri.pdf" 
           target="_blank" 
           rel="noopener noreferrer">
-        <button>
+        <button className="resume-button">
           Download Resume PDF
         </button>
         </a>

@@ -11,11 +11,11 @@ export default function Projects() {
   return (
     <div>
       <h1 className ='portfolio-header'>Portfolio</h1>
-      <p className ='portfolio-header__p'>
+      <p className ='portfolio-header__p text-lg'>
         A curated selection of my latest work, where creativity meets innovation.
       </p>
       {/* Add Project Container below header informtion */}
-      <div>
+      <div className="pb-12 portfolio-container">
         <div className="container">
           <div className="row gx-4">
             <div className='col-sm'>
