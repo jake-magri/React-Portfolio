@@ -43,6 +43,8 @@
   background-color: #2e6a50;
   border-radius: 0 0 1rem 1rem;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card__title {
@@ -76,7 +78,7 @@
 }
 
 .blog-card__read-more:hover {
-  background-color: #58a77f;
+  background-color: #94cfa3;
   transform: translateY(-0.1rem);
 }
 

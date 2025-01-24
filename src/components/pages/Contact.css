@@ -63,3 +63,8 @@
   color: white; 
   transition: all 0.2s ease-in-out;
 } 
+
+.button button:hover {
+  background-color: #94cfa3;
+  
+} 

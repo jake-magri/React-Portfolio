@@ -16,14 +16,15 @@ const BlogCard = ({ title, image, excerpt, readMoreUrl }) => {
       <div className="blog-card__content">
         <h3 className="blog-card__title">{title}</h3>
         <p className="blog-card__excerpt">{excerpt}</p>
-
         <div className="blog-card__link-container">
+        <button>
         <NavLink
             to={readMoreUrl}
             className="blog-card__read-more"
           >
             Read More
           </NavLink>
+        </button>
         </div>
       </div>
     </div>

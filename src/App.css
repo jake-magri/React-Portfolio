@@ -52,4 +52,5 @@ footer a:hover {
 button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
+    border-radius: 10px;
     }

@@ -68,10 +68,10 @@ function NavTabs() {
           <NavLink className='nav-link' to="/resume">Experience</NavLink>
           </li>
           <li className="nav-item ">
-          <NavLink className='nav-link' to="/portfolio">Projects</NavLink>
+          <NavLink className='nav-link' to="/portfolio">Portfolio</NavLink>
           </li>
           <li className="nav-item">
-          <NavLink className='nav-link' to="/blog">Blogs</NavLink>
+          <NavLink className='nav-link' to="/blogs">Blogs</NavLink>
           </li>
           <li className="nav-item">
           <NavLink className='nav-link' to="/resources">Resources</NavLink>
