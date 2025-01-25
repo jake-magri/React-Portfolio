@@ -10,5 +10,6 @@ module.exports = {
       },
       // Add more patterns as needed
     ],
-  }
+  },
+  trailingSlash: true,
 };

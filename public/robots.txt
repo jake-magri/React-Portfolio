@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin/
+Sitemap: https://jake-magri.netlify.app/sitemap.xml
