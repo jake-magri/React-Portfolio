@@ -11,4 +11,5 @@ module.exports = {
       // Add more patterns as needed
     ],
   },
+  target: 'serverless',
 };
