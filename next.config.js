@@ -1,5 +1,5 @@
 // next.config.js
-module.exports = {
+module.exports ={
   reactStrictMode: true,
   images: {
     remotePatterns: [
