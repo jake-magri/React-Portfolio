@@ -3,7 +3,7 @@ import styles from './AboutMe.module.css'; // Update your CSS to use module-base
 
 export default function AboutMe() {
   return (
-    <div className="container">
+    <div className="container mt-23">
       <div className="row about-cards">
         {/* About section */}
         <div className="col about-text-card">

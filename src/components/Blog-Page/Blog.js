@@ -5,7 +5,7 @@ import styles from './Blog.module.css'; // Assuming you're using CSS Modules for
 
 export default function Blogs() {
   return (
-    <div>
+    <div className='mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8'>
       <h1 className={styles.blogHeader}>Blogs</h1>
       <p className={`${styles.blogHeader__p} text-lg`}>
         A collection of my thoughts, insights, and explorations in technology and innovation.

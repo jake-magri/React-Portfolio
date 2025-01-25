@@ -12,7 +12,7 @@ import weatherDashboardImage from '../../../public/images/weather-dashboard.png'
 
 export default function Projects() {
   return (
-    <div>
+    <div className='mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8'>
       <h1 className={styles.portfolioHeader}>Portfolio</h1>
       <p className={`${styles.portfolioHeaderP} text-lg`}>
         A curated selection of my latest work, where creativity meets innovation.

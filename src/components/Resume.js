@@ -2,7 +2,7 @@ import styles from './Resume.module.css';
 
 export default function Resume() {
   return (
-    <div className={styles['resume-main-container']}>
+    <div className={styles['resume-main-container'] + ' mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8'} >
       <h1 className={styles['resume-header']}>Resume</h1>
 
       <div className={styles['skills-link']}>
