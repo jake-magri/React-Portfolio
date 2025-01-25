@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Canvas } from '@react-three/fiber';
 
 class MyDocument extends Document {
   render() {
@@ -17,7 +18,10 @@ class MyDocument extends Document {
           <meta name="robots" content="index, follow" />
         </Head>
         <body>
-          <Main />
+        <Main />
+        <Canvas>
+        
+        </Canvas>
           <NextScript />
         </body>
       </Html>

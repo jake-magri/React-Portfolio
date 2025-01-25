@@ -6,7 +6,6 @@ import NavTabs from '../components/header/NavTabs';
 import Footer from '../components/footer/Footer';
 import Head from 'next/head';
 
-
 const App = ({ Component, pageProps }) => {
     return (
         <>

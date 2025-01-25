@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.9.4",
+    "@react-three/fiber": "^8.17.12",
     "bootstrap": "^5.3.3",
     "lru-cache": "^11.0.2",
     "next": "^15.1.6",
@@ -19,7 +20,8 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "three": "^0.172.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
