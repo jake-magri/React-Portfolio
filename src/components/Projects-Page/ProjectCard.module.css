@@ -1,0 +1,88 @@
+.projectCard {
+    width: 100%;
+    max-width: 24rem;
+    overflow: visible;
+    background-color: #43906d;
+    border: 1px solid #ebedf1;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 300ms ease;
+    margin-bottom: 2rem;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-0.25rem);
+  }
+  
+  .projectCard__imageContainer {
+    position: relative;
+    height: 12rem;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectCard__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .projectCard__content {
+    padding: 1rem;
+    border-top: 1px solid #6464644d;
+    background-color: #2e6a50;
+    border-radius: 1rem;
+  }
+  
+  .projectCard__title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .projectCard__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .projectCard__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: color 200ms ease;
+    font-size: 0.875rem;
+  }
+  
+  .projectCard__link_primary {
+    color: #7cbd8c;
+  }
+  
+  .projectCard__link_primary:hover {
+    color: #94cfa3;
+  }
+  
+  .projectCard__link_secondary {
+    color: #7cbd8c;
+  }
+  
+  .projectCard__link_secondary:hover {
+    color: #94cfa3;
+  }
+  
+  .projectCard__icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .demoContainer {
+    padding: 2rem;
+    background-color: #f3f4f6;
+  }

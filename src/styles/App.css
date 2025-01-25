@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* styles/globals.css */
+@tailwind utilities;
+
+/* src/index.css */
+/* CSS Variables */
+:root {
+    --night: #12130fff;
+    --viridian: #1a4331;
+    --celadon: #8fcb9bff;
+    --platinum: #e5e7eb;
+    --cinereous: #2e6a50;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--platinum);
+    color: var(--night);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--viridian);
+    padding: 1rem;
+}
+
+
+main {
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--viridian);
+    color: var(--platinum);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 8vh;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--celadon);
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+    border-radius: 10px;
+    }

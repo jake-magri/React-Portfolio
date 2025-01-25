@@ -1,0 +1,22 @@
+.aboutContainer {
+  padding: 2rem;
+  background-color: #e5e7eb; /* Light neutral background */
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 1.5rem; /* Spacing between cards */
+  margin-top: 2rem;
+}
+
+.blogHeader {
+  text-align: center; /* Center header text */
+  margin-bottom: 1rem; /* Spacing below header */
+}
+
+.blogHeader__p {
+  text-align: center; /* Center paragraph text */
+  margin-top: 0.5rem;
+  color: #6b7280; /* Gray text */
+}

@@ -1,7 +1,7 @@
 // src/data/blogData.js
-import voltUndergroundImage from '../assets/images/volt-underground.png';
-import hiPubImage from '../assets/images/hi-pub.png';
-import colorRacerImage from '../assets/images/color-racer.jpg';
+import voltUndergroundImage from '../../public/images/volt-underground.png';
+import hiPubImage from '../../public/images/hi-pub.png';
+import colorRacerImage from '../../public/images/color-racer.jpg';
 // Import more images here as needed...
 
 export const blogData = [

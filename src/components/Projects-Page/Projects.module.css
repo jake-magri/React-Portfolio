@@ -1,0 +1,24 @@
+.aboutContainer {
+  padding: 2rem;
+  background-color: #e5e7eb;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 1.5rem; /* Space between cards */
+  margin-top: 2rem;
+}
+
+.portfolioHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolioHeaderP {
+  display: flex;
+  justify-content: center;
+}
