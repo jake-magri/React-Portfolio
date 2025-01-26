@@ -1,5 +1,42 @@
-import { useState } from 'react';
-import styles from './Contact.module.css'; // Import the CSS module
+import { useState, useEffect, useRef } from 'react';
+import styles from './Contact.module.css';
+
+const SlidingText = ({ direction = 'left', text }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => {
+      if (textRef.current) {
+        observer.unobserve(textRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={textRef}
+      className={`
+      ${styles['sliding-text']} 
+      ${isVisible ? styles[`animate-slide-${direction}`] : ''}`}
+    >
+      {text}
+    </div>
+  );
+};
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -25,53 +62,69 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.contactContainer + ' mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8'}>
-      <h1 className={styles.contactHeader}>Let's Build The Future!</h1>
-      <p className={`${styles.contactHeaderP} text-lg`}>
-        Ready to bring your project to life? Let's create something amazing together.
-      </p>
-      <form className={styles.contactForm} onSubmit={handleSubmit}>
-        <div className={styles.contactFormP1}>
-          <input
-            className={styles.contactFormInput}
-            placeholder="Name"
-            type="text"
-            id="name"
-            name="Name"
-            autoComplete="given-name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            onBlur={handleMouseExit}
-          />
-        </div>
-        <div className={styles.contactFormP2}>
-          <input
-            className={styles.contactFormInput}
-            placeholder="Email"
-            type="email"
-            id="mail"
-            name="Email"
-            autoComplete="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onBlur={handleMouseExit}
-          />
-        </div>
-        <div className={styles.contactFormP3}>
-          <textarea
-            className={styles.contactFormTextarea}
-            placeholder="Message"
-            id="msg"
-            name="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onBlur={handleMouseExit}
-          />
-        </div>
-        <div className={styles.button}>
-          <button type="submit">SEND</button>
-        </div>
-      </form>
+    <div className={`${styles.contactContainer} mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8`}>
+      <SlidingText
+        direction="left"
+        text={<h1 className={styles.contactHeader}>Let's Build The Future!</h1>}
+      />
+      <SlidingText
+        direction="left"
+        text={<p className={`${styles.contactHeaderP} text-lg`}>
+          Ready to bring your project to life? Let's create something amazing together.
+        </p>}
+      />
+      <div className={styles.contactFormContainer}>
+        <SlidingText
+          direction="right"
+          text={
+            <form className={styles.contactForm} onSubmit={handleSubmit}>
+              <div className={styles.contactFormP1}>
+                <label htmlFor="name" className="sr-only">Name</label>
+                <input
+                  className={styles.contactFormInput}
+                  placeholder="Name"
+                  type="text"
+                  id="name"
+                  name="Name"
+                  autoComplete="given-name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onBlur={handleMouseExit}
+                />
+              </div>
+              <div className={styles.contactFormP2}>
+                <label htmlFor="email" className="sr-only">Email</label>
+                <input
+                  className={styles.contactFormInput}
+                  placeholder="Email"
+                  type="email"
+                  id="email"
+                  name="Email"
+                  autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onBlur={handleMouseExit}
+                />
+              </div>
+              <div className={styles.contactFormP3}>
+                <label htmlFor="message" className="sr-only">Message</label>
+                <textarea
+                  className={styles.contactFormTextarea}
+                  placeholder="Message"
+                  id="message"
+                  name="Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  onBlur={handleMouseExit}
+                />
+              </div>
+              <div className={styles.button}>
+                <button type="submit">SEND</button>
+              </div>
+            </form>
+          }
+        />
+      </div>
     </div>
   );
 }

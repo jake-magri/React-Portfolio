@@ -1,17 +1,19 @@
-// components/Blog.js
 import { blogData } from '../../data/blogData'; // Adjusted the import path
 import BlogCard from './BlogCard';
 import styles from './Blog.module.css'; // Assuming you're using CSS Modules for scoped styling
+import SlidingText from '../SlidingText'; // Import the SlidingText component
 
 export default function Blogs() {
   return (
     <div className='mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8'>
-      <h1 className={styles.blogHeader}>Blogs</h1>
-      <p className={`${styles.blogHeader__p} text-lg`}>
+      <SlidingText direction="top" text={<h1 className={`${styles.blogHeader} ${styles.slideIn}`}>Blogs</h1>} />
+      <SlidingText direction="fade" text={<p className={`${styles.blogHeader__p} text-lg`}>
         A collection of my thoughts, insights, and explorations in technology and innovation.
-      </p>
+      </p>} />
+      
       {/* Blog cards container */}
       <div className="container">
+        <SlidingText direction="zoom" text={
         <div className="row gx-4">
           {blogData.map((blog) => (
             <div className="col-sm" key={blog.slug}>
@@ -24,6 +26,7 @@ export default function Blogs() {
             </div>
           ))}
         </div>
+        }/>
       </div>
     </div>
   );

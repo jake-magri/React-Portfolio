@@ -8,6 +8,7 @@ import miningHardware from '../../public/images/mining-hardware.jpg';
 import pcHardware from '../../public/images/pc-hardware.jpg';
 import graphicsCards from '../../public/images/graphics-cards.jpg';
 import styles from './Resources.module.css';
+import SlidingText from './SlidingText';
 
 export default function Resources() {
   const resources = [
@@ -71,15 +72,16 @@ export default function Resources() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 pb-12 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6">
-      <h1 className="text-4xl font-semibold text-center text-gray-800 mb-6">
+      <SlidingText direction="top" text={<><h1 className="text-4xl font-semibold text-center text-gray-800 mb-6">
         Recommended Tools & Resources
-      </h1>
+      </h1> 
       <p className="text-lg text-center text-gray-600 mb-8">
         Enhance your AI development journey with these hand-picked resources.
         Click the links below to explore tools, software, and hardware that
         optimize your workflow. These are affiliate links, so purchasing through
         them helps support the blog at no additional cost to you!
-      </p>
+      </p></>}/>
+      <SlidingText direction="bottom" text={
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {resources.map((resource, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -104,7 +106,7 @@ export default function Resources() {
             </div>
           </div>
         ))}
-      </div>
+      </div>}/>
     </div>
   );
 }

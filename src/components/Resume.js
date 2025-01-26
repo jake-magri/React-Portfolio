@@ -1,5 +1,72 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
 import styles from './Resume.module.css';
+
+
+// Define the iframe component separately
+const ResumeIframe = () => {
+  return (
+    <iframe
+      src="/documents/jake-magri-resume.pdf" // Keep the same PDF path
+      width="100%"
+      height="800px"
+      title="Jake Magri Resume"
+      style={{ border: 'none' }}
+    >
+      Your browser does not support iframes.
+      <a
+        href="/documents/jake-magri-resume.pdf"
+        download="Jake-Magri.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download the Resume
+      </a>
+    </iframe>
+  );
+};
+
+// Lazy load the ResumeIframe component
+const LazyResumeIframe = dynamic(() => Promise.resolve(ResumeIframe), {
+  ssr: false, // Disable SSR for iframe content
+  loading: () => <p>Loading Resume...</p>, // Optional loading state
+});
+
+// SlidingText Component (same as before)
+const SlidingText = ({ direction = 'left', text }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 } // Lowered threshold for better detection
+    );
+
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => {
+      if (textRef.current) {
+        observer.unobserve(textRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={textRef}
+      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''}`}
+    >
+      {text}
+    </div>
+  );
+};
 
 export default function Resume() {
   const [isClient, setIsClient] = useState(false);
@@ -11,45 +78,48 @@ export default function Resume() {
 
   return (
     <div className={`${styles['resume-main-container']} mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6`}>
-      <h1 className={styles['resume-header']}>Resume</h1>
+      {/* Resume Header */}
+      <SlidingText
+        direction="left"
+        text={<h1 className={styles['resume-header']}>Resume</h1>}
+      />
 
       <div className={styles['skills-link']}>
-        <p className={`${styles['resume-header-text']} text-lg`}>
-          Skilled in building dynamic web applications using React, Node.js, Express.js, TypeScript, and Java, with experience in AWS, PostgreSQL, MongoDB, and creating responsive, mobile-first user interfaces.
-        </p>
+        {/* Resume description */}
+        <SlidingText
+          direction="left"
+          text={
+            <p className={`${styles['resume-header-text']} text-lg`}>
+              Skilled in building dynamic web applications using React, Node.js, Express.js, TypeScript, and Java, with experience in AWS, PostgreSQL, MongoDB, and creating responsive, mobile-first user interfaces.
+            </p>
+          }
+        />
 
-        <a
-          className={styles['resume-link']}
-          href="/documents/jake-magri-resume.pdf"
-          download="Jake-Magri.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className={styles['resume-button']}>
-            Download Resume PDF
-          </button>
-        </a>
+        {/* Resume Download Button */}
+        <SlidingText
+          direction="left"
+          text={
+            <a
+              className={styles['resume-link']}
+              href="/documents/jake-magri-resume.pdf"
+              download="Jake-Magri.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className={styles['resume-button']}>
+                Download Resume PDF
+              </button>
+            </a>
+          }
+        />
       </div>
 
       {/* Conditionally render iframe content only on the client */}
       {isClient && (
-        <iframe
-          src="/documents/jake-magri-resume.pdf"
-          width="100%"
-          height="800px"
-          title="Jake Magri Resume"
-          className={styles['resume-iframe']}
-        >
-          Your browser does not support iframes.
-          <a
-            href="/documents/jake-magri-resume.pdf"
-            download="Jake-Magri.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download the Resume
-          </a>
-        </iframe>
+        <SlidingText
+          direction="bottom"
+          text={<LazyResumeIframe />}
+        />
       )}
     </div>
   );

@@ -1,4 +1,3 @@
-// components/BlogCard.js
 import Image from 'next/image';
 import styles from './BlogCard.module.css'; // Assuming you are using CSS modules
 import Link from 'next/link';
@@ -13,6 +12,7 @@ const BlogCard = ({ title, image, excerpt, readMoreUrl }) => {
           width={400} // You can adjust the width and height based on your design
           height={300}
           className={styles.blogCard__image}
+          loading="lazy" // Ensures image is lazy-loaded
         />
       </div>
 

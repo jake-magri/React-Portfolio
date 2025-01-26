@@ -1,36 +1,52 @@
-.about-cards {
+.sliding-text {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  /* Sliding from left for text */
+  .animate-slide-left {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Sliding from bottom for image */
+  .animate-slide-bottom {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .about-cards {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-.about-text-card,
-.outer-image-card {
-  margin: 0 15px; /* Create space between the two cards */
-}
-
-.about-image {
-    max-height: 500px; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-text-card,
+  .outer-image-card {
+    margin: 0 15px;
+  }
+  
+  .about-image {
+    max-height: 500px;
     width: auto;
-}
-
-.inner-image-box {
+  }
+  
+  .inner-image-box {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    max-height: 500px; /* Set a max height for the image box */
-    overflow: hidden; /* Hide overflow to prevent large images from affecting layout */
-}
-/* img {
-    position: relative;
-} */
-.about-p {
-    color: #333333; /* Gray text */
-}
-
-.about-header {
+    justify-content: center;
+    max-height: 500px;
+    overflow: hidden;
+  }
+  
+  .about-p {
+    color: #333333;
+  }
+  
+  .about-header {
     margin-bottom: 5vh;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,4 +55,32 @@
     padding: 0 2rem;
     max-width: 1200px;
     margin-top: 50px;
-}
+  }
+  
+  /* Add specific keyframes for each direction */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-200px); /* Start from the left */
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInBottom {
+    0% {
+      transform: translateY(100%); /* Start from below */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .animate-slide-bottom {
+    animation: slideInBottom 1s ease-out forwards;
+  }
+  

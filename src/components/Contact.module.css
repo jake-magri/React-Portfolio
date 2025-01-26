@@ -1,67 +1,102 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
 .contactHeader,
 .contactHeaderP,
 .contactForm {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliding-text {
+  opacity: 0;
+  transform: translateX(-200px); /* Start offset for left-slide animation */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-slide-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animate-slide-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contactFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .contactForm {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 10px; 
-  width: 100%; 
-  max-width: 600px; 
-  margin: 0 auto; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contactFormP1,
 .contactFormP2 {
-  grid-column: span 1; 
+  grid-column: span 1;
 }
 
 .contactFormP3 {
-  grid-column: span 2; 
-  margin: 10px 0; 
+  grid-column: span 2;
+  margin: 10px 0;
 }
 
-.contactFormInput {
-  width: 100%; 
-  padding: 10px; 
-  font-size: 16px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
+.contactFormInput,
+.contactFormTextarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .contactFormTextarea {
-  width: 100%; 
-  min-height: 150px; 
-  padding: 10px; 
-  font-size: 16px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px;
+  min-height: 150px;
   resize: none;
 }
- 
+
 .button {
-  grid-column: span 2; 
-  margin: 3x 0; 
-  width: 100%; 
+  grid-column: span 2;
+  margin: 10px 0;
 }
 
- .button button {
-  padding: 10px; 
-  font-size: 16px; 
+.button button {
+  padding: 10px;
+  font-size: 16px;
   cursor: pointer;
-  width: 100%; 
-  border: none; 
-  border-radius: 4px; 
+  width: 100%;
+  border: none;
+  border-radius: 4px;
   background-color: #8fc39a;
-  color: white; 
+  color: white;
   transition: all 0.2s ease-in-out;
-} 
+}
 
 .button button:hover {
   background-color: #94cfa3;
-  
-} 
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
