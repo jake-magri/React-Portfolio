@@ -3,7 +3,7 @@
 
 ## Description
 
-Single-page application portfolio website build using react, bootstrap, with client side routing and a responsive form component and navigation bar.
+Single-page application portfolio website build using react, next, bootstrap, with next client side routing, static rendering, responsive content & form react components and mobile responsive navigation bar.
 
 ## Table of Contents
 
