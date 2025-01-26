@@ -3,13 +3,15 @@ import styles from './SlidingText.module.css'; // Create a new CSS Module for th
 
 const SlidingText = ({ direction = 'left', text }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has occurred
   const textRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries[0].isIntersecting && !hasAnimated) {
           setIsVisible(true);
+          setHasAnimated(true); // Set animation flag when element is visible
         }
       },
       { threshold: 0.1 } // Lower threshold for better detection
@@ -24,12 +26,12 @@ const SlidingText = ({ direction = 'left', text }) => {
         observer.unobserve(textRef.current);
       }
     };
-  }, []);
+  }, [hasAnimated]); // Run when `hasAnimated` changes
 
   return (
     <div
       ref={textRef}
-      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''} animation-fill-forwards`}
+      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''} ${hasAnimated ? 'animation-fill-forwards' : ''}`}
     >
       {text}
     </div>
