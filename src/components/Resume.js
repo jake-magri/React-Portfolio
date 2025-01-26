@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import styles from './Resume.module.css';
-
+import SlidingText from './SlidingText';
 
 // Define the iframe component separately
 const ResumeIframe = () => {
@@ -31,42 +31,6 @@ const LazyResumeIframe = dynamic(() => Promise.resolve(ResumeIframe), {
   ssr: false, // Disable SSR for iframe content
   loading: () => <p>Loading Resume...</p>, // Optional loading state
 });
-
-// SlidingText Component (same as before)
-const SlidingText = ({ direction = 'left', text }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 } // Lowered threshold for better detection
-    );
-
-    if (textRef.current) {
-      observer.observe(textRef.current);
-    }
-
-    return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div
-      ref={textRef}
-      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''}`}
-    >
-      {text}
-    </div>
-  );
-};
 
 export default function Resume() {
   const [isClient, setIsClient] = useState(false);
