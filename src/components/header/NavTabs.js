@@ -43,7 +43,7 @@ const NavTabs = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-light bg-light custom-dark-green">
+    <nav className="navbar custom-dark-green">
       <div className="nav-container">
         <span className="navbar-brand">Jake Magri</span>
         {isMobile && !isMenuOpen && (

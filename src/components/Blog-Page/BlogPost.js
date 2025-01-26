@@ -8,7 +8,7 @@ export default function BlogPost({ post }) {
   const { title, image, content, affiliateLink } = post;
 
   return (
-    <div className="flex flex-col justify-center max-w-3xl mx-auto px-4 space-y-8 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-28">
+    <div className="flex flex-col justify-center max-w-3xl mx-auto px-4 space-y-8 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6">
       <h1 className="text-3xl font-bold text-gray-800">{title}</h1>
 
       {/* Image container */}

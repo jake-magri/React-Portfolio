@@ -70,7 +70,7 @@ export default function Resources() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 pb-12 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8">
+    <div className="max-w-5xl mx-auto px-4 pb-12 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6">
       <h1 className="text-4xl font-semibold text-center text-gray-800 mb-6">
         Recommended Tools & Resources
       </h1>

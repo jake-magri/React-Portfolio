@@ -9,7 +9,7 @@ export const blogData = [
       slug: 'volt-underground',
       title: 'Volt Underground: Revolutionizing Events',
       image: voltUndergroundImage, // Use the imported image
-      excerpt: 'Discover how Volt Underground is changing the way we experience events.',
+      excerpt: 'Discover how Volt Underground is changing the way we experience events...',
       content: `
         <p>Welcome to <strong>Volt Underground</strong>, a revolutionary ticket-selling platform designed exclusively for the underground DJ music scene. Whether you're a devoted fan or a newcomer looking to explore electrifying beats, Volt Underground bridges the gap between music enthusiasts and their favorite underground events. With an intuitive interface and robust features, our platform makes discovering and securing tickets for the hottest DJ performances a breeze.</p>
         
@@ -90,7 +90,7 @@ export const blogData = [
       slug: 'hi-pub',
       title: 'Hi, Pub!: A New Way to Connect',
       image: hiPubImage, // Use the imported image
-      excerpt: 'Exploring how Hi, Pub! makes virtual events more engaging.',
+      excerpt: 'Exploring how Hi, Pub! makes virtual events more engaging...',
       content: `
         <p>Step into the world of <strong>Hipub</strong>, a one-of-a-kind social platform that brings the camaraderie of a real-world pub to your screen. With Hipub, users can connect, chat, and enjoy a laid-back atmosphere guided by the lively AI bartender, Finn. Whether you're here for casual chats or nightlife recommendations, Hipub has something for everyone.</p>
   
