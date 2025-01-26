@@ -29,7 +29,7 @@ const SlidingText = ({ direction = 'left', text }) => {
   return (
     <div
       ref={textRef}
-      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''}`}
+      className={`${styles['sliding-text']} ${isVisible ? styles[`animate-slide-${direction}`] : ''} animation-fill-forwards`}
     >
       {text}
     </div>
