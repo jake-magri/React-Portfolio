@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://jake-magri.netlify.app/
-
 # Sitemaps
 Sitemap: https://jake-magri.netlify.app/sitemap.xml
