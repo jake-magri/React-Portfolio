@@ -17,9 +17,18 @@
   
   .about-cards {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
+
+  /* Stack cards vertically on smaller screens */
+@media (max-width: 768px) {
+    .about-cards {
+      flex-direction: column; /* Stack cards vertically */
+    }
+  }
+  
   
   .about-text-card,
   .outer-image-card {
@@ -28,7 +37,8 @@
   
   .about-image {
     max-height: 500px;
-    width: auto;
+    max-width: 300px;
+    min-width: 200px;
   }
   
   .inner-image-box {

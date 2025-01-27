@@ -79,7 +79,8 @@ const NavTabs = () => {
         <ul className="nav">
           <li className="nav-item">
             <Link
-              className={`nav-link ${router.pathname === '/' ? 'active' : ''}`}
+              className={`nav-link ${router.pathname === '/' ? 'active' : ''}`} 
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile 
               href="/"
             >
               About
@@ -88,6 +89,7 @@ const NavTabs = () => {
           <li className="nav-item">
             <Link
               className={`nav-link ${router.pathname === '/resume' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/resume"
             >
               Experience
@@ -96,6 +98,7 @@ const NavTabs = () => {
           <li className="nav-item">
             <Link
               className={`nav-link ${router.pathname === '/portfolio' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/portfolio"
             >
               Portfolio
@@ -104,6 +107,7 @@ const NavTabs = () => {
           <li className="nav-item">
             <Link
               className={`nav-link ${router.pathname === '/blogs' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/blogs"
             >
               Blogs
@@ -112,6 +116,7 @@ const NavTabs = () => {
           <li className="nav-item">
             <Link
               className={`nav-link ${router.pathname === '/resources' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/resources"
             >
               Resources
@@ -120,6 +125,7 @@ const NavTabs = () => {
           <li className="nav-item">
             <Link
               className={`nav-link ${router.pathname === '/contact' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/contact"
             >
               Contact
