@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://jake-magri.netlify.app/sitemap.xml
+Sitemap: https://jakemagri.dev/sitemap.xml
