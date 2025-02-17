@@ -43,6 +43,7 @@
   color: white;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .blogCard__title {

@@ -54,7 +54,7 @@ export default function Resume() {
           direction="left"
           text={
             <p className={`${styles['resume-header-text']} text-lg`}>
-              Skilled in building dynamic web applications using React, Node.js, Express.js, TypeScript, and Java, with experience in AWS, PostgreSQL, MongoDB, and creating responsive, mobile-first user interfaces.
+              Skilled in systems analysis, process optimization, and data analytics. Experienced in using advanced SQL, Python-based analytics, and Gantt chart-driven project management to drive operational efficiency and standardization. Adept at cross-functional collaboration, developing dynamic dashboards, and implementing technology-driven solutions to enhance branch operations and support continuous process improvements.
             </p>
           }
         />
