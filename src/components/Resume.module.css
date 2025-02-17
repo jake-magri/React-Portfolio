@@ -53,6 +53,10 @@
   text-align: center;
 }
 
+.resume-header-text {
+  color: #333333;
+}
+
 /* Responsive iframe styles */
 .resume-iframe {
   width: 100%;

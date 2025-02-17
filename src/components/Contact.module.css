@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.contactHeaderP {
+  color: #333333;
+}
+
 .sliding-text {
   opacity: 0;
   transform: translateX(-200px); /* Start offset for left-slide animation */

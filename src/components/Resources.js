@@ -75,7 +75,7 @@ export default function Resources() {
       <SlidingText direction="top" text={<><h1 className="text-4xl font-semibold text-center text-gray-800 mb-6">
         Recommended Tools & Resources
       </h1> 
-      <p className="text-lg text-center text-gray-600 mb-8">
+      <p className="text-lg text-center text-gray-700 mb-8">
         Enhance your AI development journey with these hand-picked resources.
         Click the links below to explore tools, software, and hardware that
         optimize your workflow. These are affiliate links, so purchasing through
