@@ -54,7 +54,7 @@ export default function Resume() {
           direction="left"
           text={
             <p className={`${styles['resume-header-text']} text-lg`}>
-              Skilled in systems analysis, process optimization, and data analytics. Experienced in using advanced SQL, Python-based analytics, and Gantt chart-driven project management to drive operational efficiency and standardization. Adept at cross-functional collaboration, developing dynamic dashboards, and implementing technology-driven solutions to enhance branch operations and support continuous process improvements.
+              Skilled in systems analysis, process optimization, data analytics, and business applications development. Experienced in using advanced SQL, Python-based analytics, and data-driven project management to drive operational efficiency and standardization. Adept at cross-functional collaboration, developing dynamic dashboards, and implementing technology-driven solutions to enhance operations and support ongoing process improvements.
             </p>
           }
         />
