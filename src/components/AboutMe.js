@@ -21,7 +21,7 @@ export default function AboutMe() {
           text={
             <p className={styles['about-p']}>
               Hi, I'm Jake, a Management Information Systems graduate from UNC Charlotte and a certified Developer.
-              My academic background in systems analysis, supply chain management (including hands-on experience with Gantt charts), data analytics, and business applications development has given me a comprehensive perspective that blends time-tested methodologies with modern, data-driven solutions.
+              My academic background in systems analysis, supply chain management (including hands-on experience with Gantt charts), data analytics, and business applications development has given me a comprehensive perspective that blends time-tested methodologies with data-driven solutions.
             </p>
           }
         />

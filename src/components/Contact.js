@@ -26,7 +26,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${styles.contactContainer} mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-8`}>
+    <div className={`${styles.contactContainer} mt-12 mx-4 sm:mx-6 mb-8`}>
       <SlidingText
         direction="left"
         text={<h1 className={styles.contactHeader}>Let's Build The Future!</h1>}

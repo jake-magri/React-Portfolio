@@ -13,14 +13,26 @@
   align-items: center;
 }
 
+.contactHeader {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-size: 54px;
+  font-style: italic;
+}
+
 .contactHeaderP {
   color: #333333;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .sliding-text {
   opacity: 0;
-  transform: translateX(-200px); /* Start offset for left-slide animation */
+  transform: translateX(-100px); /* Start offset for left-slide animation */
   transition: opacity 1s ease-out, transform 1s ease-out;
+  z-index: -1;
 }
 
 .animate-slide-left {
@@ -47,6 +59,10 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .contactFormP1,
@@ -80,7 +96,8 @@
 
 .button button {
   padding: 10px;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 500;
   cursor: pointer;
   width: 100%;
   border: none;

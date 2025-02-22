@@ -1,3 +1,18 @@
 .resources-p {
     color: #333333;
 }
+
+.alegreyaSans {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 54px;
+    font-style: italic;
+  }
+
+.interTight {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.cardLinkContainer {
+    position: relative;
+}

@@ -53,8 +53,19 @@
   text-align: center;
 }
 
+.resume-header {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 54px;
+}
+
 .resume-header-text {
   color: #333333;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 /* Responsive iframe styles */

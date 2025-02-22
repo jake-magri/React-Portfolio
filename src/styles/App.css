@@ -16,7 +16,6 @@
 
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
     background-color: var(--platinum);
     color: var(--night);
     margin: 0;
@@ -49,6 +48,7 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
 
 footer a:hover {

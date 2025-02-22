@@ -50,10 +50,18 @@
   
   .about-p {
     color: #333333;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 18px;
   }
   
   .about-header {
     margin-bottom: 5vh;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 54px;
+    font-style: italic;
   }
   
   .container {
