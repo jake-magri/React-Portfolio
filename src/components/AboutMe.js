@@ -55,9 +55,9 @@ export default function AboutMe() {
               className={styles['about-image']}
               src="/images/6.png"
               alt="A professional headshot of Jake Magri"
-              width={500}
+              width={300}
               height={500}
-              loading="lazy"
+              priority
             />
           </div>
         }

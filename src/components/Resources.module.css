@@ -1,13 +1,19 @@
 .resources-p {
     color: #333333;
+    font-family: 'Inter Tight', sans-serif;
 }
 
-.alegreyaSans {
-    font-family: "Alegreya Sans", sans-serif;
+.tenorSans {
+    font-family: "Tenor Sans", sans-serif;
     font-weight: 400;
-    font-size: 54px;
-    font-style: italic;
-  }
+    font-size: 48px;
+}
+
+.resourceCard {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
 
 .interTight {
     font-family: 'Inter Tight', sans-serif;
@@ -16,3 +22,21 @@
 .cardLinkContainer {
     position: relative;
 }
+
+.learnMore {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #7cbd8c;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+    transition: background-color 200ms ease, transform 200ms ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.learnMore:hover {
+    background-color: #94cfa3;
+    transform: translateY(-0.1rem);
+  }

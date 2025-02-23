@@ -20,8 +20,8 @@ const BlogCard = ({ title, image, excerpt, readMoreUrl }) => {
         <h3 className={styles.blogCard__title}>{title}</h3>
         <p className={styles.blogCard__excerpt}>{excerpt}</p>
         <div className={styles.blogCard__linkContainer}>
-          <button>
-            <Link href={readMoreUrl} className={styles.blogCard__readMore}>
+          <button className={styles.blogCard__readMore}>
+            <Link href={readMoreUrl} className='text-white'>
               Read More
             </Link>
           </button>

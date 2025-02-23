@@ -76,7 +76,7 @@ export default function Resources() {
         direction="top"
         text={
           <>
-            <h1 className={`${styles.alegreyaSans} text-[54px] font-normal italic text-center text-gray-800 mb-6`}>
+            <h1 className={`${styles.tenorSans} text-[54px] font-normal text-center text-gray-800 mb-6`}>
               Recommended Tools & Resources
             </h1>
             </>
@@ -111,18 +111,19 @@ export default function Resources() {
                   height={350}
                 />
                 <div className="p-6 grid grid-rows-[auto_1fr]">
-                  <h3 className="text-xl font-semibold text-gray-800">{resource.name}</h3>
+                  <h3 className={`${styles.resourceCard} text-gray-800`}>{resource.name}</h3>
                   <p className="text-gray-600 mt-2">{resource.description}</p>
                 </div>
-                <div className="p-6">
-                  <a
+                <div className="p-6 flex justify-center">
+                  <button className={styles.learnMore}><a
                     href={resource.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-blue-600 hover:underline"
+                    className='ale inline-block text-white hover:underline'
                   >
                     Learn More
                   </a>
+                  </button>
                 </div>
               </div>
             ))}
