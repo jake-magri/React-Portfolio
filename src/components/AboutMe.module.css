@@ -101,3 +101,38 @@
     animation: slideInBottom 1s ease-out forwards;
   }
   
+  .specialization-header {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #333333; /* Adjust to your site's theme */
+  font-weight: 600;
+}
+
+.specialization-list {
+  list-style-type: none; /* We will use custom bullets for a cleaner look */
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.specialization-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Custom Bullet Point (Square or Circle) */
+.specialization-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333333;
+  font-weight: bold;
+}
+
+.specialization-list li strong {
+  display: block; /* Puts the title on its own line if you want, or keep inline */
+  color: #333333;
+}

@@ -53,9 +53,43 @@ export default function Resume() {
         <SlidingText
           direction="left"
           text={
-            <p className={`${styles['resume-header-text']} text-lg`}>
-              Skilled in systems analysis, process optimization, data analytics, and business applications development. Experienced in using advanced SQL, Python-based analytics, and data-driven project management to drive operational efficiency and standardization. Adept at cross-functional collaboration, developing dynamic dashboards, and implementing technology-driven solutions to enhance operations and support ongoing process improvements.
-            </p>
+            <div className={styles['resume-content']}>
+              <p className={`${styles['resume-header-text']} text-lg mb-6`}>
+                <strong>Full-Stack Capability. AI-Driven Results.</strong> I don't just build "wrappers." I architect full-lifecycle solutions. Whether it’s migrating from managed APIs to custom LLM orchestration for better token efficiency or engineering high-scale data pipelines in AWS, I focus on the technical maturity required for SOC2 and HIPAA-compliant environments.
+              </p>
+
+            <div className={styles['tech-stack-grid']}>
+              {/* AI & Machine Learning */}
+              <div className={styles['stack-category']}>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">AI & LLM Orchestration</h3>
+                <div className={styles['skill-pill-container']}>
+                  {['RAG', 'Agentic Workflows', 'OpenAI API', 'Vector Databases', 'Knowledge Graphs', 'NLP', 'Semantic Modeling', 'Prompt Engineering'].map((skill) => (
+                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Systems & Architecture */}
+              <div className={styles['stack-category']}>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">Systems & Architecture</h3>
+                <div className={styles['skill-pill-container']}>
+                  {['Solution Architecture', 'Systems Design', 'API Development', 'Microservices', 'ETL Pipelines', 'Data Warehousing'].map((skill) => (
+                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+                
+              {/* Engineering & Cloud */}
+              <div className={styles['stack-category']}>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">Engineering & Cloud</h3>
+                <div className={styles['skill-pill-container']}>
+                  {['Python', 'C#', '.NET Framework', 'MVVM', 'ASP.NET', 'AWS (Lambda/S3/EC2)', 'SQL Server', 'React/Next.js'].map((skill) => (
+                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+           </div>
+          </div>
           }
         />
 
@@ -80,10 +114,9 @@ export default function Resume() {
 
       {/* Conditionally render iframe content only on the client */}
       {isClient && (
-        <SlidingText
-          direction="bottom"
-          text={<LazyResumeIframe />}
-        />
+        <div className={styles['resume-iframe-container']}>
+          <SlidingText direction="bottom" text={<LazyResumeIframe />} />
+        </div>
       )}
     </div>
   );

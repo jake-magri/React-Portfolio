@@ -13,15 +13,14 @@ export default function AboutMe() {
     <div className={styles['about-text-card']}>
       <SlidingText
         direction="left"
-        text={<h1 className={styles['about-header']}>Driving Operational Excellence Through Data & Collaboration</h1>}
+        text={<h1 className={styles['about-header']}>Architecting Agentic Systems & AI Strategy for the Enterprise</h1>}
       />
       <section className={styles['about-summary']}>
         <SlidingText
           direction="left"
           text={
             <p className={styles['about-p']}>
-              Hi, I'm Jake, a Management Information Systems graduate from UNC Charlotte and a certified Developer.
-              My academic background in systems analysis, supply chain management (including hands-on experience with Gantt charts), data analytics, and business applications development has given me a comprehensive perspective that blends time-tested methodologies with data-driven solutions.
+              Hi, I'm Jake. I'm a Software Engineer and AI Specialist focused on bridging the gap between complex business logic and production-grade Agentic systems.
             </p>
           }
         />
@@ -29,17 +28,32 @@ export default function AboutMe() {
           direction="left"
           text={
             <p className={styles['about-p']}>
-              At Ally Financial, I led cross-functional projects, developed performance dashboards, and implemented process improvements using tools like SQL, Jira, and ServiceNow.
-              These experiences honed my ability to analyze operations, streamline processes, and support operational excellence.
+              Currently, I report to the CEO and Chief Software Engineer at ImagineSoftware, where I lead AI strategy for a multi-eight-figure ARR medical billing platform. My work is centered on building "High-Depth" AI: systems that don't just chat, but perform—automating end-to-end RCM workflows, extracting structured data from unstructured medical documents, and pioneering hallucination-resistant RAG architectures.
             </p>
           }
         />
         <SlidingText
           direction="left"
           text={
-            <p className={styles['about-p']}>
-              I thrive on fostering collaboration across teams and translating technical details into actionable insights. Whether it's developing comprehensive process documentation or partnering with business stakeholders to pinpoint improvement opportunities, my goal is to drive standardization, efficiency, and continuous improvement, honoring proven practices while embracing forward-thinking solutions.
-            </p>
+            <div className={styles['about-specialization']}>
+              <p className={styles['about-p']}>
+                My background is a blend of high-stakes discipline and technical execution. From serving as a Combat Medic in the Army National Guard to orchestrating mission-critical software releases at Ally Financial, I've learned that the most successful technology solutions are those that prioritize reliability, data integrity, and measurable commercial impact.
+              </p>
+      
+              <h3 className={styles['specialization-header']}>I specialize in:</h3>
+      
+              <ul className={styles['specialization-list']}>
+                <li>
+                  <strong>Agentic Workflows:</strong> Orchestrating LLMs to automate complex, multi-step business processes.
+                </li>
+                <li>
+                  <strong>Semantic Data Layers:</strong> Building NL-to-SQL interfaces and Knowledge Graphs for legacy enterprise data.
+                </li>
+                <li>
+                  <strong>Production RAG:</strong> Engineering ETL pipelines with verified citation mapping for "Source of Truth" reliability.
+                </li>
+              </ul>
+            </div>
           }
         />
       </section>
