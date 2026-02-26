@@ -75,7 +75,6 @@ export const blogData = [
             <li>Don't forget to star the project on GitHub if you support our operational goals!</li>
           </ul>
         `,
-      affiliateLink: 'https://affiliate.link/voltunderground',
     },
     {
       slug: 'hi-pub',
@@ -114,9 +113,8 @@ export const blogData = [
           </ul>
   
           <h2>Getting Started</h2>
-          <p>Hi, Pub! is accessible as a deployed app on Render. Visit <a href="https://render.com" target="_blank" rel="noopener noreferrer">Hi, Pub! on Render</a> to see how it can add value to your operational strategies!</p>
+          <p>Hi, Pub! is accessible as a deployed app on Render. Visit <a href="https://hipub.onrender.com/" target="_blank" rel="noopener noreferrer">Hi, Pub! on Render</a> to see how it can add value to your operational strategies!</p>
         `,
-      affiliateLink: 'https://affiliate.link/hipub',
     },
     {
       slug: 'color-racer',
@@ -174,8 +172,7 @@ export const blogData = [
           <h3>Conclusion</h3>
           <p>Color Racer is not just a game but a tool to improve operational capabilities, focusing on speed, accuracy, and team coordination. Ideal for operations analysts looking to sharpen their skills.</p>
 
-          <p><strong>Use Now:</strong> Begin your operational training with <a href="your-deployed-link-here">Color Racer - Play Now</a>.</p>
+          <p><strong>Use Now:</strong> Begin your operational training with <a href="https://mr-mikeross.github.io/Color-Racer/">Color Racer - Play Now</a>.</p>
         `,
-      affiliateLink: 'https://affiliate.link/colorracer',
     },
   ];

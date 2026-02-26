@@ -52,6 +52,9 @@ export default function AboutMe() {
                 <li>
                   <strong>Production RAG:</strong> Engineering ETL pipelines with verified citation mapping for "Source of Truth" reliability.
                 </li>
+                <li>
+                  <strong>Cognitive Systems & Decision Frameworks:</strong> Designing structured thinking tools that reduce mental friction, sharpen judgment, and translate complexity into clear execution.
+                </li>
               </ul>
             </div>
           }
