@@ -20,45 +20,45 @@ export default function Resources() {
   const prompts = [
     {
       name: 'Operator Starter Pack',
-      description:
-        'For when you feel scattered, overwhelmed, or mentally noisy.\n\nIncludes prompts to:\n• regain clarity in minutes\n• compress chaos into 1–3 priorities\n• reset your nervous system + state\n• stop overthinking loops\n• re-enter execution mode',
-      gumroadUrl: 'https://gumroad.com/your-product-url-starter', // Replace
+      description: 'For when you feel scattered, overwhelmed, or mentally noisy.\n\nIncludes prompts to:\n• regain clarity in minutes\n• compress chaos into 1–3 priorities\n• reset your nervous system + state\n• stop overthinking loops\n• re-enter execution mode',
+      gumroadUrl: 'https://magri0.gumroad.com/l/operator-starter-pack',
       price: '$9.99',
+      comingSoon: false, // LIVE
     },
     {
       name: 'Clarity & Momentum System',
-      description:
-        'Your weekly operating system for clarity and momentum.\n\nIncludes:\n• weekly reset + recalibration ritual\n• priority ranking + constraint design\n• friction + energy leak detection\n• next-best-action extractor\n• reflection loops that drive behavioral change',
-      gumroadUrl: 'https://gumroad.com/your-product-url-clarity', // Replace
+      description: 'Your weekly operating system for clarity and momentum.\n\nIncludes:\n• weekly reset + recalibration ritual\n• priority ranking + constraint design\n• friction + energy leak detection\n• next-best-action extractor\n• reflection loops that drive behavioral change',
+      gumroadUrl: 'https://gumroad.com/your-product-url-clarity',
       price: '$19.99',
+      comingSoon: true,
     },
     {
       name: 'Creator Distillation Pack',
-      description:
-        'Turn raw thoughts into sharp, resonant content.\n\nIncludes prompts for:\n• Threads / X punchlines & insight posts\n• poetic → structured distillation\n• longform → high-impact shortform\n• emotional truth → clarity-driven messaging\n• positioning depth without oversharing',
-      gumroadUrl: 'https://gumroad.com/your-product-url-creator', // Replace
+      description: 'Turn raw thoughts into sharp, resonant content.\n\nIncludes prompts for:\n• Threads / X punchlines & insight posts\n• poetic → structured distillation\n• longform → high-impact shortform\n• emotional truth → clarity-driven messaging\n• positioning depth without oversharing',
+      gumroadUrl: 'https://gumroad.com/your-product-url-creator',
       price: '$24.99',
+      comingSoon: true,
     },
     {
       name: 'Mirror + Distill Kit',
-      description:
-        'Deep introspection — without drifting into rumination.\n\nIncludes prompts to:\n• interpret emotional patterns clearly\n• identify recurring loops + attachments\n• extract lessons without self-judgment\n• stabilize perspective during transitions\n• translate experience into direction',
-      gumroadUrl: 'https://gumroad.com/your-product-url-mirror', // Replace
+      description: 'Deep introspection — without drifting into rumination.\n\nIncludes prompts to:\n• interpret emotional patterns clearly\n• identify recurring loops + attachments\n• extract lessons without self-judgment\n• stabilize perspective during transitions\n• translate experience into direction',
+      gumroadUrl: 'https://gumroad.com/your-product-url-mirror',
       price: '$29.99',
+      comingSoon: true,
     },
     {
       name: 'Decision Mastery Framework',
-      description:
-        'For high-stakes decisions where clarity matters.\n\nIncludes prompts to:\n• evaluate tradeoffs without distortion\n• run second- and third-order consequence analysis\n• separate intuition from fear\n• detect bias, projection, and emotional noise\n• convert uncertainty into clean judgment\n\nBuilt for founders, operators, and builders making real moves.',
-      gumroadUrl: 'https://gumroad.com/your-product-url-decision', // Replace
+      description: 'For high-stakes decisions where clarity matters.\n\nIncludes prompts to:\n• evaluate tradeoffs without distortion\n• run second- and third-order consequence analysis\n• separate intuition from fear\n• detect bias, projection, and emotional noise\n• convert uncertainty into clean judgment\n\nBuilt for founders, operators, and builders making real moves.',
+      gumroadUrl: 'https://gumroad.com/your-product-url-decision',
       price: '$34.99',
+      comingSoon: true,
     },
     {
       name: 'Executive Operator Bundle',
-      description:
-        'Everything above — built to reduce friction and increase alignment.\n\nIncludes:\n• Operator Starter Pack\n• Clarity & Momentum System\n• Creator Distillation Pack\n• Mirror + Distill Kit\n• Decision Mastery Framework\n\nPlus: lifetime updates as new templates drop.',
-      gumroadUrl: 'https://gumroad.com/your-product-url-bundle', // Replace
+      description: 'Everything above — built to reduce friction and increase alignment.\n\nIncludes:\n• Operator Starter Pack\n• Clarity & Momentum System\n• Creator Distillation Pack\n• Mirror + Distill Kit\n• Decision Mastery Framework\n\nPlus: lifetime updates as new templates drop.',
+      gumroadUrl: 'https://gumroad.com/your-product-url-bundle',
       price: '$59.99',
+      comingSoon: true,
     },
   ];
 
@@ -112,7 +112,7 @@ export default function Resources() {
                     className={styles.learnMore}
                     data-gumroad-single-product="true"
                   >
-                    Get Access (coming soon)
+                    {prompt.comingSoon ? 'Get Access (coming soon)' : 'Get Access'}
                   </a>
                 </div>
               </div>
