@@ -28,9 +28,9 @@ export default function Resources() {
     {
       name: 'Clarity & Momentum System',
       description: 'Your weekly operating system for clarity and momentum.\n\nIncludes:\n• weekly reset + recalibration ritual\n• priority ranking + constraint design\n• friction + energy leak detection\n• next-best-action extractor\n• reflection loops that drive behavioral change',
-      gumroadUrl: 'https://gumroad.com/your-product-url-clarity',
+      gumroadUrl: 'https://magri0.gumroad.com/l/clarity-momentum-system',
       price: '$19.99',
-      comingSoon: true,
+      comingSoon: false, // LIVE
     },
     {
       name: 'Creator Distillation Pack',
