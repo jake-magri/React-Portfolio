@@ -10,12 +10,18 @@ export async function getStaticProps() {
 const HomePage = () => (
   <>
     <Head>
-      <title>About Me - Learn More About Me</title>
-      <meta name="description" content="Welcome to my personal website. Learn more about my journey, skills, and achievements." />
+      <title>Jake Magri | AI Solutions Consultant</title>
+      <meta
+        name="description"
+        content="AI solutions consultant helping healthcare and operations teams design practical systems for workflow automation, document intelligence, reporting, and internal knowledge."
+      />
       <meta name="google-site-verification" content="iLv9k0dPIQu_OGNySDAki1qfSN1UeKCKdAzWmzOTlcE" />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="About Me - Learn More About Me" />
-      <meta property="og:description" content="Welcome to my personal website. Learn more about my journey, skills, and achievements." />
+      <meta property="og:title" content="Jake Magri | AI Solutions Consultant" />
+      <meta
+        property="og:description"
+        content="Workflow automation, document intelligence, reporting systems, and practical AI solution design for healthcare and operations teams."
+      />
     </Head>
     <AboutMe />
   </>

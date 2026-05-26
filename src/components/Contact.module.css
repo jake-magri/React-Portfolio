@@ -17,6 +17,8 @@
   font-family: "Tenor Sans", sans-serif;
   font-weight: 400;
   font-size: 48px;
+  text-align: center;
+  max-width: 900px;
 }
 
 .contactHeaderP {
@@ -25,6 +27,19 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-size: 18px;
+  text-align: center;
+  max-width: 760px;
+}
+
+.contactSubcopy {
+  color: #333333;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 680px;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .sliding-text {
@@ -95,7 +110,7 @@
 
 .button button {
   padding: 10px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   width: 100%;

@@ -55,35 +55,35 @@ export default function Resume() {
           text={
             <div className={styles['resume-content']}>
               <p className={`${styles['resume-header-text']} text-lg mb-6`}>
-                <strong>Full-Stack Capability. AI-Driven Results.</strong> I don't just build "wrappers." I architect full-lifecycle solutions. Whether it’s migrating from managed APIs to custom LLM orchestration for better token efficiency or engineering high-scale data pipelines in AWS, I focus on the technical maturity required for SOC2 and HIPAA-compliant environments.
+                <strong>AI Solutions, Workflow Automation, and Product Systems.</strong> My background combines healthcare operations, applied AI, enterprise delivery, and technical implementation. I focus on turning workflow challenges into practical AI systems across document intelligence, retrieval, reporting, and operational automation.
               </p>
 
             <div className={styles['tech-stack-grid']}>
               {/* AI & Machine Learning */}
               <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">AI & LLM Orchestration</h3>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">Applied AI Systems</h3>
                 <div className={styles['skill-pill-container']}>
-                  {['RAG', 'Agentic Workflows', 'OpenAI API', 'Vector Databases', 'Knowledge Graphs', 'NLP', 'Semantic Modeling', 'Prompt Engineering'].map((skill) => (
+                  {['OCR', 'Document Intelligence', 'RAG', 'Vector Retrieval', 'NL-to-SQL', 'Conversational AI', 'AI Evaluation', 'Workflow Orchestration'].map((skill) => (
                     <span key={skill} className={styles['skill-pill']}>{skill}</span>
                   ))}
                 </div>
               </div>
               
-              {/* Systems & Architecture */}
+              {/* Business & Product Systems */}
               <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">Systems & Architecture</h3>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">Business & Product Systems</h3>
                 <div className={styles['skill-pill-container']}>
-                  {['Solution Architecture', 'Systems Design', 'API Development', 'Microservices', 'ETL Pipelines', 'Data Warehousing'].map((skill) => (
+                  {['Workflow Discovery', 'Requirements Gathering', 'Solution Design', 'Stakeholder Communication', 'UAT', 'Business Process Mapping'].map((skill) => (
                     <span key={skill} className={styles['skill-pill']}>{skill}</span>
                   ))}
                 </div>
               </div>
                 
-              {/* Engineering & Cloud */}
+              {/* Healthcare SaaS & Delivery */}
               <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">Engineering & Cloud</h3>
+                <h3 className="font-bold text-blue-400 mb-3 text-center">Healthcare SaaS & Delivery</h3>
                 <div className={styles['skill-pill-container']}>
-                  {['Python', 'C#', '.NET Framework', 'MVVM', 'ASP.NET', 'AWS (Lambda/S3/EC2)', 'SQL Server', 'React/Next.js'].map((skill) => (
+                  {['Revenue Cycle Management', 'Medical Billing', 'HIPAA/SOC2', 'AWS Lambda', 'SQL/SSAS', 'Jira/Confluence', 'Python', 'C#'].map((skill) => (
                     <span key={skill} className={styles['skill-pill']}>{skill}</span>
                   ))}
                 </div>

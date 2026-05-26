@@ -1,47 +1,57 @@
-import Image from 'next/image'; // Import for optimized image loading
-import styles from './ProjectCard.module.css'; // Import the CSS module
+import Image from 'next/image';
+import styles from './ProjectCard.module.css';
 
-// Define ProjectCard component
 const ProjectCard = ({
-  title = "Project Name",
-  image = "/api/placeholder/400/300",
-  deployedUrl = "#",
-  githubUrl = "#"
+  title = 'Case Study',
+  image = '/api/placeholder/400/300',
+  summary = '',
+  outcome = '',
+  stack = '',
+  deployedUrl = '#',
+  githubUrl = '#',
+  primaryLabel = 'View Project',
+  secondaryLabel = 'View Repository',
 }) => {
-  // Returns JSX with props in the containers
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectCard__imageContainer}>
         <Image
           src={image}
           alt={title}
-          width={400} // Set width to match the intended size
-          height={300} // Set height to match the intended size
+          width={400}
+          height={300}
           className={styles.projectCard__image}
         />
       </div>
 
       <div className={styles.projectCard__content}>
         <h3 className={styles.projectCard__title}>{title}</h3>
+        {summary && <p className={styles.projectCard__summary}>{summary}</p>}
+        {outcome && <p className={styles.projectCard__outcome}><strong>Outcome:</strong> {outcome}</p>}
+        {stack && <p className={styles.projectCard__stack}><strong>Stack:</strong> {stack}</p>}
 
         <div className={styles.projectCard__links}>
-          <a
-            href={deployedUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.projectCard__link} ${styles.projectCard__link_primary}`}
-          >
-            View Deployed Application
-          </a>
+          {deployedUrl && deployedUrl !== '#' && (
+            <a
+              href={deployedUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.projectCard__link} ${styles.projectCard__link_primary}`}
+            >
+              {primaryLabel}
+            </a>
+          )}
 
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.projectCard__link} ${styles.projectCard__link_secondary}`}
-          >
-            View GitHub Repository
-          </a>
+          {githubUrl && githubUrl !== '#' && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.projectCard__link} ${styles.projectCard__link_secondary}`}
+            >
+              {secondaryLabel}
+            </a>
+          )}
         </div>
       </div>
     </div>

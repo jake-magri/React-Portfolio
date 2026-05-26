@@ -1,106 +1,106 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image'; // Direct import for Next.js Image
 import ProjectCard from './ProjectCard';
-import styles from './Projects.module.css'; // Import CSS Module for scoped styling
+import styles from './Projects.module.css';
 import dynamic from 'next/dynamic';
 
-// Lazy load the sliding text component
 const SlidingText = dynamic(() => import('../SlidingText'), {
-  ssr: false, // Disable SSR for the sliding effect
-  loading: () => <p>Loading...</p>, // Show loading text while the component is being loaded
+  ssr: false,
+  loading: () => <p>Loading...</p>,
 });
+
+const caseStudies = [
+  {
+    title: 'Radiology Billing OCR Workflow',
+    image: '/images/radiology_ocr_workflow.png',
+    summary: 'Designed and demonstrated document-intelligence workflows that convert unstructured radiology billing documents into structured demographic and charge-data extraction pipelines.',
+    outcome: 'Supported enterprise client workflows and contributed to a $60k enterprise solution sale.',
+    stack: 'OCR, OpenAI APIs, AWS Lambda, healthcare workflow design, structured extraction',
+  },
+  {
+    title: 'Enterprise Knowledge Retrieval System',
+    image: '/images/enterprise_knowledge_retrieval.png',
+    summary: 'Built retrieval-augmented support experiences over long-lived technical documentation so support, operations, and product teams could retrieve source-grounded answers faster.',
+    outcome: 'Turned 25+ years of internal documentation into citation-grounded conversational support workflows.',
+    stack: 'RAG, vector retrieval, OpenAI, documentation pipelines, citation grounding',
+  },
+  {
+    title: 'Natural-Language Reporting Assistant',
+    image: '/images/natural_language_reporting.png',
+    summary: 'Mapped business terminology, reporting intent, and legacy healthcare data structures into natural-language reporting and retrieval workflows.',
+    outcome: 'Supported reporting concepts over 20+ years of RCM transactional data within HIPAA/SOC2-aligned environments.',
+    stack: 'NL-to-SQL concepts, SSAS, semantic layer design, RCM reporting, stakeholder translation',
+  },
+  {
+    title: 'AI Receptionist Workflow Prototype',
+    image: '/images/ai_receptionist_workflow.png',
+    summary: 'Designed a small-business automation prototype for handling calls, appointment booking, and workflow routing through conversational AI.',
+    outcome: 'Demonstrates how routine customer interactions can be captured, routed, and converted into structured business actions.',
+    stack: 'Twilio, OpenAI, LangChain, Google Calendar API, WebSockets',
+  },
+  {
+    title: 'Enterprise Release Readiness',
+    image: '/images/enterprise_release_readiness.png',
+    summary: 'Coordinated software release readiness across engineering teams using structured reporting, dependency tracking, and stakeholder communication workflows.',
+    outcome: 'Supported 98% on-time release delivery across enterprise application teams.',
+    stack: 'Jira, ServiceNow, Confluence, GitLab, AWS, release governance',
+  },
+  {
+    title: 'Volt Underground Product Build',
+    image: '/images/volt-underground.png',
+    summary: 'Full-stack event commerce platform built as a product-oriented software project for local underground electronic music events.',
+    outcome: 'Shows full-stack product execution, collaboration, and user-facing application delivery.',
+    stack: 'React, Node.js, Apollo GraphQL, MongoDB',
+    deployedUrl: 'https://volt-underground.onrender.com/',
+    githubUrl: 'https://github.com/parsamh8/Volt-Underground',
+  },
+];
 
 export default function Projects() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Ensures that we are on the client side before rendering the images
     setIsClient(true);
   }, []);
 
   if (!isClient) {
-    return null; // Avoid rendering the page until the client-side is ready
+    return null;
   }
 
   return (
     <div className="mt-12 mx-4 sm:mx-6 mb-8">
       <SlidingText
         direction="right"
-        text={<h1 className={styles.portfolioHeader}>Portfolio</h1>}
+        text={<h1 className={styles.portfolioHeader}>Case Studies</h1>}
       />
       <SlidingText
         direction="right"
         text={
           <p className={`${styles.portfolioHeaderP} text-lg`}>
-            A curated selection of my latest work, where creativity meets innovation.
+            Selected work across AI workflow automation, healthcare operations, document intelligence, retrieval systems, and product delivery.
           </p>
         }
       />
 
-      {/* Add Project Container below header information */}
-      <div className="pb-12 portfolio-container">
-        <div className="container">
-        <SlidingText
-        direction="left"
-        text={
-          <div className="row gx-4">
-            <div className="col-sm">
+      <div className={styles.caseStudyGrid}>
+        {caseStudies.map((item) => (
+          <SlidingText
+            key={item.title}
+            direction="left"
+            text={
               <ProjectCard
-                title="Volt Underground"
-                image="/images/volt-underground.png"
-                deployedUrl="https://volt-underground.onrender.com/"
-                githubUrl="https://github.com/parsamh8/Volt-Underground"
+                title={item.title}
+                image={item.image}
+                summary={item.summary}
+                outcome={item.outcome}
+                stack={item.stack}
+                deployedUrl={item.deployedUrl}
+                githubUrl={item.githubUrl}
+                primaryLabel="View Live Project"
+                secondaryLabel="View Repository"
               />
-            </div>
-            <div className="col-sm">
-              <ProjectCard
-                title="Hi, Pub!"
-                image="/images/hi-pub.png"
-                deployedUrl="https://hipub.onrender.com/"
-                githubUrl="https://github.com/jake-magri/Hipub"
-              />
-            </div>
-            <div className="col-sm">
-              <ProjectCard
-                title="Color Racer"
-                image="/images/color-racer.jpg"
-                deployedUrl="https://mr-mikeross.github.io/Color-Racer/"
-                githubUrl="https://github.com/Mr-MikeRoss/Color-Racer"
-              />
-            </div>
-          </div>
-        }/>
-        <SlidingText
-        direction="right"
-        text={
-          <div className="row gx-4">
-            <div className="col-sm">
-              <ProjectCard
-                title="Book Search Engine"
-                image="/images/book-search-engine.png"
-                deployedUrl="https://book-search-engine-ydkm.onrender.com/"
-                githubUrl="https://github.com/jake-magri/Book-Search-Engine"
-              />
-            </div>
-            <div className="col-sm">
-              <ProjectCard
-                title="Employee Tracker CLI"
-                image="/images/Employee-Tracker.png"
-                deployedUrl="https://github.com/jake-magri/Employee-Tracker"
-                githubUrl="https://github.com/jake-magri/Employee-Tracker"
-              />
-            </div>
-            <div className="col-sm">
-              <ProjectCard
-                title="Weather Dashboard"
-                image="/images/weather-dashboard.png"
-                deployedUrl="https://weather-dashboard-jm.onrender.com/"
-                githubUrl="https://github.com/jake-magri/Weather-Dashboard"
-              />
-            </div>
-          </div>
-        }/>
-        </div>
+            }
+          />
+        ))}
       </div>
     </div>
   );

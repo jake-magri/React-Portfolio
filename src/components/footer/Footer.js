@@ -3,20 +3,18 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      {/* A paragraph element with contact links in the footer component */}
       <p>
         <a href='https://github.com/jake-magri'
           target="_blank"
           rel="noopener noreferrer">
-          GitHub: jake-magri
+          GitHub
         </a> | <a href='https://www.linkedin.com/in/jakemagri/'
           target="_blank"
           rel="noopener noreferrer">
-          LinkedIn: Jake Magri
-        </a> | <a href='https://stackoverflow.com/users/27334719/jake'
-          target="_blank"
+          LinkedIn
+        </a> | <a href='https://jakemagri.dev/contact'
           rel="noopener noreferrer">
-          Stack Overflow: Jake
+          Contact
         </a>
       </p>
     </footer>

@@ -1,86 +1,59 @@
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import SlidingText from './SlidingText';
 import styles from './AboutMe.module.css';
-
-// Dynamically import the Image component to enable lazy loading
-const LazyImage = dynamic(() => import('next/image'), { ssr: false });
 
 export default function AboutMe() {
   return (
     <div className={styles.container}>
-  <div className={styles['about-cards']}>
-    {/* About section */}
-    <div className={styles['about-text-card']}>
-      <SlidingText
-        direction="left"
-        text={<h1 className={styles['about-header']}>Architecting Agentic Systems & AI Strategy for the Enterprise</h1>}
-      />
-      <section className={styles['about-summary']}>
-        <SlidingText
-          direction="left"
-          text={
-            <p className={styles['about-p']}>
-              Hi, I'm Jake. I'm a Software Engineer and AI Specialist focused on bridging the gap between complex business logic and production-grade Agentic systems.
-            </p>
-          }
-        />
-        <SlidingText
-          direction="left"
-          text={
-            <p className={styles['about-p']}>
-              Currently, I report to the CEO and Chief Software Engineer at ImagineSoftware, where I lead AI strategy for a multi-eight-figure ARR medical billing platform. My work is centered on building "High-Depth" AI: systems that don't just chat, but perform—automating end-to-end RCM workflows, extracting structured data from unstructured medical documents, and pioneering hallucination-resistant RAG architectures.
-            </p>
-          }
-        />
-        <SlidingText
-          direction="left"
-          text={
-            <div className={styles['about-specialization']}>
-              <p className={styles['about-p']}>
-                My background is a blend of high-stakes discipline and technical execution. From serving as a Combat Medic in the Army National Guard to orchestrating mission-critical software releases at Ally Financial, I've learned that the most successful technology solutions are those that prioritize reliability, data integrity, and measurable commercial impact.
-              </p>
-      
-              <h3 className={styles['specialization-header']}>I specialize in:</h3>
-      
-              <ul className={styles['specialization-list']}>
-                <li>
-                  <strong>Agentic Workflows:</strong> Orchestrating LLMs to automate complex, multi-step business processes.
-                </li>
-                <li>
-                  <strong>Semantic Data Layers:</strong> Building NL-to-SQL interfaces and Knowledge Graphs for legacy enterprise data.
-                </li>
-                <li>
-                  <strong>Production RAG:</strong> Engineering ETL pipelines with verified citation mapping for "Source of Truth" reliability.
-                </li>
-                <li>
-                  <strong>Cognitive Systems & Decision Frameworks:</strong> Designing structured thinking tools that reduce mental friction, sharpen judgment, and translate complexity into clear execution.
-                </li>
-              </ul>
-            </div>
-          }
-        />
-      </section>
-    </div>
+      <div className={styles['about-cards']}>
+        <div className={styles['about-text-card']}>
+          <SlidingText
+            direction="left"
+            text={
+              <>
+                <p className={styles.eyebrow}>
+                  AI Solutions Consultant • Workflow Automation • Product & Systems Design
+                </p>
+                <h1 className={styles['about-header']}>
+                  Practical AI systems for document-heavy, workflow-heavy teams.
+                </h1>
+              </>
+            }
+          />
 
-    {/* Image with two divs for future picture frame styling */}
-    <div className={styles['outer-image-card']}>
-      <SlidingText
-        direction="bottom"
-        text={
-          <div className={styles['inner-image-box']}>
-            <LazyImage
-              className={styles['about-image']}
-              src="/images/6.png"
-              alt="A professional headshot of Jake Magri"
-              width={300}
-              height={500}
-              priority
-            />
-          </div>
-        }
-      />
+          <section className={styles['about-summary']}>
+            <p className={styles['about-p']}>
+              I help healthcare and operations teams turn manual processes into AI-enabled workflows that are easier to run, easier to explain, and easier to improve.
+            </p>
+
+            <p className={styles['about-p']}>
+              My work sits between business requirements, product design, and technical delivery. I focus on the parts that usually make AI projects succeed or fail: workflow discovery, data and document flow, stakeholder alignment, solution design, and implementation handoff.
+            </p>
+
+            <p className={styles['about-p']}>
+              Recent work includes OCR pipelines for radiology billing, RAG systems over decades of internal documentation, conversational reporting concepts over healthcare data, and AI-assisted workflow automation inside revenue cycle operations.
+            </p>
+
+            <div className={styles.ctaRow}>
+              <Link href="/portfolio" className={styles.primaryCta}>
+                View Case Studies
+              </Link>
+              <Link href="/contact" className={styles.secondaryCta}>
+                Discuss a Workflow
+              </Link>
+            </div>
+
+            <h3 className={styles['specialization-header']}>Core Services</h3>
+
+            <ul className={styles['specialization-list']}>
+              <li><strong>AI Workflow Automation</strong> — identify manual steps, design the target workflow, and define the path to implementation.</li>
+              <li><strong>Document Intelligence</strong> — turn PDFs, forms, notes, and billing documents into structured data workflows.</li>
+              <li><strong>Knowledge & Reporting Systems</strong> — make internal documentation and business data easier to search, retrieve, and act on.</li>
+              <li><strong>Product & Systems Design</strong> — translate operational pain into requirements, demos, acceptance criteria, and delivery plans.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   );
 }

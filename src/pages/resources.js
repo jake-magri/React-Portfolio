@@ -10,11 +10,11 @@ export async function getStaticProps() {
 const ResourcesPage = () => (
   <>
     <Head>
-      <title>Resources - Helpful Tools and Guides</title>
-      <meta name="description" content="Explore a collection of helpful resources, guides, and tools for developers." />
+      <title>Resources | Jake Magri</title>
+      <meta name="description" content="Prompt systems and practical tools for operators, builders, creators, and decision-makers." />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Resources - Helpful Tools and Guides" />
-      <meta property="og:description" content="Explore a collection of helpful resources, guides, and tools for developers." />
+      <meta property="og:title" content="Resources | Jake Magri" />
+      <meta property="og:description" content="Prompt systems for planning, prioritization, decision-making, and execution." />
     </Head>
     <Resources />
   </>

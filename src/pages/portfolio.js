@@ -10,11 +10,17 @@ export async function getStaticProps() {
 const PortfolioPage = () => (
   <>
     <Head>
-      <title>My Portfolio - Showcase of My Work</title>
-      <meta name="description" content="Check out my portfolio to see the projects and applications I have worked on." />
+      <title>Case Studies | Jake Magri</title>
+      <meta
+        name="description"
+        content="Case studies in AI workflow automation, document intelligence, retrieval systems, reporting assistants, and product delivery."
+      />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="My Portfolio - Showcase of My Work" />
-      <meta property="og:description" content="Check out my portfolio to see the projects and applications I have worked on." />
+      <meta property="og:title" content="Case Studies | Jake Magri" />
+      <meta
+        property="og:description"
+        content="Selected AI systems, workflow automation, healthcare operations, and product delivery work."
+      />
     </Head>
     <Projects />
   </>

@@ -4,7 +4,6 @@ import SlidingText from './SlidingText';
 
 export default function Resources() {
   useEffect(() => {
-    // Load Gumroad embed script
     const script = document.createElement('script');
     script.src = 'https://gumroad.com/js/gumroad.js';
     script.async = true;
@@ -20,42 +19,42 @@ export default function Resources() {
   const prompts = [
     {
       name: 'Operator Starter Pack',
-      description: 'For when you feel scattered, overwhelmed, or mentally noisy.\n\nIncludes prompts to:\n• regain clarity in minutes\n• compress chaos into 1–3 priorities\n• reset your nervous system + state\n• stop overthinking loops\n• re-enter execution mode',
+      description: 'A practical reset system for turning scattered work into a short execution plan.\n\nIncludes prompts to:\n• identify the real priority\n• reduce mental noise\n• convert open loops into next actions\n• choose 1–3 moves for the day\n• restart execution without overplanning',
       gumroadUrl: 'https://magri0.gumroad.com/l/operator-starter-pack',
       price: '$9.99',
-      comingSoon: false, // LIVE
+      comingSoon: false,
     },
     {
       name: 'Clarity & Momentum System',
-      description: 'Your weekly operating system for clarity and momentum.\n\nIncludes:\n• weekly reset + recalibration ritual\n• priority ranking + constraint design\n• friction + energy leak detection\n• next-best-action extractor\n• reflection loops that drive behavioral change',
+      description: 'A weekly planning system for staying aligned without building an overcomplicated productivity process.\n\nIncludes:\n• weekly review and reset\n• priority ranking\n• constraint and friction mapping\n• next-action planning\n• simple reflection loops',
       gumroadUrl: 'https://magri0.gumroad.com/l/clarity-momentum-system',
       price: '$19.99',
-      comingSoon: false, // LIVE
+      comingSoon: false,
     },
     {
       name: 'Creator Distillation Pack',
-      description: 'Turn raw thoughts into sharp, resonant content.\n\nIncludes prompts for:\n• Threads / X punchlines & insight posts\n• poetic → structured distillation\n• longform → high-impact shortform\n• emotional truth → clarity-driven messaging\n• positioning depth without oversharing',
+      description: 'A prompt system for turning raw ideas into clear posts, threads, and short-form insights.\n\nIncludes prompts for:\n• hooks and punchlines\n• longform to shortform\n• idea distillation\n• structured messaging\n• clear positioning without overexplaining',
       gumroadUrl: 'https://gumroad.com/your-product-url-creator',
       price: '$24.99',
       comingSoon: true,
     },
     {
-      name: 'Mirror + Distill Kit',
-      description: 'Deep introspection — without drifting into rumination.\n\nIncludes prompts to:\n• interpret emotional patterns clearly\n• identify recurring loops + attachments\n• extract lessons without self-judgment\n• stabilize perspective during transitions\n• translate experience into direction',
+      name: 'Reflection & Decision Kit',
+      description: 'A lightweight framework for making sense of recurring patterns and turning them into cleaner decisions.\n\nIncludes prompts to:\n• identify repeated loops\n• separate signal from noise\n• clarify tradeoffs\n• convert reflection into action\n• reduce circular thinking',
       gumroadUrl: 'https://gumroad.com/your-product-url-mirror',
       price: '$29.99',
       comingSoon: true,
     },
     {
       name: 'Decision Mastery Framework',
-      description: 'For high-stakes decisions where clarity matters.\n\nIncludes prompts to:\n• evaluate tradeoffs without distortion\n• run second- and third-order consequence analysis\n• separate intuition from fear\n• detect bias, projection, and emotional noise\n• convert uncertainty into clean judgment\n\nBuilt for founders, operators, and builders making real moves.',
+      description: 'A decision-support prompt system for evaluating options, tradeoffs, and second-order consequences.\n\nIncludes prompts to:\n• compare options clearly\n• identify risks and constraints\n• test assumptions\n• separate emotion from evidence\n• convert uncertainty into a next move',
       gumroadUrl: 'https://gumroad.com/your-product-url-decision',
       price: '$34.99',
       comingSoon: true,
     },
     {
       name: 'Executive Operator Bundle',
-      description: 'Everything above — built to reduce friction and increase alignment.\n\nIncludes:\n• Operator Starter Pack\n• Clarity & Momentum System\n• Creator Distillation Pack\n• Mirror + Distill Kit\n• Decision Mastery Framework\n\nPlus: lifetime updates as new templates drop.',
+      description: 'A complete prompt bundle for planning, prioritization, decision support, and content distillation.\n\nIncludes:\n• Operator Starter Pack\n• Clarity & Momentum System\n• Creator Distillation Pack\n• Reflection & Decision Kit\n• Decision Mastery Framework',
       gumroadUrl: 'https://gumroad.com/your-product-url-bundle',
       price: '$59.99',
       comingSoon: true,
@@ -64,13 +63,12 @@ export default function Resources() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 pb-32 mt-12 sm:mx-6">
-      {/* Prompts Section */}
       <SlidingText
         direction="top"
         text={
           <>
             <h2 className={`${styles.tenorSans} text-[48px] font-normal text-center text-gray-800 mb-6`}>
-              Prompt Systems for Clarity & Execution
+              Prompt Systems for Operators, Builders, and Creators
             </h2>
           </>
         }
@@ -81,8 +79,7 @@ export default function Resources() {
         text={
           <>
             <p className={`${styles.interTight} text-[18px] font-light text-center text-gray-600 mb-8`}>
-              These aren’t random “prompt bundles.” They’re reusable frameworks to remove friction,
-              sharpen priorities, and move with consistency — without burning out.
+              Practical prompt packs for planning, prioritizing, decision-making, and turning raw ideas into clear action.
             </p>
           </>
         }

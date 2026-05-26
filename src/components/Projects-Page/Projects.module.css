@@ -3,13 +3,19 @@
   background-color: #e5e7eb;
 }
 
+.caseStudyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto 4rem;
+  max-width: 1180px;
+  justify-items: center;
+}
+
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Responsive columns */
-  gap: 1.5rem; /* Space between cards */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -19,14 +25,29 @@
   font-family: "Tenor Sans", sans-serif;
   font-weight: 400;
   font-size: 48px;
+  color: #1f1f1f;
 }
 
 .portfolioHeaderP {
   display: flex;
   justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
   color: #333333;
   font-family: "Inter Tight", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .portfolioHeader {
+    font-size: 38px;
+  }
+
+  .caseStudyGrid {
+    grid-template-columns: 1fr;
+  }
 }

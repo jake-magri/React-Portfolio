@@ -1,23 +1,26 @@
 import Contact from '../components/Contact';
 import Head from 'next/head';
 
-// If you need to fetch data before the page is rendered, use getStaticProps
 export async function getStaticProps() {
-  // Fetch any required static data here, if needed
-  // For now, we return an empty object since there's no dynamic data
   return {
-    props: {}, // Can be used to pass data to the page
+    props: {},
   };
 }
 
 const ContactPage = () => (
   <>
     <Head>
-      <title>Contact Me - Get in Touch</title>
-      <meta name="description" content="Contact me for inquiries, project collaborations, or questions. I'm here to help!" />
+      <title>Contact | Jake Magri</title>
+      <meta
+        name="description"
+        content="Contact Jake Magri to discuss AI workflow automation, document intelligence, reporting systems, internal knowledge tools, and product systems design."
+      />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Contact Me - Get in Touch" />
-      <meta property="og:description" content="Contact me for inquiries, project collaborations, or questions. I'm here to help!" />
+      <meta property="og:title" content="Contact | Jake Magri" />
+      <meta
+        property="og:description"
+        content="Discuss a workflow, reporting process, document problem, or AI system you want to improve."
+      />
     </Head>
     <Contact />
   </>

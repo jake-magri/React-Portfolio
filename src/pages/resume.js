@@ -10,11 +10,11 @@ export async function getStaticProps() {
 const ResumePage = () => (
   <>
     <Head>
-      <title>My Resume - Professional Background</title>
-      <meta name="description" content="View my resume to learn about my experience, education, and skills." />
+      <title>Experience | Jake Magri</title>
+      <meta name="description" content="Experience in AI solutions, workflow automation, healthcare SaaS, RCM systems, document intelligence, RAG, and product systems design." />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="My Resume - Professional Background" />
-      <meta property="og:description" content="View my resume to learn about my experience, education, and skills." />
+      <meta property="og:title" content="Experience | Jake Magri" />
+      <meta property="og:description" content="AI solutions, workflow automation, healthcare operations, and technical delivery experience." />
     </Head>
     <Resume />
   </>

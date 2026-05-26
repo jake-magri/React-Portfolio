@@ -101,7 +101,7 @@ const NavTabs = () => {
               onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/portfolio"
             >
-              Portfolio
+              Case Studies
             </Link>
           </li>
           <li className="nav-item">
