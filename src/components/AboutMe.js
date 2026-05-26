@@ -54,22 +54,22 @@ export default function AboutMe() {
             <ul className={styles['specialization-list']}>
               <li>
                 <strong>Workflow Review</strong>
-                Map how work currently moves across people, tools, documents, and handoffs.
+                — Map how work currently moves across people, tools, documents, and handoffs.
               </li>
 
               <li>
                 <strong>Automation Opportunity Assessment</strong>
-                Identify where AI, dashboards, integrations, or process changes can reduce manual work.
+                — Identify where AI, dashboards, integrations, or process changes can reduce manual work.
               </li>
 
               <li>
                 <strong>AI Prototype / Pilot</strong>
-                Build a focused proof of concept for document workflows, reporting assistants, internal tools, or customer-facing automation.
+                — Build a focused proof of concept for document workflows, reporting assistants, internal tools, or customer-facing automation.
               </li>
 
               <li>
                 <strong>Reporting &amp; Knowledge Systems</strong>
-                Improve how teams search documentation, retrieve answers, and access business information.
+                — Improve how teams search documentation, retrieve answers, and access business information.
               </li>
             </ul>
 
