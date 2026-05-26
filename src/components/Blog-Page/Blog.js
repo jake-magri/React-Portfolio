@@ -8,7 +8,7 @@ export default function Blogs() {
     <div className='mt-12 mx-4 sm:mx-6 mb-8'>
       <SlidingText direction="top" text={<h1 className={`${styles.blogHeader} ${styles.slideIn}`}>Project Notes</h1>} />
       <SlidingText direction="fade" text={<p className={`${styles.blogHeader__p} text-lg`}>
-        Notes from earlier software projects, product experiments, and build work.
+        Notes on practical AI systems, document intelligence, retrieval workflows, and natural-language reporting design.
       </p>} />
 
       <div className="container">

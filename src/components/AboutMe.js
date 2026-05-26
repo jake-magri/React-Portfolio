@@ -7,6 +7,7 @@ export default function AboutMe() {
     <div className={styles.container}>
       <div className={styles['about-cards']}>
         <div className={styles['about-text-card']}>
+
           <SlidingText
             direction="left"
             text={
@@ -14,44 +15,66 @@ export default function AboutMe() {
                 <p className={styles.eyebrow}>
                   AI Solutions Consultant • Workflow Automation • Product & Systems Design
                 </p>
+
                 <h1 className={styles['about-header']}>
-                  Practical AI systems for document-heavy, workflow-heavy teams.
+                  Practical AI systems that reduce manual work and make operations easier to run.
                 </h1>
               </>
             }
           />
 
           <section className={styles['about-summary']}>
+
             <p className={styles['about-p']}>
-              I help healthcare and operations teams turn manual processes into AI-enabled workflows that are easier to run, easier to explain, and easier to improve.
+              I help teams find friction inside operational workflows and turn those bottlenecks into practical automation, reporting, and AI-enabled systems.
             </p>
 
             <p className={styles['about-p']}>
-              My work sits between business requirements, product design, and technical delivery. I focus on the parts that usually make AI projects succeed or fail: workflow discovery, data and document flow, stakeholder alignment, solution design, and implementation handoff.
+              My work sits between business requirements, product thinking, and technical delivery — translating operational pain into workflows, prototypes, requirements, and implementation plans teams can actually adopt.
             </p>
 
             <p className={styles['about-p']}>
-              Recent work includes OCR pipelines for radiology billing, RAG systems over decades of internal documentation, conversational reporting concepts over healthcare data, and AI-assisted workflow automation inside revenue cycle operations.
+              Recent work includes document-intelligence workflows for healthcare operations, retrieval systems over long-lived technical knowledge, natural-language reporting concepts, and AI-assisted operational automation.
             </p>
 
             <div className={styles.ctaRow}>
               <Link href="/portfolio" className={styles.primaryCta}>
                 View Case Studies
               </Link>
+
               <Link href="/contact" className={styles.secondaryCta}>
                 Discuss a Workflow
               </Link>
             </div>
 
-            <h3 className={styles['specialization-header']}>Core Services</h3>
+            <h3 className={styles['specialization-header']}>
+              Services
+            </h3>
 
             <ul className={styles['specialization-list']}>
-              <li><strong>AI Workflow Automation</strong> — identify manual steps, design the target workflow, and define the path to implementation.</li>
-              <li><strong>Document Intelligence</strong> — turn PDFs, forms, notes, and billing documents into structured data workflows.</li>
-              <li><strong>Knowledge & Reporting Systems</strong> — make internal documentation and business data easier to search, retrieve, and act on.</li>
-              <li><strong>Product & Systems Design</strong> — translate operational pain into requirements, demos, acceptance criteria, and delivery plans.</li>
+              <li>
+                <strong>Workflow Review</strong>
+                Map how work currently moves across people, tools, documents, and handoffs.
+              </li>
+
+              <li>
+                <strong>Automation Opportunity Assessment</strong>
+                Identify where AI, dashboards, integrations, or process changes can reduce manual work.
+              </li>
+
+              <li>
+                <strong>AI Prototype / Pilot</strong>
+                Build a focused proof of concept for document workflows, reporting assistants, internal tools, or customer-facing automation.
+              </li>
+
+              <li>
+                <strong>Reporting &amp; Knowledge Systems</strong>
+                Improve how teams search documentation, retrieve answers, and access business information.
+              </li>
             </ul>
+
           </section>
+
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
 import dynamic from 'next/dynamic';
@@ -56,16 +55,6 @@ const caseStudies = [
 ];
 
 export default function Projects() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
-
   return (
     <div className="mt-12 mx-4 sm:mx-6 mb-8">
       <SlidingText

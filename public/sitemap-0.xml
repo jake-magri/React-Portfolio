@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://jakemagri.dev/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/blogs/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/contact/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/portfolio/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/resources/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/resume/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/blogs/document-intelligence-workflows/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/blogs/building-trustworthy-retrieval-systems/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://jakemagri.dev/blogs/natural-language-reporting/</loc><lastmod>2026-05-26T20:19:47.138Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/</loc><lastmod>2026-05-26T20:52:37.361Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/blogs/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/contact/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/portfolio/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/resources/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/resume/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/blogs/document-intelligence-workflows/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/blogs/building-trustworthy-retrieval-systems/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://jakemagri.dev/blogs/natural-language-reporting/</loc><lastmod>2026-05-26T20:52:37.362Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
