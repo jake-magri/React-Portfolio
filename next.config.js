@@ -1,6 +1,10 @@
 // next.config.js
-module.exports ={
+const path = require('path');
+
+module.exports = {
   reactStrictMode: true,
+  // Ensure Next.js uses this folder as the output tracing root
+  outputFileTracingRoot: __dirname,
   images: {
     remotePatterns: [
       {
