@@ -84,7 +84,7 @@ export default function BookkeepingWorkflowAutomation() {
               >
                 Book a Workflow Audit
               </a>
-              <a className={styles.secondaryCta} href="#demo">
+              <a className={styles.secondaryCta} href="https://bookkeeperflow.netlify.app/">
                 View Example System
               </a>
             </div>
