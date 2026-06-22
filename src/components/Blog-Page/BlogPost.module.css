@@ -1,20 +1,69 @@
-.back-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #7cbd8c;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    transition: background-color 200ms ease, transform 200ms ease;
-  }
-  
-  .back-button:hover {
-    background-color: #94cfa3;
-    transform: translateY(-0.1rem);
-  }
-  
-  .back-button:active {
-    transform: translateY(0);
-  }
+.pageShell {
+  min-height: 100vh;
+  padding: 5.5rem 1.25rem 7rem;
+  background:
+    radial-gradient(circle at top left, rgba(143, 203, 155, 0.22), transparent 28rem),
+    linear-gradient(180deg, #f7f4ed 0%, #f2efe7 50%, #ffffff 100%);
+  color: #14231d;
+}
+
+.postShell {
+  width: min(880px, 100%);
+  margin: 0 auto;
+  border-radius: 2rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(18, 51, 38, 0.1);
+  box-shadow: 0 20px 54px rgba(18, 51, 38, 0.1);
+}
+
+.backLink {
+  display: inline-flex;
+  margin-bottom: 1.4rem;
+  color: #2e6a50;
+  font-weight: 900;
+}
+
+.postShell h1 {
+  margin: 0 0 1.2rem;
+  font-family: "Tenor Sans", Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #10261c;
+}
+
+.imageContainer {
+  overflow: hidden;
+  border-radius: 1.4rem;
+  margin: 1.4rem 0;
+  background: #10261c;
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.postContent {
+  color: #3d4a44;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.postContent h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #10261c;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.postContent ul {
+  padding-left: 1.2rem;
+}
+
+.postContent li {
+  margin-bottom: 0.45rem;
+}

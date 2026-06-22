@@ -1,52 +1,64 @@
-.aboutContainer {
-  padding: 2rem;
-  background-color: #e5e7eb;
+.pageShell {
+  min-height: 100vh;
+  padding: 5.5rem 1.25rem 7rem;
+  background:
+    radial-gradient(circle at top left, rgba(143, 203, 155, 0.22), transparent 28rem),
+    linear-gradient(180deg, #f7f4ed 0%, #f2efe7 50%, #ffffff 100%);
+  color: #14231d;
+}
+
+.heroBlock,
+.caseStudyGrid {
+  width: min(1120px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroBlock {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.portfolioHeader {
+  margin: 0 auto 1rem;
+  max-width: 860px;
+  font-family: "Tenor Sans", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: #10261c;
+}
+
+.portfolioHeaderP {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4b5a53;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: #2e6a50;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .caseStudyGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto 4rem;
-  max-width: 1180px;
-  justify-items: center;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.portfolioHeader {
-  display: flex;
-  justify-content: center;
-  font-family: "Tenor Sans", sans-serif;
-  font-weight: 400;
-  font-size: 48px;
-  color: #1f1f1f;
-}
-
-.portfolioHeaderP {
-  display: flex;
-  justify-content: center;
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: center;
-  color: #333333;
-  font-family: "Inter Tight", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.6;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.1rem;
+  padding: 2rem 0 1rem;
+  justify-items: stretch;
 }
 
 @media (max-width: 768px) {
-  .portfolioHeader {
-    font-size: 38px;
-  }
-
   .caseStudyGrid {
     grid-template-columns: 1fr;
   }

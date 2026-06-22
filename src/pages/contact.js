@@ -13,13 +13,13 @@ const ContactPage = () => (
       <title>Contact | Jake Magri</title>
       <meta
         name="description"
-        content="Contact Jake Magri to discuss AI workflow automation, document intelligence, reporting systems, internal knowledge tools, and product systems design."
+        content="Contact Jake Magri to discuss bookkeeping workflow automation, finance operations, AI enablement, document collection systems, and practical workflow cleanup."
       />
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Contact | Jake Magri" />
       <meta
         property="og:description"
-        content="Discuss a workflow, reporting process, document problem, or AI system you want to improve."
+        content="Send the workflow, monthly process, document collection problem, or finance operations bottleneck you want to improve."
       />
     </Head>
     <Contact />

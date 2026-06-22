@@ -9,6 +9,15 @@ const SlidingText = dynamic(() => import('../SlidingText'), {
 
 const caseStudies = [
   {
+    title: 'Monthly Client Document Collection System',
+    image: '/images/natural_language_reporting.png',
+    summary: 'A bookkeeping workflow automation concept for reducing monthly client document chasing, missing-item reminders, and manual tracker updates.',
+    outcome: 'Designed as the flagship finance-operations demo for firms that need cleaner intake, upload tracking, reminders, weekly summaries, and close readiness visibility.',
+    stack: 'Power Automate, Zapier, Microsoft/Google Forms, SharePoint/Drive, Excel/Sheets, AI-assisted follow-up drafts',
+    deployedUrl: '/bookkeeping-workflow-automation',
+    primaryLabel: 'View Finance Automation Page',
+  },
+  {
     title: 'Radiology Billing OCR Workflow',
     image: '/images/radiology_ocr_workflow.png',
     summary: 'Designed and demonstrated document-intelligence workflows that convert unstructured radiology billing documents into structured demographic and charge-data extraction pipelines.',
@@ -56,19 +65,26 @@ const caseStudies = [
 
 export default function Projects() {
   return (
-    <div className="mt-12 mx-4 sm:mx-6 mb-8">
-      <SlidingText
-        direction="right"
-        text={<h1 className={styles.portfolioHeader}>Case Studies</h1>}
-      />
-      <SlidingText
-        direction="right"
-        text={
-          <p className={`${styles.portfolioHeaderP} text-lg`}>
-            Selected work across AI workflow automation, healthcare operations, document intelligence, retrieval systems, and product delivery.
-          </p>
-        }
-      />
+    <main className={styles.pageShell}>
+      <section className={styles.heroBlock}>
+        <SlidingText
+          direction="right"
+          text={
+            <>
+              <p className={styles.eyebrow}>Selected systems and workflows</p>
+              <h1 className={styles.portfolioHeader}>Case Studies</h1>
+            </>
+          }
+        />
+        <SlidingText
+          direction="fade"
+          text={
+            <p className={styles.portfolioHeaderP}>
+              Selected work across finance workflow automation, document intelligence, retrieval systems, reporting assistants, and enterprise delivery.
+            </p>
+          }
+        />
+      </section>
 
       <div className={styles.caseStudyGrid}>
         {caseStudies.map((item) => (
@@ -84,13 +100,13 @@ export default function Projects() {
                 stack={item.stack}
                 deployedUrl={item.deployedUrl}
                 githubUrl={item.githubUrl}
-                primaryLabel="View Live Project"
-                secondaryLabel="View Repository"
+                primaryLabel={item.primaryLabel || "View Live Project"}
+                secondaryLabel={item.secondaryLabel || "View Repository"}
               />
             }
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 }

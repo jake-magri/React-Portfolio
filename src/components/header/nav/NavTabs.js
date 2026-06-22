@@ -1,5 +1,5 @@
 // components/NavTabs.js
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -102,6 +102,15 @@ const NavTabs = () => {
               href="/portfolio"
             >
               Case Studies
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              className={`nav-link ${router.pathname === '/bookkeeping-workflow-automation' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null}
+              href="/bookkeeping-workflow-automation"
+            >
+              Finance Automation
             </Link>
           </li>
           <li className="nav-item">

@@ -1,42 +1,122 @@
-.resources-p {
-    color: #333333;
-    font-family: 'Inter Tight', sans-serif;
+.pageShell {
+  min-height: 100vh;
+  padding: 5.5rem 1.25rem 7rem;
+  background:
+    radial-gradient(circle at top left, rgba(143, 203, 155, 0.22), transparent 28rem),
+    linear-gradient(180deg, #f7f4ed 0%, #f2efe7 50%, #ffffff 100%);
+  color: #14231d;
 }
 
-.tenorSans {
-    font-family: "Tenor Sans", sans-serif;
-    font-weight: 400;
-    font-size: 48px;
+.heroBlock,
+.resourceGrid {
+  width: min(1120px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroBlock {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: #2e6a50;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroBlock h1 {
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  font-family: "Tenor Sans", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: #10261c;
+}
+
+.heroBlock p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #4b5a53;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0;
 }
 
 .resourceCard {
-    font-family: "Tenor Sans", sans-serif;
-    font-weight: 400;
-    font-size: 28px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1.2rem;
+  border-radius: 1.5rem;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(18, 51, 38, 0.1);
+  box-shadow: 0 12px 36px rgba(18, 51, 38, 0.07);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-.interTight {
-    font-family: 'Inter Tight', sans-serif;
+.resourceCard:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgba(46, 106, 80, 0.28);
+  box-shadow: 0 22px 54px rgba(18, 51, 38, 0.14);
 }
 
-.cardLinkContainer {
-    position: relative;
+.price {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.62rem;
+  background: #e3f3e8;
+  color: #1a4331;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.resourceCard h3 {
+  margin: 0 0 0.8rem;
+  font-family: "Tenor Sans", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: #10261c;
+}
+
+.resourceCard p {
+  margin: 0;
+  color: #56645e;
+  font-size: 1rem;
+  line-height: 1.62;
 }
 
 .learnMore {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #7cbd8c;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-decoration: none;
-    color: white;
-    transition: background-color 200ms ease, transform 200ms ease;
-    font-family: 'Quicksand', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: #123326;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 
 .learnMore:hover {
-    background-color: #94cfa3;
-    transform: translateY(-0.1rem);
-  }
+  color: #ffffff;
+  background: #1b4d38;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(18, 51, 38, 0.22);
+}

@@ -13,13 +13,13 @@ const PortfolioPage = () => (
       <title>Case Studies | Jake Magri</title>
       <meta
         name="description"
-        content="Case studies in AI workflow automation, document intelligence, retrieval systems, reporting assistants, and product delivery."
+        content="Case studies in bookkeeping workflow automation, AI workflow systems, document intelligence, retrieval systems, reporting assistants, and enterprise delivery."
       />
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Case Studies | Jake Magri" />
       <meta
         property="og:description"
-        content="Selected AI systems, workflow automation, healthcare operations, and product delivery work."
+        content="Selected systems across finance workflow automation, document intelligence, retrieval, reporting, healthcare operations, and enterprise delivery."
       />
     </Head>
     <Projects />

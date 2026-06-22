@@ -1,66 +1,95 @@
 @import "tailwindcss";
 @import 'bootstrap/dist/css/bootstrap.min.css';
-
-/* styles/globals.css */
 @tailwind utilities;
 
-/* src/index.css */
-/* CSS Variables */
 :root {
-    --night: #12130fff;
-    --viridian: #1a4331;
-    --celadon: #8fcb9bff;
-    --platinum: #e5e7eb;
-    --cinereous: #2e6a50;
+  --ink: #10261c;
+  --ink-soft: #14231d;
+  --forest: #123326;
+  --viridian: #1a4331;
+  --green: #2e6a50;
+  --green-bright: #8fcb9b;
+  --cream: #f7f4ed;
+  --cream-deep: #f2efe7;
+  --white: #ffffff;
+  --muted: #4b5a53;
+  --muted-light: #6f7c75;
+  --line: rgba(18, 51, 38, 0.1);
+  --shadow-soft: 0 12px 36px rgba(18, 51, 38, 0.07);
+  --shadow-strong: 0 26px 70px rgba(16, 38, 28, 0.22);
 }
 
-/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: var(--platinum);
-    color: var(--night);
-    margin: 0;
-    transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-family: "Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background-color: var(--viridian);
-    padding: 1rem;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-
-main {
-    padding: 2rem;
-    padding-top: 5rem;
+a:hover {
+  color: inherit;
 }
 
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--viridian);
-    color: var(--platinum);
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: 6vh;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-}
-
-footer a:hover {
-    color: var(--celadon);
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
-    border-radius: 10px;
-    }
+  box-shadow: none;
+  transform: none;
+}
 
-a {
-    text-decoration: none;
+::selection {
+  background: rgba(143, 203, 155, 0.45);
+}
+
+footer {
+  width: 100%;
+  padding: 1.4rem 1rem;
+  background: linear-gradient(145deg, #10261c 0%, #1a4331 100%);
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Inter Tight", sans-serif;
+}
+
+footer a:hover {
+  color: var(--green-bright);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }

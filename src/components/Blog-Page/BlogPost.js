@@ -1,39 +1,29 @@
-// src/components/Blog-Page/BlogPost.js
 import Image from 'next/image';
-import styles from './BlogPost.module.css'; // Assuming you are using CSS modules for styles
+import styles from './BlogPost.module.css';
 import Link from 'next/link';
 
 export default function BlogPost({ post }) {
-  // Destructure the post data for easier access
-  const { title, image, content} = post;
+  const { title, image, content } = post;
 
   return (
-    <div className="flex flex-col justify-center max-w-3xl mx-auto px-4 space-y-8 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mx-4 sm:mx-6 mb-18">
-      <h1 className="text-3xl font-bold text-gray-800">{title}</h1>
-
-      {/* Image container */}
-      <div className={styles.imageContainer}>
-        <Image
-          src={image}
-          alt={title}
-          width={1200} // Adjust the width and height to match your design
-          height={800}
-          className="rounded-lg shadow-lg"
+    <main className={styles.pageShell}>
+      <article className={styles.postShell}>
+        <Link href="/blogs" className={styles.backLink}>← Back to notes</Link>
+        <h1>{title}</h1>
+        <div className={styles.imageContainer}>
+          <Image
+            src={image}
+            alt={title}
+            width={1200}
+            height={800}
+            className={styles.postImage}
+          />
+        </div>
+        <div
+          className={styles.postContent}
+          dangerouslySetInnerHTML={{ __html: content }}
         />
-      </div>
-
-      {/* Blog content */}
-      <div
-        className="text-lg text-gray-700 leading-relaxed mt-6"
-        dangerouslySetInnerHTML={{ __html: content }}
-      ></div>
-
-      {/* Back Button */}
-      <div className="flex flex-col justify-center">
-        <Link href="/blogs" className="flex justify-center">
-          <button className={styles['back-button']}>Back</button>
-        </Link>
-      </div>
-    </div>
+      </article>
+    </main>
   );
 }

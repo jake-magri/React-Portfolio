@@ -11,10 +11,10 @@ const ResumePage = () => (
   <>
     <Head>
       <title>Experience | Jake Magri</title>
-      <meta name="description" content="Experience in AI solutions, workflow automation, healthcare SaaS, RCM systems, document intelligence, RAG, and product systems design." />
+      <meta name="description" content="Experience in AI workflow automation, finance operations, healthcare SaaS, document intelligence, NL-to-SQL, RAG, AWS workflows, and enterprise delivery." />
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Experience | Jake Magri" />
-      <meta property="og:description" content="AI solutions, workflow automation, healthcare operations, and technical delivery experience." />
+      <meta property="og:description" content="AI workflow automation, finance operations, healthcare billing workflows, and enterprise software delivery experience." />
     </Head>
     <Resume />
   </>

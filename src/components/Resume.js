@@ -3,11 +3,10 @@ import dynamic from 'next/dynamic';
 import styles from './Resume.module.css';
 import SlidingText from './SlidingText';
 
-// Define the iframe component separately
 const ResumeIframe = () => {
   return (
     <iframe
-      src="/documents/jake-magri-resume.pdf" // Keep the same PDF path
+      src="/documents/jake-magri-resume.pdf"
       width="100%"
       height="800px"
       title="Jake Magri Resume"
@@ -26,98 +25,88 @@ const ResumeIframe = () => {
   );
 };
 
-// Lazy load the ResumeIframe component
 const LazyResumeIframe = dynamic(() => Promise.resolve(ResumeIframe), {
-  ssr: false, // Disable SSR for iframe content
-  loading: () => <p>Loading Resume...</p>, // Optional loading state
+  ssr: false,
+  loading: () => <p className={styles.loadingText}>Loading Resume...</p>,
 });
+
+const skillGroups = [
+  {
+    title: 'Finance workflow automation',
+    skills: ['Bookkeeping Workflows', 'Document Collection', 'Month-End Admin', 'Client Follow-Up', 'Reporting Visibility', 'Workflow Cleanup'],
+  },
+  {
+    title: 'Applied AI systems',
+    skills: ['OCR', 'Document Intelligence', 'RAG', 'Vector Retrieval', 'NL-to-SQL', 'AI Evaluation', 'Prompt Workflows'],
+  },
+  {
+    title: 'Implementation tools',
+    skills: ['Power Automate', 'Zapier', 'SQL', 'AWS Lambda', 'S3', 'REST APIs', 'Python', 'C#/.NET'],
+  },
+];
 
 export default function Resume() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Ensure this effect runs only on the client side
     setIsClient(true);
   }, []);
 
   return (
-    <div className={`${styles['resume-main-container']} mt-12 mx-4 sm:mx-6`}>
-      {/* Resume Header */}
-      <SlidingText
-        direction="left"
-        text={<h1 className={styles['resume-header']}>Resume</h1>}
-      />
-
-      <div className={styles['skills-link']}>
-        {/* Resume description */}
+    <main className={styles.pageShell}>
+      <section className={styles.heroBlock}>
         <SlidingText
           direction="left"
           text={
-            <div className={styles['resume-content']}>
-              <p className={`${styles['resume-header-text']} text-lg mb-6`}>
-                <strong>AI Solutions, Workflow Automation, and Product Systems.</strong> My background combines healthcare operations, applied AI, enterprise delivery, and technical implementation. I focus on turning workflow challenges into practical AI systems across document intelligence, retrieval, reporting, and operational automation.
-              </p>
-
-            <div className={styles['tech-stack-grid']}>
-              {/* AI & Machine Learning */}
-              <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">Applied AI Systems</h3>
-                <div className={styles['skill-pill-container']}>
-                  {['OCR', 'Document Intelligence', 'RAG', 'Vector Retrieval', 'NL-to-SQL', 'Conversational AI', 'AI Evaluation', 'Workflow Orchestration'].map((skill) => (
-                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Business & Product Systems */}
-              <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">Business & Product Systems</h3>
-                <div className={styles['skill-pill-container']}>
-                  {['Workflow Discovery', 'Requirements Gathering', 'Solution Design', 'Stakeholder Communication', 'UAT', 'Business Process Mapping'].map((skill) => (
-                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
-                  ))}
-                </div>
-              </div>
-                
-              {/* Healthcare SaaS & Delivery */}
-              <div className={styles['stack-category']}>
-                <h3 className="font-bold text-blue-400 mb-3 text-center">Healthcare SaaS & Delivery</h3>
-                <div className={styles['skill-pill-container']}>
-                  {['Revenue Cycle Management', 'Medical Billing', 'HIPAA/SOC2', 'AWS Lambda', 'SQL/SSAS', 'Jira/Confluence', 'Python', 'C#'].map((skill) => (
-                    <span key={skill} className={styles['skill-pill']}>{skill}</span>
-                  ))}
-                </div>
-              </div>
-           </div>
-          </div>
+            <>
+              <p className={styles.eyebrow}>Experience and technical credibility</p>
+              <h1 className={styles.resumeHeader}>AI workflow automation, finance operations, and enterprise delivery.</h1>
+            </>
           }
         />
-
-        {/* Resume Download Button */}
         <SlidingText
-          direction="left"
+          direction="fade"
           text={
-            <a
-              className={styles['resume-link']}
-              href="/documents/jake-magri-resume.pdf"
-              download="Jake-Magri.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className={styles['resume-button']}>
-                Download Resume PDF
-              </button>
-            </a>
+            <p className={styles.resumeHeaderText}>
+              My background combines applied AI systems, healthcare billing workflows, financial-services technology delivery, document intelligence, reporting, and practical workflow implementation.
+            </p>
           }
         />
-      </div>
 
-      {/* Conditionally render iframe content only on the client */}
-      {isClient && (
-        <div className={styles['resume-iframe-container']}>
-          <SlidingText direction="bottom" text={<LazyResumeIframe />} />
+        <div className={styles.ctaRow}>
+          <a
+            className={styles.primaryCta}
+            href="/documents/jake-magri-resume.pdf"
+            download="Jake-Magri.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Resume PDF
+          </a>
+          <a className={styles.secondaryCta} href="#resume-preview">
+            View Resume Preview
+          </a>
         </div>
+      </section>
+
+      <section className={styles.skillGrid}>
+        {skillGroups.map((group) => (
+          <article key={group.title} className={styles.stackCategory}>
+            <h3>{group.title}</h3>
+            <div className={styles.skillPillContainer}>
+              {group.skills.map((skill) => (
+                <span key={skill} className={styles.skillPill}>{skill}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+
+      {isClient && (
+        <section className={styles.resumeIframeContainer} id="resume-preview">
+          <SlidingText direction="bottom" text={<LazyResumeIframe />} />
+        </section>
       )}
-    </div>
+    </main>
   );
 }
