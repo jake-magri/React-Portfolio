@@ -3,10 +3,10 @@ import styles from './Contact.module.css';
 import SlidingText from './SlidingText';
 
 const contactReasons = [
-  'Bookkeeping workflow cleanup audit',
-  'Finance automation demo request',
-  'Corporate AI enablement role',
-  'General workflow automation conversation',
+  'Technical Product Manager / Product Ops role inquiry',
+  'Enterprise Operations Leadership opportunity',
+  'Strategic partnership or collaboration',
+  'Technical advisory or governance framework design',
 ];
 
 export default function Contact() {
@@ -21,8 +21,8 @@ export default function Contact() {
       return;
     }
 
-    const subject = encodeURIComponent('Workflow automation inquiry');
-    const body = encodeURIComponent(`Hi Jake,\n\nName: ${name}\nEmail: ${email}\n\nWorkflow / project details:\n${message}`);
+    const subject = encodeURIComponent('Strategic inquiry - jakemagri.dev');
+    const body = encodeURIComponent(`Hi Jake,\n\nName: ${name}\nEmail: ${email}\n\nOpportunity / Strategic Discussion:\n${message}`);
     window.location.href = `mailto:jake.magri2@gmail.com?subject=${subject}&body=${body}`;
   };
 
@@ -34,8 +34,8 @@ export default function Contact() {
             direction="left"
             text={
               <>
-                <p className={styles.eyebrow}>Start with one workflow</p>
-                <h1>Send the process your team hates doing manually.</h1>
+                <p className={styles.eyebrow}>Let's align on strategic direction</p>
+                <h1>Connect about enterprise leadership and systemic impact.</h1>
               </>
             }
           />
@@ -43,7 +43,7 @@ export default function Contact() {
             direction="fade"
             text={
               <p className={styles.heroText}>
-                I’ll help determine whether it is a fit for a workflow cleanup audit, low-code automation build, AI-assisted system, or a simpler process fix.
+                I'm interested in conversations about Technical Product leadership, operational governance, enterprise AI architecture, and building systems that drive measurable business impact at scale.
               </p>
             }
           />
@@ -78,17 +78,17 @@ export default function Contact() {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <label htmlFor="message">Workflow details</label>
+            <label htmlFor="message">What are we discussing?</label>
             <textarea
               className={styles.contactFormTextarea}
-              placeholder="What workflow, monthly task, document process, report, or admin bottleneck do you want to improve?"
+              placeholder="Share details about your organization's challenge, strategic initiative, or role focus. (e.g., scaling AI product delivery, governing enterprise systems, managing release coordination across teams)"
               id="message"
               name="Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
 
-            <button className={styles.submitButton} type="submit">Send Project Details</button>
+            <button className={styles.submitButton} type="submit">Send Message</button>
           </form>
         </div>
       </section>

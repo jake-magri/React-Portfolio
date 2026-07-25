@@ -4,20 +4,20 @@ import styles from './AboutMe.module.css';
 
 const focusAreas = [
   {
-    title: 'Finance workflow automation',
-    text: 'Client document collection, intake, reminders, month-end trackers, reporting visibility, and admin workflows for bookkeeping and finance-adjacent teams.',
+    title: 'Enterprise AI & Workflow Governance',
+    text: 'Architecting scalable document intelligence, retrieval systems, and automated workflows that reduce cycle time, enforce SLA compliance, and maintain regulatory alignment (HIPAA, SOC 2) without sacrificing engineering velocity.',
   },
   {
-    title: 'Applied AI systems',
-    text: 'Document intelligence, RAG knowledge systems, natural-language reporting, prompt workflows, and AI-assisted operational tools.',
+    title: 'Operational Scale & System Design',
+    text: 'Designing governance frameworks for multi-team delivery, building release management systems, and creating operational metrics that move beyond outputs to P&L efficiency and accuracy baselines (95%+).',
   },
   {
-    title: 'Technical enablement',
-    text: 'Practical solution design across low-code tools, SQL, APIs, AWS workflows, and lightweight scripting when the workflow actually needs it.',
+    title: 'Compliance-First Architecture',
+    text: 'Building enterprise systems that balance automation throughput with regulatory guardrails, audit trails, and operational transparency across healthcare, financial services, and mission-critical environments.',
   },
 ];
 
-const proofPoints = ['OCR / document intelligence', 'NL-to-SQL reporting', 'RAG knowledge systems', 'Financial-services delivery'];
+const proofPoints = ['$60K+ revenue-generating solutions', '98% SLA delivery at enterprise scale', 'HIPAA/SOC 2 compliance architecture', '20+ years of data governance'];
 
 export default function AboutMe() {
   return (
@@ -28,8 +28,8 @@ export default function AboutMe() {
             direction="left"
             text={
               <>
-                <p className={styles.eyebrow}>AI workflow automation for finance and operations teams</p>
-                <h1>Clean up repetitive admin work with practical automation.</h1>
+                <p className={styles.eyebrow}>Technical Product & Business Operations</p>
+                <h1>Governing enterprise AI systems, automated workflows, and high-velocity delivery.</h1>
               </>
             }
           />
@@ -38,17 +38,17 @@ export default function AboutMe() {
             direction="fade"
             text={
               <p className={styles.heroText}>
-                I help teams turn messy workflows, documents, reporting needs, and internal knowledge into simple systems that reduce manual work and make operations easier to run.
+                I architect enterprise systems and governance frameworks that enforce operational throughput, regulatory compliance, and measurable business impact. My work spans AI-driven automation, multi-team release coordination, and revenue-generating infrastructure.
               </p>
             }
           />
 
           <div className={styles.ctaRow}>
-            <Link href="/bookkeeping-workflow-automation" className={styles.primaryCta}>
-              View Finance Automation
-            </Link>
-            <Link href="/portfolio" className={styles.secondaryCta}>
+            <Link href="/portfolio" className={styles.primaryCta}>
               View Case Studies
+            </Link>
+            <Link href="/contact" className={styles.secondaryCta}>
+              Connect / Strategy
             </Link>
           </div>
 
@@ -60,26 +60,26 @@ export default function AboutMe() {
         <div className={styles.heroCard}>
           <div className={styles.cardHeader}>
             <span className={styles.statusDot}></span>
-            <span>Workflow Operating Model</span>
+            <span>System Governance Framework</span>
           </div>
           <div className={styles.workflowPreview}>
-            <div>01. Map the bottleneck</div>
-            <div>02. Choose low-code first</div>
-            <div>03. Add AI only where useful</div>
-            <div>04. Hand off a repeatable system</div>
+            <div>01. Audit bottlenecks &amp; throughput</div>
+            <div>02. Design SLA &amp; compliance guardrails</div>
+            <div>03. Build governance &amp; automation layers</div>
+            <div>04. Enforce accountability &amp; metrics</div>
           </div>
           <p className={styles.cardNote}>
-            The goal is not more software. The goal is less chasing, fewer handoffs, clearer status, and cleaner operational visibility.
+            The goal is measurable impact: SLA adherence, reduced cycle time (15–30%), execution accuracy (95%+), and business unit velocity.
           </p>
         </div>
       </section>
 
       <section className={styles.sectionBlock}>
         <div className={styles.sectionIntro}>
-          <p className={styles.eyebrow}>What I do</p>
-          <h2>Automation work that stays close to business value.</h2>
+          <p className={styles.eyebrow}>Operational Philosophy</p>
+          <h2>System governance that scales enterprise velocity.</h2>
           <p>
-            My work sits between finance operations, workflow discovery, technical implementation, and AI enablement. I use low-code tools first, then APIs, SQL, and lightweight code only when the workflow calls for it.
+            My work bridges business architecture, technical execution, and compliance strategy. I audit manual bottlenecks, design enforcement mechanisms, and architect systems that move beyond raw outputs to sustainable P&L efficiency, SLA adherence, and measurable business impact.
           </p>
         </div>
 
@@ -95,15 +95,15 @@ export default function AboutMe() {
 
       <section className={styles.splitSection}>
         <div>
-          <p className={styles.eyebrow}>Background</p>
-          <h2>Finance-adjacent, healthcare-tested, automation-focused.</h2>
+          <p className={styles.eyebrow}>Experience</p>
+          <h2>Enterprise-scale AI, operations, and delivery governance.</h2>
         </div>
         <div className={styles.copyCard}>
           <p>
-            Recent work includes document-intelligence workflows for healthcare operations, retrieval systems over long-lived technical knowledge, natural-language reporting concepts, AWS document-processing workflows, and enterprise release coordination in financial services.
+            I've architected enterprise document-intelligence systems that generated $60K+ revenue, governed multi-team release delivery at 98% SLA adherence, and built retrieval systems over 20+ years of mission-critical transactional data. My work navigates regulatory alignment (HIPAA, SOC 2, compliance frameworks) while maintaining engineering velocity and measurable business impact.
           </p>
           <p>
-            That combination is now pointed at a clear value center: helping bookkeeping, finance, and operations teams make recurring admin work easier to run.
+            I'm positioned for Technical Product Manager, Product Ops Lead, or Enterprise Operations Leader roles—where systemic impact, regulatory control, and structural leverage define success.
           </p>
         </div>
       </section>

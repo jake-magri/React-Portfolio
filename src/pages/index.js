@@ -10,17 +10,17 @@ export async function getStaticProps() {
 const HomePage = () => (
   <>
     <Head>
-      <title>Jake Magri | AI Workflow Automation for Finance Operations</title>
+      <title>Jake Magri | Technical Product &amp; Operations Leader | Enterprise AI Systems</title>
       <meta
         name="description"
-        content="AI workflow automation and enablement for finance, bookkeeping, healthcare operations, document intelligence, reporting, and internal knowledge systems."
+        content="Technical Product &amp; Business Operations Leader specializing in enterprise AI automation, workflow governance, compliance-first architecture, and high-velocity delivery. Expertise in document intelligence, release coordination, and revenue-generating infrastructure."
       />
       <meta name="google-site-verification" content="iLv9k0dPIQu_OGNySDAki1qfSN1UeKCKdAzWmzOTlcE" />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Jake Magri | AI Workflow Automation" />
+      <meta property="og:title" content="Jake Magri | Technical Product &amp; Operations Leader" />
       <meta
         property="og:description"
-        content="Practical workflow automation for finance operations, bookkeeping admin, document collection, AI enablement, and reporting visibility."
+        content="Architecting enterprise AI systems, workflow governance, and high-velocity delivery pipelines. Expertise in document intelligence, SLA-driven operations, compliance architecture, and revenue-generating infrastructure."
       />
     </Head>
     <AboutMe />

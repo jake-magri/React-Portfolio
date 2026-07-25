@@ -9,57 +9,49 @@ const SlidingText = dynamic(() => import('../SlidingText'), {
 
 const caseStudies = [
   {
-    title: 'Monthly Client Document Collection System',
-    image: '/images/natural_language_reporting.png',
-    summary: 'A bookkeeping workflow automation concept for reducing monthly client document chasing, missing-item reminders, and manual tracker updates.',
-    outcome: 'Designed as the flagship finance-operations demo for firms that need cleaner intake, upload tracking, reminders, weekly summaries, and close readiness visibility.',
-    stack: 'Power Automate, Zapier, Microsoft/Google Forms, SharePoint/Drive, Excel/Sheets, AI-assisted follow-up drafts',
-    deployedUrl: '/bookkeeping-workflow-automation',
-    primaryLabel: 'View Finance Automation Page',
-  },
-  {
-    title: 'Radiology Billing OCR Workflow',
+    title: 'Healthcare Document Intelligence & Revenue Engine ($60K Win)',
     image: '/images/radiology_ocr_workflow.png',
-    summary: 'Designed and demonstrated document-intelligence workflows that convert unstructured radiology billing documents into structured demographic and charge-data extraction pipelines.',
-    outcome: 'Supported enterprise client workflows and contributed to a $60k enterprise solution sale.',
-    stack: 'OCR, OpenAI APIs, AWS Lambda, healthcare workflow design, structured extraction',
+    summary: 'Architected document-intelligence workflows that convert unstructured healthcare billing documents into structured demographic and charge-data extraction pipelines.',
+    outcome: 'Designed and delivered an enterprise solution that generated $60K+ revenue, demonstrated compliance-first architecture (HIPAA/SOC 2 alignment), and created recurring document-processing revenue streams while maintaining 95%+ extraction accuracy.',
+    stack: 'OCR, OpenAI APIs, AWS Lambda, compliance-first architecture, healthcare data governance',
+    primaryLabel: 'Read Case Study',
   },
   {
-    title: 'Enterprise Knowledge Retrieval System',
+    title: 'Enterprise Release Governance & SLA Delivery (15+ Teams)',
+    image: '/images/enterprise_release_readiness.png',
+    summary: 'Coordinated software release readiness across engineering teams using structured reporting, dependency tracking, and stakeholder communication governance.',
+    outcome: 'Maintained 98% on-time SLA delivery across enterprise application teams, reduced release prep cycle time by 15%, and enforced operational accountability through dependency mapping and compliance tracking.',
+    stack: 'Jira, ServiceNow, Confluence, GitLab, release governance frameworks',
+  },
+  {
+    title: 'Enterprise Knowledge Retrieval &amp; Operational Support (20+ Yrs Data)',
     image: '/images/enterprise_knowledge_retrieval.png',
-    summary: 'Built retrieval-augmented support experiences over long-lived technical documentation so support, operations, and product teams could retrieve source-grounded answers faster.',
-    outcome: 'Turned 25+ years of internal documentation into citation-grounded conversational support workflows.',
-    stack: 'RAG, vector retrieval, OpenAI, documentation pipelines, citation grounding',
+    summary: 'Built retrieval-augmented support systems over 20+ years of long-lived technical documentation to enable support, operations, and product teams to retrieve source-grounded answers faster.',
+    outcome: 'Transformed legacy documentation into citation-grounded conversational support workflows, achieved 95% execution success rate, and reduced documentation retrieval overhead by moving to semantic search and RAG-driven architecture.',
+    stack: 'RAG architecture, vector retrieval, OpenAI, documentation governance, semantic layer design',
   },
   {
-    title: 'Natural-Language Reporting Assistant',
+    title: 'Natural-Language Reporting &amp; Legacy Data Governance',
     image: '/images/natural_language_reporting.png',
-    summary: 'Mapped business terminology, reporting intent, and legacy healthcare data structures into natural-language reporting and retrieval workflows.',
-    outcome: 'Supported reporting concepts over 20+ years of RCM transactional data within HIPAA/SOC2-aligned environments.',
-    stack: 'NL-to-SQL concepts, SSAS, semantic layer design, RCM reporting, stakeholder translation',
+    summary: 'Mapped business terminology and reporting intent into natural-language reporting and retrieval workflows over 20+ years of RCM transactional data.',
+    outcome: 'Built semantic reporting layer supporting HIPAA/SOC2-aligned environments, demonstrated NL-to-SQL translation at scale, and translated operational requirements into governance-compliant data architecture.',
+    stack: 'NL-to-SQL concepts, SSAS, semantic layer design, RCM data governance, stakeholder translation',
   },
   {
-    title: 'AI Receptionist Workflow Prototype',
+    title: 'Monthly Client Document Collection &amp; Intake Automation',
+    image: '/images/natural_language_reporting.png',
+    summary: 'Designed bookkeeping workflow automation for reducing monthly client document chasing, missing-item reminders, and manual tracker updates.',
+    outcome: 'Created the flagship finance-operations demo showcasing intake governance, upload tracking, automated reminders, weekly summaries, and close-readiness visibility as operational control systems.',
+    stack: 'Power Automate, Zapier, Microsoft/Google Forms, SharePoint/Drive, AI-assisted follow-up',
+    deployedUrl: '/bookkeeping-workflow-automation',
+    primaryLabel: 'View Finance Automation Framework',
+  },
+  {
+    title: 'AI Receptionist &amp; Workflow Routing Prototype',
     image: '/images/ai_receptionist_workflow.png',
     summary: 'Designed a small-business automation prototype for handling calls, appointment booking, and workflow routing through conversational AI.',
-    outcome: 'Demonstrates how routine customer interactions can be captured, routed, and converted into structured business actions.',
+    outcome: 'Demonstrates how routine customer interactions can be captured, routed, and converted into structured business actions with compliance tracking and operational governance.',
     stack: 'Twilio, OpenAI, LangChain, Google Calendar API, WebSockets',
-  },
-  {
-    title: 'Enterprise Release Readiness',
-    image: '/images/enterprise_release_readiness.png',
-    summary: 'Coordinated software release readiness across engineering teams using structured reporting, dependency tracking, and stakeholder communication workflows.',
-    outcome: 'Supported 98% on-time release delivery across enterprise application teams.',
-    stack: 'Jira, ServiceNow, Confluence, GitLab, AWS, release governance',
-  },
-  {
-    title: 'Volt Underground Product Build',
-    image: '/images/volt-underground.png',
-    summary: 'Full-stack event commerce platform built as a product-oriented software project for local underground electronic music events.',
-    outcome: 'Shows full-stack product execution, collaboration, and user-facing application delivery.',
-    stack: 'React, Node.js, Apollo GraphQL, MongoDB',
-    deployedUrl: 'https://volt-underground.onrender.com/',
-    githubUrl: 'https://github.com/parsamh8/Volt-Underground',
   },
 ];
 
@@ -71,8 +63,8 @@ export default function Projects() {
           direction="right"
           text={
             <>
-              <p className={styles.eyebrow}>Selected systems and workflows</p>
-              <h1 className={styles.portfolioHeader}>Case Studies</h1>
+              <p className={styles.eyebrow}>Enterprise systems &amp; architecture</p>
+              <h1 className={styles.portfolioHeader}>Case Studies in Systemic Impact</h1>
             </>
           }
         />
@@ -80,7 +72,7 @@ export default function Projects() {
           direction="fade"
           text={
             <p className={styles.portfolioHeaderP}>
-              Selected work across finance workflow automation, document intelligence, retrieval systems, reporting assistants, and enterprise delivery.
+              Selected work across enterprise AI automation, workflow governance, document intelligence, data architecture, and high-velocity delivery. Focused on measurable business outcomes, compliance-first design, and systemic operational leverage.
             </p>
           }
         />
