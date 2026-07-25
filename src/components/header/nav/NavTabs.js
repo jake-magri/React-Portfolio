@@ -106,15 +106,6 @@ const NavTabs = () => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${router.pathname === '/bookkeeping-workflow-automation' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null}
-              href="/bookkeeping-workflow-automation"
-            >
-              Finance Automation
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
               className={`nav-link ${router.pathname === '/blogs' ? 'active' : ''}`}
               onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/blogs"
