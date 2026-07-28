@@ -83,7 +83,7 @@ const NavTabs = () => {
               onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile 
               href="/"
             >
-              About
+              Home
             </Link>
           </li>
           <li className="nav-item">
@@ -110,7 +110,7 @@ const NavTabs = () => {
               onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/blogs"
             >
-              Blogs
+              Writing
             </Link>
           </li>
           <li className="nav-item">

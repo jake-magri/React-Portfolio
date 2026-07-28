@@ -9,49 +9,50 @@ const SlidingText = dynamic(() => import('../SlidingText'), {
 
 const caseStudies = [
   {
-    title: 'Healthcare Document Intelligence & Revenue Engine ($60K Win)',
+    title: 'AI Reporting Assistant',
+    image: '/images/natural_language_reporting.png',
+    summary: 'Worked with stakeholders to turn recurring reporting requests into a clearer, more repeatable workflow for getting the right information faster.',
+    outcome: 'Reduced back-and-forth, improved reporting clarity, and created a stronger path from question to answer for business teams.',
+    stack: 'Requirements gathering, workflow mapping, reporting operations, stakeholder alignment',
+    deployedUrl: '/case-studies',
+    primaryLabel: 'View Discovery Approach',
+  },
+  {
+    title: 'Healthcare OCR',
     image: '/images/radiology_ocr_workflow.png',
-    summary: 'Architected document-intelligence workflows that convert unstructured healthcare billing documents into structured demographic and charge-data extraction pipelines.',
-    outcome: 'Designed and delivered an enterprise solution that generated $60K+ revenue, demonstrated compliance-first architecture (HIPAA/SOC 2 alignment), and created recurring document-processing revenue streams while maintaining 95%+ extraction accuracy.',
-    stack: 'OCR, OpenAI APIs, AWS Lambda, compliance-first architecture, healthcare data governance',
-    primaryLabel: 'Read Case Study',
+    summary: 'Helped define the business problem, constraints, and success criteria for a document intake workflow that needed more reliable handling of healthcare paperwork.',
+    outcome: 'Clarified what mattered most to the business, shaped the process around real operational needs, and improved consistency in a high-friction workflow.',
+    stack: 'Business analysis, process discovery, operational constraints, cross-functional collaboration',
   },
   {
-    title: 'Enterprise Release Governance & SLA Delivery (15+ Teams)',
-    image: '/images/enterprise_release_readiness.png',
-    summary: 'Coordinated software release readiness across engineering teams using structured reporting, dependency tracking, and stakeholder communication governance.',
-    outcome: 'Maintained 98% on-time SLA delivery across enterprise application teams, reduced release prep cycle time by 15%, and enforced operational accountability through dependency mapping and compliance tracking.',
-    stack: 'Jira, ServiceNow, Confluence, GitLab, release governance frameworks',
-  },
-  {
-    title: 'Enterprise Knowledge Retrieval &amp; Operational Support (20+ Yrs Data)',
+    title: 'Enterprise Knowledge Assistant',
     image: '/images/enterprise_knowledge_retrieval.png',
-    summary: 'Built retrieval-augmented support systems over 20+ years of long-lived technical documentation to enable support, operations, and product teams to retrieve source-grounded answers faster.',
-    outcome: 'Transformed legacy documentation into citation-grounded conversational support workflows, achieved 95% execution success rate, and reduced documentation retrieval overhead by moving to semantic search and RAG-driven architecture.',
-    stack: 'RAG architecture, vector retrieval, OpenAI, documentation governance, semantic layer design',
+    summary: 'Explored how teams access institutional knowledge and translated that into a more useful support experience for day-to-day operations.',
+    outcome: 'Improved access to information, reduced friction in support workflows, and made knowledge retrieval more dependable for teams working under time pressure.',
+    stack: 'Workflow analysis, knowledge management, stakeholder needs, process improvement',
   },
   {
-    title: 'Natural-Language Reporting &amp; Legacy Data Governance',
-    image: '/images/natural_language_reporting.png',
-    summary: 'Mapped business terminology and reporting intent into natural-language reporting and retrieval workflows over 20+ years of RCM transactional data.',
-    outcome: 'Built semantic reporting layer supporting HIPAA/SOC2-aligned environments, demonstrated NL-to-SQL translation at scale, and translated operational requirements into governance-compliant data architecture.',
-    stack: 'NL-to-SQL concepts, SSAS, semantic layer design, RCM data governance, stakeholder translation',
+    title: 'Release Coordination',
+    image: '/images/enterprise_release_readiness.png',
+    summary: 'Supported delivery planning by connecting stakeholders, tracking dependencies, and making release readiness more visible across functions.',
+    outcome: 'Improved coordination, reduced avoidable confusion, and created a clearer operating rhythm for high-stakes delivery work.',
+    stack: 'Cross-functional coordination, prioritization, dependency clarity, delivery readiness',
   },
   {
-    title: 'Monthly Client Document Collection &amp; Intake Automation',
+    title: 'Client Intake Automation',
     image: '/images/natural_language_reporting.png',
-    summary: 'Designed bookkeeping workflow automation for reducing monthly client document chasing, missing-item reminders, and manual tracker updates.',
-    outcome: 'Created the flagship finance-operations demo showcasing intake governance, upload tracking, automated reminders, weekly summaries, and close-readiness visibility as operational control systems.',
-    stack: 'Power Automate, Zapier, Microsoft/Google Forms, SharePoint/Drive, AI-assisted follow-up',
+    summary: 'Designed a process for collecting client information and follow-up steps with less manual chasing and clearer visibility into pending items.',
+    outcome: 'Created a more structured intake workflow that improved follow-through, reduced admin friction, and made monthly operations easier to manage.',
+    stack: 'Process design, workflow automation, operational visibility, business process improvement',
     deployedUrl: '/bookkeeping-workflow-automation',
-    primaryLabel: 'View Finance Automation Framework',
+    primaryLabel: 'View Workflow Example',
   },
   {
-    title: 'AI Receptionist &amp; Workflow Routing Prototype',
+    title: 'AI Receptionist',
     image: '/images/ai_receptionist_workflow.png',
-    summary: 'Designed a small-business automation prototype for handling calls, appointment booking, and workflow routing through conversational AI.',
-    outcome: 'Demonstrates how routine customer interactions can be captured, routed, and converted into structured business actions with compliance tracking and operational governance.',
-    stack: 'Twilio, OpenAI, LangChain, Google Calendar API, WebSockets',
+    summary: 'Explored how routine customer interactions could be captured, organized, and routed into a practical operational process.',
+    outcome: 'Showed how conversational automation could support business flow while preserving clarity around ownership, follow-up, and customer experience.',
+    stack: 'Discovery, requirements, process mapping, customer workflow design',
   },
 ];
 
@@ -63,8 +64,8 @@ export default function Projects() {
           direction="right"
           text={
             <>
-              <p className={styles.eyebrow}>Enterprise systems &amp; architecture</p>
-              <h1 className={styles.portfolioHeader}>Case Studies in Systemic Impact</h1>
+              <p className={styles.eyebrow}>Business systems &amp; product analysis</p>
+              <h1 className={styles.portfolioHeader}>Case studies in business improvement</h1>
             </>
           }
         />
@@ -72,7 +73,7 @@ export default function Projects() {
           direction="fade"
           text={
             <p className={styles.portfolioHeaderP}>
-              Selected work across enterprise AI automation, workflow governance, document intelligence, data architecture, and high-velocity delivery. Focused on measurable business outcomes, compliance-first design, and systemic operational leverage.
+              Selected work focused on understanding business problems, clarifying requirements, improving workflows, and shaping solutions that are practical to adopt.
             </p>
           }
         />
@@ -92,8 +93,8 @@ export default function Projects() {
                 stack={item.stack}
                 deployedUrl={item.deployedUrl}
                 githubUrl={item.githubUrl}
-                primaryLabel={item.primaryLabel || "View Live Project"}
-                secondaryLabel={item.secondaryLabel || "View Repository"}
+                primaryLabel={item.primaryLabel || 'View Case Study'}
+                secondaryLabel={item.secondaryLabel || 'View Repository'}
               />
             }
           />

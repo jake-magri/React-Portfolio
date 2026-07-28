@@ -32,16 +32,16 @@ const LazyResumeIframe = dynamic(() => Promise.resolve(ResumeIframe), {
 
 const skillGroups = [
   {
-    title: 'Finance workflow automation',
-    skills: ['Bookkeeping Workflows', 'Document Collection', 'Month-End Admin', 'Client Follow-Up', 'Reporting Visibility', 'Workflow Cleanup'],
+    title: 'Business analysis & discovery',
+    skills: ['Stakeholder interviews', 'Requirements gathering', 'Process mapping', 'User stories', 'Prioritization'],
   },
   {
-    title: 'Applied AI systems',
-    skills: ['OCR', 'Document Intelligence', 'RAG', 'Vector Retrieval', 'NL-to-SQL', 'AI Evaluation', 'Prompt Workflows'],
+    title: 'Workflow & operations',
+    skills: ['Workflow analysis', 'Operational improvement', 'Documentation', 'Cross-functional coordination', 'Reporting clarity'],
   },
   {
-    title: 'Implementation tools',
-    skills: ['Power Automate', 'Zapier', 'SQL', 'AWS Lambda', 'S3', 'REST APIs', 'Python', 'C#/.NET'],
+    title: 'Delivery & enablement',
+    skills: ['Process design', 'Automation evaluation', 'Risk & tradeoff analysis', 'Business outcome tracking', 'Change adoption'],
   },
 ];
 
@@ -59,8 +59,8 @@ export default function Resume() {
           direction="left"
           text={
             <>
-              <p className={styles.eyebrow}>Experience and technical credibility</p>
-              <h1 className={styles.resumeHeader}>AI workflow automation, finance operations, and enterprise delivery.</h1>
+              <p className={styles.eyebrow}>Product Analysis & Business Systems</p>
+              <h1 className={styles.resumeHeader}>Business analysis, workflow improvement, and practical delivery.</h1>
             </>
           }
         />
@@ -68,7 +68,7 @@ export default function Resume() {
           direction="fade"
           text={
             <p className={styles.resumeHeaderText}>
-              My background combines applied AI systems, healthcare billing workflows, financial-services technology delivery, document intelligence, reporting, and practical workflow implementation.
+              My experience sits at the intersection of stakeholder collaboration, requirements gathering, workflow design, and operational improvement. I’ve worked across reporting, intake processes, knowledge systems, and automation initiatives that support better business decisions and smoother day-to-day execution.
             </p>
           }
         />
@@ -81,7 +81,7 @@ export default function Resume() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download Resume PDF
+            Download Resume
           </a>
           <a className={styles.secondaryCta} href="#resume-preview">
             View Resume Preview

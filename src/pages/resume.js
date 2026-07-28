@@ -10,11 +10,11 @@ export async function getStaticProps() {
 const ResumePage = () => (
   <>
     <Head>
-      <title>Experience | Jake Magri | Technical Product & Operations</title>
-      <meta name="description" content="Technical Product & Operations leadership experience spanning enterprise AI systems, workflow governance, document intelligence, healthcare SaaS, release coordination, NL-to-SQL systems, RAG architecture, and cloud infrastructure." />
+      <title>Experience | Jake Magri | Product Analyst & Business Systems</title>
+      <meta name="description" content="Experience in product analysis, requirements gathering, stakeholder collaboration, workflow improvement, and practical business solutions across operations and delivery." />
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Experience | Jake Magri" />
-      <meta property="og:description" content="Enterprise-scale experience in technical product leadership, operations governance, AI automation, compliance-first architecture, healthcare systems, and revenue-generating infrastructure." />
+      <meta property="og:description" content="Experience in business analysis, process improvement, requirements gathering, and cross-functional delivery for product and operations teams." />
     </Head>
     <Resume />
   </>

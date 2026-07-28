@@ -41,6 +41,28 @@
   line-height: 1.65;
 }
 
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  background: #123326;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(18, 51, 38, 0.22);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.primaryCta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  background: #1b4d38;
+  box-shadow: 0 16px 34px rgba(18, 51, 38, 0.28);
+}
+
 .eyebrow {
   margin: 0 0 0.8rem;
   color: #2e6a50;
@@ -56,6 +78,27 @@
   gap: 1.1rem;
   padding: 2rem 0 1rem;
   justify-items: stretch;
+}
+
+.caseStudyCard {
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(18, 51, 38, 0.1);
+  box-shadow: 0 12px 36px rgba(18, 51, 38, 0.06);
+}
+
+.caseStudyCard h3 {
+  color: #123326;
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-bottom: 0.65rem;
+}
+
+.caseStudyCard p {
+  color: #56645e;
+  line-height: 1.7;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

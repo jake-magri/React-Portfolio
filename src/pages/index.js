@@ -10,17 +10,17 @@ export async function getStaticProps() {
 const HomePage = () => (
   <>
     <Head>
-      <title>Jake Magri | Technical Product &amp; Operations Leader | Enterprise AI Systems</title>
+      <title>Jake Magri | Product Analyst | Business Systems | Product Operations</title>
       <meta
         name="description"
-        content="Technical Product &amp; Business Operations Leader specializing in enterprise AI automation, workflow governance, compliance-first architecture, and high-velocity delivery. Expertise in document intelligence, release coordination, and revenue-generating infrastructure."
+        content="Product Analyst and business systems professional focused on requirements gathering, stakeholder collaboration, workflow improvement, and AI-enabled business solutions."
       />
       <meta name="google-site-verification" content="iLv9k0dPIQu_OGNySDAki1qfSN1UeKCKdAzWmzOTlcE" />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Jake Magri | Technical Product &amp; Operations Leader" />
+      <meta property="og:title" content="Jake Magri | Product Analyst | Business Systems" />
       <meta
         property="og:description"
-        content="Architecting enterprise AI systems, workflow governance, and high-velocity delivery pipelines. Expertise in document intelligence, SLA-driven operations, compliance architecture, and revenue-generating infrastructure."
+        content="Business analysis, requirements gathering, workflow improvement, and practical solutions for product and operations teams."
       />
     </Head>
     <AboutMe />

@@ -3,10 +3,10 @@ import styles from './Contact.module.css';
 import SlidingText from './SlidingText';
 
 const contactReasons = [
-  'Technical Product Manager / Product Ops role inquiry',
-  'Enterprise Operations Leadership opportunity',
-  'Strategic partnership or collaboration',
-  'Technical advisory or governance framework design',
+  'Product Analyst / Business Systems Analyst inquiry',
+  'Product Operations or process improvement conversation',
+  'Requirements gathering or workflow design discussion',
+  'Cross-functional delivery or stakeholder alignment opportunity',
 ];
 
 export default function Contact() {
@@ -34,8 +34,8 @@ export default function Contact() {
             direction="left"
             text={
               <>
-                <p className={styles.eyebrow}>Let's align on strategic direction</p>
-                <h1>Connect about enterprise leadership and systemic impact.</h1>
+                <p className={styles.eyebrow}>Let's align on business needs</p>
+                <h1>Connect about business analysis, workflow improvement, and practical delivery.</h1>
               </>
             }
           />
@@ -43,7 +43,7 @@ export default function Contact() {
             direction="fade"
             text={
               <p className={styles.heroText}>
-                I'm interested in conversations about Technical Product leadership, operational governance, enterprise AI architecture, and building systems that drive measurable business impact at scale.
+                I'm interested in conversations about product analysis, requirements gathering, stakeholder alignment, workflow design, and practical business solutions.
               </p>
             }
           />
@@ -81,7 +81,7 @@ export default function Contact() {
             <label htmlFor="message">What are we discussing?</label>
             <textarea
               className={styles.contactFormTextarea}
-              placeholder="Share details about your organization's challenge, strategic initiative, or role focus. (e.g., scaling AI product delivery, governing enterprise systems, managing release coordination across teams)"
+              placeholder="Share details about your team's challenge, process gap, or operational goal. (e.g., improving intake, clarifying requirements, coordinating delivery across functions)"
               id="message"
               name="Message"
               value={message}

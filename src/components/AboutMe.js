@@ -4,20 +4,32 @@ import styles from './AboutMe.module.css';
 
 const focusAreas = [
   {
-    title: 'Enterprise AI & Workflow Governance',
-    text: 'Architecting scalable document intelligence, retrieval systems, and automated workflows that reduce cycle time, enforce SLA compliance, and maintain regulatory alignment (HIPAA, SOC 2) without sacrificing engineering velocity.',
+    title: 'Business Analysis & Product Discovery',
+    text: 'Partnering with business, product, operations, and engineering teams to uncover the real problem, define goals, and shape practical solutions.',
   },
   {
-    title: 'Operational Scale & System Design',
-    text: 'Designing governance frameworks for multi-team delivery, building release management systems, and creating operational metrics that move beyond outputs to P&L efficiency and accuracy baselines (95%+).',
+    title: 'Business Systems & Workflow Improvement',
+    text: 'Mapping current-state workflows, clarifying handoffs, and strengthening processes so work moves with less friction and more consistency.',
   },
   {
-    title: 'Compliance-First Architecture',
-    text: 'Building enterprise systems that balance automation throughput with regulatory guardrails, audit trails, and operational transparency across healthcare, financial services, and mission-critical environments.',
+    title: 'AI-enabled Business Solutions',
+    text: 'Evaluating where automation and AI can support decision-making, customer experience, and day-to-day operations without overcomplicating the process.',
+  },
+  {
+    title: 'Requirements & User Stories',
+    text: 'Turning stakeholder conversations into clear requirements, acceptance criteria, and user stories that support delivery and adoption.',
+  },
+  {
+    title: 'Process Optimization',
+    text: 'Improving operating rhythms, responsibilities, and controls so teams can execute with more clarity and less rework.',
+  },
+  {
+    title: 'Operational Excellence',
+    text: 'Connecting analysis, delivery, and adoption so changes are practical, measurable, and sustainable.',
   },
 ];
 
-const proofPoints = ['$60K+ revenue-generating solutions', '98% SLA delivery at enterprise scale', 'HIPAA/SOC 2 compliance architecture', '20+ years of data governance'];
+const proofPoints = ['Stakeholder interviews & requirements gathering', 'Workflow analysis & process improvement', 'Cross-functional collaboration', 'Business outcomes & adoption'];
 
 export default function AboutMe() {
   return (
@@ -28,8 +40,8 @@ export default function AboutMe() {
             direction="left"
             text={
               <>
-                <p className={styles.eyebrow}>Technical Product & Business Operations</p>
-                <h1>Governing enterprise AI systems, automated workflows, and high-velocity delivery.</h1>
+                <p className={styles.eyebrow}>Product Analysis • Business Systems • Workflow Improvement</p>
+                <h1>Helping organizations turn complex business problems into practical systems, better processes, and measurable outcomes.</h1>
               </>
             }
           />
@@ -38,7 +50,7 @@ export default function AboutMe() {
             direction="fade"
             text={
               <p className={styles.heroText}>
-                I architect enterprise systems and governance frameworks that enforce operational throughput, regulatory compliance, and measurable business impact. My work spans AI-driven automation, multi-team release coordination, and revenue-generating infrastructure.
+                I partner with business, product, operations, and engineering teams to understand the problem, gather requirements, improve workflows, and deliver solutions that create real business value.
               </p>
             }
           />
@@ -60,16 +72,16 @@ export default function AboutMe() {
         <div className={styles.heroCard}>
           <div className={styles.cardHeader}>
             <span className={styles.statusDot}></span>
-            <span>System Governance Framework</span>
+            <span>Discovery & Delivery Framework</span>
           </div>
           <div className={styles.workflowPreview}>
-            <div>01. Audit bottlenecks &amp; throughput</div>
-            <div>02. Design SLA &amp; compliance guardrails</div>
-            <div>03. Build governance &amp; automation layers</div>
-            <div>04. Enforce accountability &amp; metrics</div>
+            <div>01. Understand the business problem</div>
+            <div>02. Gather requirements & stakeholder input</div>
+            <div>03. Map the workflow & define priorities</div>
+            <div>04. Deliver a practical solution</div>
           </div>
           <p className={styles.cardNote}>
-            The goal is measurable impact: SLA adherence, reduced cycle time (15–30%), execution accuracy (95%+), and business unit velocity.
+            The focus is clear: better decisions, stronger adoption, and measurable operational improvement.
           </p>
         </div>
       </section>
@@ -77,9 +89,9 @@ export default function AboutMe() {
       <section className={styles.sectionBlock}>
         <div className={styles.sectionIntro}>
           <p className={styles.eyebrow}>Operational Philosophy</p>
-          <h2>System governance that scales enterprise velocity.</h2>
+          <h2>Business-focused analysis that connects people, process, and systems.</h2>
           <p>
-            My work bridges business architecture, technical execution, and compliance strategy. I audit manual bottlenecks, design enforcement mechanisms, and architect systems that move beyond raw outputs to sustainable P&L efficiency, SLA adherence, and measurable business impact.
+            I work at the intersection of business needs, operational design, and practical delivery. Through stakeholder interviews, requirements gathering, workflow analysis, and process improvement, I help teams turn ambiguity into clear next steps and measurable outcomes.
           </p>
         </div>
 
@@ -96,14 +108,14 @@ export default function AboutMe() {
       <section className={styles.splitSection}>
         <div>
           <p className={styles.eyebrow}>Experience</p>
-          <h2>Enterprise-scale AI, operations, and delivery governance.</h2>
+          <h2>Product analysis, business systems, and workflow improvement.</h2>
         </div>
         <div className={styles.copyCard}>
           <p>
-            I've architected enterprise document-intelligence systems that generated $60K+ revenue, governed multi-team release delivery at 98% SLA adherence, and built retrieval systems over 20+ years of mission-critical transactional data. My work navigates regulatory alignment (HIPAA, SOC 2, compliance frameworks) while maintaining engineering velocity and measurable business impact.
+            I partner with cross-functional teams to understand business problems, gather requirements, improve processes, and shape solutions that are usable and sustainable. My work has included workflow automation, intake processes, knowledge systems, reporting, and operational coordination across regulated and fast-moving environments.
           </p>
           <p>
-            I'm positioned for Technical Product Manager, Product Ops Lead, or Enterprise Operations Leader roles—where systemic impact, regulatory control, and structural leverage define success.
+            I’m particularly interested in roles where business context, stakeholder alignment, and operational clarity matter as much as the final implementation.
           </p>
         </div>
       </section>

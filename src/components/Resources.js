@@ -4,32 +4,32 @@ import SlidingText from './SlidingText';
 export default function Resources() {
   const frameworks = [
     {
-      name: 'Enterprise AI PRD & Acceptance Criteria Matrix',
-      category: 'Product Management',
-      description: 'A standardized Product Requirement Document (PRD) template designed for AI/LLM integrations, covering confidence threshold routing, fallback behavior, and HIPAA audit trails.',
-      actionText: 'View Spec',
-      link: '/portfolio',
+      name: 'Discovery & Requirements Template',
+      category: 'Product Analysis',
+      description: 'A practical framework for turning stakeholder conversations into clear problem statements, requirements, and next steps.',
+      actionText: 'View Template',
+      link: '/case-studies',
     },
     {
-      name: 'Cross-Functional Release Readiness Framework',
-      category: 'Operations & Governance',
-      description: 'A 15+ team delivery checklist modeled after enterprise release governance, covering dependency tracking, ServiceNow change management, and operational risk mitigation.',
+      name: 'Workflow Mapping & Prioritization Framework',
+      category: 'Process Improvement',
+      description: 'A simple approach to documenting current workflows, identifying friction, and aligning on what should change first.',
       actionText: 'View Framework',
-      link: '/portfolio',
+      link: '/case-studies',
     },
     {
-      name: 'NL-to-SQL Semantic Layer Architecture Spec',
-      category: 'Data Governance',
-      description: 'System design specification for bridging natural language questions with governed relational databases without allowing unconstrained query execution.',
-      actionText: 'View Architecture',
-      link: '/portfolio',
+      name: 'Cross-Functional Delivery Checklist',
+      category: 'Operations',
+      description: 'A lightweight checklist for coordinating handoffs, clarifying ownership, and keeping delivery moving across teams.',
+      actionText: 'View Checklist',
+      link: '/case-studies',
     },
     {
-      name: 'Document Intelligence Evaluation & QA Protocol',
-      category: 'Systems Quality',
-      description: 'Evaluation matrix and error-handling taxonomy for measuring OCR and layout extraction accuracy across complex medical and financial documentation.',
-      actionText: 'View Protocol',
-      link: '/portfolio',
+      name: 'Business Outcome Tracking Sheet',
+      category: 'Operational Excellence',
+      description: 'A concise structure for linking process changes to business outcomes, adoption, and follow-up work.',
+      actionText: 'View Sheet',
+      link: '/case-studies',
     },
   ];
 
@@ -40,8 +40,8 @@ export default function Resources() {
           direction="top"
           text={
             <>
-              <p className={styles.eyebrow}>Governance & Frameworks</p>
-              <h1>Operating specs for enterprise systems and product delivery.</h1>
+              <p className={styles.eyebrow}>Analysis & Delivery Tools</p>
+              <h1>Practical tools for analysis, workflow design, and delivery.</h1>
             </>
           }
         />
@@ -49,7 +49,7 @@ export default function Resources() {
           direction="fade"
           text={
             <p>
-              Open-source operational blueprints, product requirements templates, and governance frameworks for scaling compliant AI and software workflows.
+              Practical templates and frameworks for understanding problems, gathering requirements, mapping workflows, and improving how work gets done.
             </p>
           }
         />

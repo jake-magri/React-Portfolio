@@ -10,16 +10,16 @@ export async function getStaticProps() {
 const PortfolioPage = () => (
   <>
     <Head>
-      <title>Case Studies | Jake Magri | Enterprise AI &amp; Operations</title>
+      <title>Case Studies | Jake Magri | Product Analysis &amp; Business Systems</title>
       <meta
         name="description"
-        content="Enterprise case studies in AI automation, document intelligence, workflow governance, release coordination, revenue-generating infrastructure, and compliance-first system architecture."
+        content="Case studies focused on requirements gathering, workflow improvement, stakeholder collaboration, and practical business solutions."
       />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Enterprise Case Studies | Jake Magri" />
+      <meta property="og:title" content="Case Studies | Jake Magri" />
       <meta
         property="og:description"
-        content="Selected systems and case studies: $60K revenue-generating document intelligence, 98% SLA enterprise delivery, 20+ years of data governance, and enterprise AI architecture."
+        content="Selected work in product analysis, workflow design, process improvement, and AI-enabled business solutions."
       />
     </Head>
     <Projects />

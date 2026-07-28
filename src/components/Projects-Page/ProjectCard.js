@@ -28,7 +28,7 @@ const ProjectCard = ({
         <h3 className={styles.projectCard__title}>{title}</h3>
         {summary && <p className={styles.projectCard__summary}>{summary}</p>}
         {outcome && <p className={styles.projectCard__outcome}><strong>Outcome:</strong> {outcome}</p>}
-        {stack && <p className={styles.projectCard__stack}><strong>Stack:</strong> {stack}</p>}
+        {stack && <p className={styles.projectCard__stack}><strong>Focus:</strong> {stack}</p>}
 
         <div className={styles.projectCard__links}>
           {deployedUrl && deployedUrl !== '#' && (

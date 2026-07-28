@@ -10,16 +10,16 @@ export async function getStaticProps() {
 const ContactPage = () => (
   <>
     <Head>
-      <title>Contact | Jake Magri</title>
+      <title>Contact | Jake Magri | Product Analysis</title>
       <meta
         name="description"
-        content="Contact Jake Magri to discuss bookkeeping workflow automation, finance operations, AI enablement, document collection systems, and practical workflow cleanup."
+        content="Contact Jake Magri to discuss product analysis, requirements gathering, workflow improvement, stakeholder collaboration, and practical business solutions."
       />
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Contact | Jake Magri" />
       <meta
         property="og:description"
-        content="Send the workflow, monthly process, document collection problem, or finance operations bottleneck you want to improve."
+        content="Share a stakeholder challenge, process gap, or operational goal that would benefit from business analysis and workflow improvement."
       />
     </Head>
     <Contact />
