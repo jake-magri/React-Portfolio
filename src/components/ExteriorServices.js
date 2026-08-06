@@ -273,21 +273,32 @@ export default function ExteriorServices() {
         <div className={styles.localFooterBrand}>Magri Exterior Services</div>
         <div className={styles.localFooterRight}>
           <div className={styles.localFooterMeta}>South Charlotte, NC • 704-421-8832</div>
-          <div className={styles.localFooterSocial} aria-label="Magri Exterior Services social links">
+          <div className={styles.localFooterLinks}>
             <a
-              href="https://www.facebook.com/profile.php?id=61592680299659&mibextid=wwXIfr&mibextid=wwXIfr"
+              className={styles.localFooterReviewButton}
+              href="https://g.page/r/CbrBCnWqGdD5EAE/review"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Leave a Google review for Magri Exterior Services"
             >
-              Facebook
+              Leave a Google Review
             </a>
-            <a
-              href="https://www.instagram.com/super_clean_77"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
+            <div className={styles.localFooterSocial} aria-label="Magri Exterior Services social links">
+              <a
+                href="https://www.facebook.com/profile.php?id=61592680299659&mibextid=wwXIfr&mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/super_clean_77"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </div>
           </div>
           <div className={styles.localFooterSubtle}>
             Part of <a href="/">JakeMagri.dev</a>
