@@ -124,6 +124,15 @@ const NavTabs = () => {
           </li>
           <li className="nav-item">
             <Link
+              className={`nav-link service-link ${router.pathname === '/exterior-services' ? 'active' : ''}`}
+              onClick={isMobile ? toggleMenu : null}
+              href="/exterior-services"
+            >
+              Exterior Services
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
               className={`nav-link ${router.pathname === '/contact' ? 'active' : ''}`}
               onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
               href="/contact"

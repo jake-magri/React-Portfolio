@@ -141,6 +141,15 @@ nav ul {
   transform: translateY(-1px);
 }
 
+.nav-link.service-link {
+  background: rgba(143, 203, 155, 0.12);
+  color: #f7f4ed !important;
+}
+
+.nav-link.service-link:hover {
+  background: rgba(143, 203, 155, 0.2);
+}
+
 .nav-link.active {
   color: #123326 !important;
   background: #ffffff;

@@ -104,21 +104,6 @@ export default function AboutMe() {
           ))}
         </div>
       </section>
-
-      <section className={styles.splitSection}>
-        <div>
-          <p className={styles.eyebrow}>Experience</p>
-          <h2>Product analysis, business systems, and workflow improvement.</h2>
-        </div>
-        <div className={styles.copyCard}>
-          <p>
-            I partner with cross-functional teams to understand business problems, gather requirements, improve processes, and shape solutions that are usable and sustainable. My work has included workflow automation, intake processes, knowledge systems, reporting, and operational coordination across regulated and fast-moving environments.
-          </p>
-          <p>
-            I’m particularly interested in roles where business context, stakeholder alignment, and operational clarity matter as much as the final implementation.
-          </p>
-        </div>
-      </section>
     </main>
   );
 }
