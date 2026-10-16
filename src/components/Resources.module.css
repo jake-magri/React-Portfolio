@@ -1,6 +1,6 @@
 .pageShell {
   min-height: 100vh;
-  padding: 5.5rem 1.25rem 7rem;
+  padding: 2rem 1.25rem 4rem;
   background:
     radial-gradient(circle at top left, rgba(143, 203, 155, 0.22), transparent 28rem),
     linear-gradient(180deg, #f7f4ed 0%, #f2efe7 50%, #ffffff 100%);
@@ -34,7 +34,7 @@
   font-family: "Tenor Sans", Georgia, serif;
   font-weight: 400;
   font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: 0.92;
+  line-height: 1.08;
   letter-spacing: -0.04em;
   color: #10261c;
 }
@@ -120,3 +120,6 @@
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(18, 51, 38, 0.22);
 }
+
+.categoryBadge { display: inline-block; margin-bottom: .8rem; padding: .35rem .65rem; border-radius: 999px; background: #e5eee4; color: #22583d; font-size: .8rem; font-weight: 750; }
+.resourceCard h2 { font-size: 1.35rem; color: #123326; }

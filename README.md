@@ -1,43 +1,46 @@
-# React-Portfolio
-![License](https://img.shields.io/badge/MIT%20License-purple)
+# Jake Magri — software portfolio
 
-## Description
+A Next.js Pages Router portfolio focused on software development, business applications, and application implementation. The existing green/cream visual identity and separate Magri Exterior Services landing page are preserved.
 
-Single-page application portfolio website build using react, next, bootstrap, with next client side routing, static rendering, responsive content & form react components and mobile responsive navigation bar.
+## Run locally
 
-## Table of Contents
+Use Node.js 20.9 or later (validated with Node 24.19.0).
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [How to Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [License](#license)
-- [Questions](#questions)
+```bash
+npm ci
+npm run dev
+```
 
-## Installation
-Deployment Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/86a59d4a-b509-49eb-a492-827887d88856/deploy-status)](https://app.netlify.com/sites/jake-magri/deploys)   
-This application is deployed on Netlify. [Click to access.](https://jake-magri.netlify.app/)
+Open the local URL printed by Next.js. For a production build:
 
-## Usage
+```bash
+npm run build
+npm start
+```
 
-### Video Demo
-https://github.com/user-attachments/assets/44f3d799-085c-4de4-819c-bf6b99974dce
+`npm run build` generates the Next.js build and then the sitemap/robots files. `npm run preview` also runs the built Next.js server. Installed dependencies, build output, and Git history are intentionally excluded from the source archive.
 
-### Usage Information
-Click on the top right hamburger icon to view the navbar and select other pages.
+## Content and structure
 
-## How to Contribute
+- `src/pages`: page routes and per-page metadata.
+- `src/components`: homepage, experience, contact, navigation, footer, notes, project cards, and the separate exterior-services page.
+- `src/data/projects.js`: project summaries, contribution descriptions, tools, validation considerations, and boundaries. Detail pages are generated from this data at `/projects/[slug]/`.
+- `src/data/blogData.js`: engineering design notes. HTML is authored locally, not accepted from users. Sanitize it before using untrusted CMS content.
+- `src/components/SiteHead.js`: canonical URLs and social/search metadata for career pages.
+- `src/styles` and component CSS modules: global and local styles.
+- `public`: downloadable résumé and retained image/video assets.
+- `docs/software-resume.tex`: source for the downloadable résumé. Compile with pdfLaTeX, then copy the PDF to `public/documents/jake-magri-resume.pdf`.
+- `docs/SITE_REVIEW.md`: review findings, changes, and validation limits.
+- `docs/ORIGINAL_FILE_INVENTORY.json`: original archive inventory with content hashes.
 
-Open to feedback! Send me a message on git.
+## Routes
 
-## Tests
+`/`, `/portfolio/`, `/projects/[slug]/`, `/resume/`, `/blogs/`, `/blogs/[slug]/`, `/case-studies/` (how I work), `/resources/`, `/contact/`, `/exterior-services/`.
 
-Functionally tested.
+The contact form opens an email draft using the visitor's email application. It has no submission backend and does not send or store messages itself. Direct email is also visible.
 
-## License 
-This application is covered under MIT License.
-See the [full license](https://opensource.org/licenses/MIT) for more information.
+## Deployment
 
-## Questions
+This source retains the existing Netlify Next.js setup. `netlify.toml` uses `npm run build` so the postbuild sitemap step also runs. Keep the existing Netlify project and domain configuration; no hosting migration is needed. The revised source has not been deployed.
 
-To reach me with additional questions please message me on either GitHub at jake-magri or via email jake.magri2@gmail.com.
+No environment variables are required for the current static content. Links to external services and social profiles should be checked before publishing.

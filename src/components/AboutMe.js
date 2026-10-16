@@ -1,109 +1,30 @@
 import Link from 'next/link';
-import SlidingText from './SlidingText';
 import styles from './AboutMe.module.css';
-
 const focusAreas = [
-  {
-    title: 'Business Analysis & Product Discovery',
-    text: 'Partnering with business, product, operations, and engineering teams to uncover the real problem, define goals, and shape practical solutions.',
-  },
-  {
-    title: 'Business Systems & Workflow Improvement',
-    text: 'Mapping current-state workflows, clarifying handoffs, and strengthening processes so work moves with less friction and more consistency.',
-  },
-  {
-    title: 'AI-enabled Business Solutions',
-    text: 'Evaluating where automation and AI can support decision-making, customer experience, and day-to-day operations without overcomplicating the process.',
-  },
-  {
-    title: 'Requirements & User Stories',
-    text: 'Turning stakeholder conversations into clear requirements, acceptance criteria, and user stories that support delivery and adoption.',
-  },
-  {
-    title: 'Process Optimization',
-    text: 'Improving operating rhythms, responsibilities, and controls so teams can execute with more clarity and less rework.',
-  },
-  {
-    title: 'Operational Excellence',
-    text: 'Connecting analysis, delivery, and adoption so changes are practical, measurable, and sustainable.',
-  },
+  { title: 'Business applications', text: 'C#/.NET and SQL for applications that help people complete real operational work.' },
+  { title: 'Integrations & automation', text: 'APIs, Python, and document-processing workflows that connect systems and reduce manual steps.' },
+  { title: 'Testing & delivery', text: 'Experience with test automation, release coordination, technical documentation, and cross-team communication.' },
 ];
-
-const proofPoints = ['Stakeholder interviews & requirements gathering', 'Workflow analysis & process improvement', 'Cross-functional collaboration', 'Business outcomes & adoption'];
-
 export default function AboutMe() {
-  return (
-    <main className={styles.pageShell}>
-      <section className={styles.heroSection}>
-        <div className={styles.heroCopy}>
-          <SlidingText
-            direction="left"
-            text={
-              <>
-                <p className={styles.eyebrow}>Product Analysis • Business Systems • Workflow Improvement</p>
-                <h1>Helping organizations turn complex business problems into practical systems, better processes, and measurable outcomes.</h1>
-              </>
-            }
-          />
-
-          <SlidingText
-            direction="fade"
-            text={
-              <p className={styles.heroText}>
-                I partner with business, product, operations, and engineering teams to understand the problem, gather requirements, improve workflows, and deliver solutions that create real business value.
-              </p>
-            }
-          />
-
-          <div className={styles.ctaRow}>
-            <Link href="/portfolio" className={styles.primaryCta}>
-              View Case Studies
-            </Link>
-            <Link href="/contact" className={styles.secondaryCta}>
-              Connect / Strategy
-            </Link>
-          </div>
-
-          <div className={styles.trustLine}>
-            {proofPoints.map((item) => <span key={item}>{item}</span>)}
-          </div>
-        </div>
-
-        <div className={styles.heroCard}>
-          <div className={styles.cardHeader}>
-            <span className={styles.statusDot}></span>
-            <span>Discovery & Delivery Framework</span>
-          </div>
-          <div className={styles.workflowPreview}>
-            <div>01. Understand the business problem</div>
-            <div>02. Gather requirements & stakeholder input</div>
-            <div>03. Map the workflow & define priorities</div>
-            <div>04. Deliver a practical solution</div>
-          </div>
-          <p className={styles.cardNote}>
-            The focus is clear: better decisions, stronger adoption, and measurable operational improvement.
-          </p>
-        </div>
-      </section>
-
-      <section className={styles.sectionBlock}>
-        <div className={styles.sectionIntro}>
-          <p className={styles.eyebrow}>Operational Philosophy</p>
-          <h2>Business-focused analysis that connects people, process, and systems.</h2>
-          <p>
-            I work at the intersection of business needs, operational design, and practical delivery. Through stakeholder interviews, requirements gathering, workflow analysis, and process improvement, I help teams turn ambiguity into clear next steps and measurable outcomes.
-          </p>
-        </div>
-
-        <div className={styles.focusGrid}>
-          {focusAreas.map((area) => (
-            <article key={area.title} className={styles.focusCard}>
-              <h3>{area.title}</h3>
-              <p>{area.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+  return <main className={styles.pageShell}>
+    <section className={styles.heroSection}>
+      <div className={styles.heroCopy}>
+        <p className={styles.eyebrow}>Jake Magri · Software Developer · Charlotte, NC</p>
+        <h1>Useful software.<br />Clear business purpose.</h1>
+        <p className={styles.heroText}>I build and connect business applications with C#/.NET, SQL, and APIs. My background combines software implementation, AI-assisted workflows, testing, and enterprise release coordination.</p>
+        <div className={styles.ctaRow}><Link href="/portfolio" className={styles.primaryCta}>Explore my work</Link><Link href="/resume" className={styles.secondaryCta}>Experience & résumé</Link></div>
+        <div className={styles.trustLine}>{['C# / .NET', 'SQL', 'Python', 'JavaScript / TypeScript'].map(s => <span key={s}>{s}</span>)}</div>
+      </div>
+      <aside className={styles.heroCard} aria-label="What I bring to a team">
+        <div className={styles.cardHeader}><span className={styles.statusDot} aria-hidden="true" /><span>From requirement to working software</span></div>
+        <div className={styles.workflowPreview}><div>01. Clarify the user’s task</div><div>02. Implement a focused change</div><div>03. Test and document the behavior</div><div>04. Review, learn, and improve</div></div>
+        <p className={styles.cardNote}>I value clear requirements, thoughtful code review, and teammates who share context. I enjoy talking with users and making technical work understandable.</p>
+      </aside>
+    </section>
+    <section className={styles.sectionBlock}>
+      <div className={styles.sectionIntro}><p className={styles.eyebrow}>My technical foundation</p><h2>Building with business context.</h2><p>A Management Information Systems degree, JavaScript/TypeScript bootcamp training, and experience in healthcare technology, financial services, and enterprise testing shape how I approach software.</p></div>
+      <div className={styles.focusGrid}>{focusAreas.map(a => <article key={a.title} className={styles.focusCard}><h3>{a.title}</h3><p>{a.text}</p></article>)}</div>
+    </section>
+    <section className={styles.splitSection}><div><p className={styles.eyebrow}>My next chapter</p><h2>Contributing and growing with a team.</h2></div><div className={styles.copyCard}><p>I’m exploring associate software development and application implementation roles with collaborative engineering teams. My strongest starting point is C#/.NET and SQL, with Python for supporting automation and JavaScript/TypeScript for web applications.</p><p>Outside of software, I enjoy music, fitness, and working outdoors. Running Magri Exterior Services has also kept me close to customer needs and the practical work of operating a small business.</p><Link href="/contact" className={styles.secondaryCta}>Let’s talk about your team</Link></div></section>
+  </main>;
 }

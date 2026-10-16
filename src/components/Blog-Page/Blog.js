@@ -12,7 +12,7 @@ export default function Blogs() {
           text={
             <>
               <p className={styles.eyebrow}>Project notes</p>
-              <h1 className={styles.blogHeader}>Thinking in workflows</h1>
+              <h1 className={styles.blogHeader}>Notes on building and testing</h1>
             </>
           }
         />
@@ -20,7 +20,7 @@ export default function Blogs() {
           direction="fade"
           text={
             <p className={styles.blogHeaderP}>
-              Notes on document intelligence, retrieval systems, natural-language reporting, and practical AI workflows that teams can actually trust.
+              General design notes on document processing, retrieval, and reporting. These discuss engineering considerations; they are not production benchmarks or claims that every pattern was implemented.
             </p>
           }
         />

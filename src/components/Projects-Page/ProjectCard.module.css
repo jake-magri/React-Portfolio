@@ -115,3 +115,5 @@
   background: #ffffff;
   transform: translateY(-2px);
 }
+
+.badge { color: #2e6a50; font-size: .76rem; font-weight: 750; letter-spacing: .04em; margin-bottom: 1rem; }

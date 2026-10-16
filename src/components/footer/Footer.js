@@ -1,23 +1,2 @@
-
-const Footer = () => {
-  return (
-    <footer>
-      <p>
-        <a href='https://github.com/jake-magri'
-          target="_blank"
-          rel="noopener noreferrer">
-          GitHub
-        </a> | <a href='https://www.linkedin.com/in/jakemagri/'
-          target="_blank"
-          rel="noopener noreferrer">
-          LinkedIn
-        </a> | <a href='https://jakemagri.dev/contact'
-          rel="noopener noreferrer">
-          Contact
-        </a>
-      </p>
-    </footer>
-  );
-};
-
-export default Footer;
+import Link from 'next/link';
+export default function Footer() { return <footer><p>Jake Magri · Software Developer · Charlotte, NC</p><nav aria-label="Footer navigation"><a href="https://github.com/jake-magri" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/jakemagri/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <Link href="/contact">Contact</Link> · <Link href="/resources">References</Link> · <Link href="/exterior-services">Magri Exterior Services</Link></nav></footer>; }

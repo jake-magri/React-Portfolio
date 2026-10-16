@@ -1,112 +1,16 @@
-import { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import styles from './Resume.module.css';
-import SlidingText from './SlidingText';
-
-const ResumeIframe = () => {
-  return (
-    <iframe
-      src="/documents/jake-magri-resume.pdf"
-      width="100%"
-      height="800px"
-      title="Jake Magri Resume"
-      style={{ border: 'none' }}
-    >
-      Your browser does not support iframes.
-      <a
-        href="/documents/jake-magri-resume.pdf"
-        download="Jake-Magri.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Download the Resume
-      </a>
-    </iframe>
-  );
-};
-
-const LazyResumeIframe = dynamic(() => Promise.resolve(ResumeIframe), {
-  ssr: false,
-  loading: () => <p className={styles.loadingText}>Loading Resume...</p>,
-});
-
 const skillGroups = [
-  {
-    title: 'Business analysis & discovery',
-    skills: ['Stakeholder interviews', 'Requirements gathering', 'Process mapping', 'User stories', 'Prioritization'],
-  },
-  {
-    title: 'Workflow & operations',
-    skills: ['Workflow analysis', 'Operational improvement', 'Documentation', 'Cross-functional coordination', 'Reporting clarity'],
-  },
-  {
-    title: 'Delivery & enablement',
-    skills: ['Process design', 'Automation evaluation', 'Risk & tradeoff analysis', 'Business outcome tracking', 'Change adoption'],
-  },
+  { title: 'Application development', skills: ['C# / .NET', 'SQL / T-SQL', 'JavaScript / TypeScript', 'React'] },
+  { title: 'Integrations & automation', skills: ['Python', 'REST APIs', 'AI integrations', 'Document processing'] },
+  { title: 'Quality & delivery', skills: ['Test automation', 'SDLC', 'Release coordination', 'Technical documentation'] },
 ];
-
+const experience = [
+  ['Magri Exterior Services', 'Founder', 'Jul 2026 – Present', 'Operate a Charlotte exterior-services business, managing customer communication, scheduling, pricing, and service delivery.'],
+  ['ImagineSoftware', 'AI Specialist', 'Mar 2025 – May 2026', 'Contributed to AI-enabled reporting, document intelligence, and knowledge retrieval initiatives, connecting business requirements with prototypes, validation, UAT, and handoff.'],
+  ['Brooksource at Ally Financial', 'Technical Release Coordinator', 'Feb 2024 – Sep 2024', 'Coordinated release readiness across 15+ engineering teams; tracked dependencies, approvals, and blockers and communicated delivery status.'],
+  ['Domtar', 'Test Automation Engineer Intern', 'May 2023 – Aug 2023', 'Supported SAP ERP testing through workflow analysis, test automation, defect documentation, and communication with enterprise teams.'],
+  ['Army National Guard', 'Combat Medic', 'Mar 2019 – Feb 2021', 'Supported medical readiness and documentation in structured team environments, developing accountability and clear communication under pressure.'],
+];
 export default function Resume() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  return (
-    <main className={styles.pageShell}>
-      <section className={styles.heroBlock}>
-        <SlidingText
-          direction="left"
-          text={
-            <>
-              <p className={styles.eyebrow}>Product Analysis & Business Systems</p>
-              <h1 className={styles.resumeHeader}>Business analysis, workflow improvement, and practical delivery.</h1>
-            </>
-          }
-        />
-        <SlidingText
-          direction="fade"
-          text={
-            <p className={styles.resumeHeaderText}>
-              My experience sits at the intersection of stakeholder collaboration, requirements gathering, workflow design, and operational improvement. I’ve worked across reporting, intake processes, knowledge systems, and automation initiatives that support better business decisions and smoother day-to-day execution.
-            </p>
-          }
-        />
-
-        <div className={styles.ctaRow}>
-          <a
-            className={styles.primaryCta}
-            href="/documents/jake-magri-resume.pdf"
-            download="Jake-Magri.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download Resume
-          </a>
-          <a className={styles.secondaryCta} href="#resume-preview">
-            View Resume Preview
-          </a>
-        </div>
-      </section>
-
-      <section className={styles.skillGrid}>
-        {skillGroups.map((group) => (
-          <article key={group.title} className={styles.stackCategory}>
-            <h3>{group.title}</h3>
-            <div className={styles.skillPillContainer}>
-              {group.skills.map((skill) => (
-                <span key={skill} className={styles.skillPill}>{skill}</span>
-              ))}
-            </div>
-          </article>
-        ))}
-      </section>
-
-      {isClient && (
-        <section className={styles.resumeIframeContainer} id="resume-preview">
-          <SlidingText direction="bottom" text={<LazyResumeIframe />} />
-        </section>
-      )}
-    </main>
-  );
+  return <main className={styles.pageShell}><section className={styles.heroBlock}><p className={styles.eyebrow}>Experience & technical foundation</p><h1 className={styles.resumeHeader}>Software, systems, and delivery.</h1><p className={styles.resumeHeaderText}>Experience across application implementation, AI-assisted workflows, enterprise testing, and release coordination. I bring business context and clear communication to technical work.</p><div className={styles.ctaRow}><a className={styles.primaryCta} href="/documents/jake-magri-resume.pdf" download="Jake-Magri-Software-Resume.pdf">Download résumé</a><a className={styles.secondaryCta} href="#experience">Read experience</a></div></section><section className={styles.skillGrid} aria-label="Technical skills">{skillGroups.map(g => <article key={g.title} className={styles.stackCategory}><h2>{g.title}</h2><div className={styles.skillPillContainer}>{g.skills.map(s => <span key={s} className={styles.skillPill}>{s}</span>)}</div></article>)}</section><section id="experience" className={styles.experience}><h2>Professional experience</h2>{experience.map(([company,role,dates,summary]) => <article key={company}><p className={styles.eyebrow}>{dates}</p><h3>{role} · {company}</h3><p>{summary}</p></article>)}<h2>Education & credentials</h2><p><strong>University of North Carolina at Charlotte</strong><br />BSBA, Management Information Systems · December 2023</p><p>JavaScript/TypeScript full-stack bootcamp training<br />Certified Scrum Product Owner (CSPO) · August 2026</p></section><details className={styles.experience}><summary>Preview résumé PDF</summary><iframe src="/documents/jake-magri-resume.pdf" title="Jake Magri software development résumé" width="100%" height="850" loading="lazy" /><p><a href="/documents/jake-magri-resume.pdf">Open the résumé directly</a> if your browser cannot display the preview.</p></details></main>;
 }

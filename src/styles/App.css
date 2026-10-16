@@ -93,3 +93,10 @@ footer a:hover {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+
+:focus-visible { outline: 3px solid #39815a; outline-offset: 4px; }
+.site-nav :focus-visible, footer :focus-visible { outline-color: #b3e0b9; }
+.skip-link { position: fixed; left: 1rem; top: -8rem; z-index: 2000; padding: 1rem; background: white; color: #10261c; }
+.skip-link:focus { top: 1rem; }
+footer nav { margin-top: .7rem; line-height: 2; }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }

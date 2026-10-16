@@ -130,7 +130,7 @@ export const blogData = [
       </ul>
 
       <h2>What this prevents</h2>
-      <p>This design avoids free-form SQL or DAX generation, silent assumptions, mixed-fact queries, unknown metrics, and incorrect reporting outputs that look plausible but are wrong.</p>
+      <p>These constraints can reduce the risks of unconstrained query generation and ambiguous reporting. They do not guarantee correct results: metric definitions, permissions, query logic, and outputs still require validation.</p>
 
       <h2>Takeaway</h2>
       <p>Natural-language reporting works best when AI is constrained by a governed semantic layer, explicit clarification, and deterministic execution rules.</p>

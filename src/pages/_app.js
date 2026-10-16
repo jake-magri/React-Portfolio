@@ -13,16 +13,16 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Jake Magri | AI Workflow Automation</title>
-        <meta name="description" content="AI workflow automation for finance operations, bookkeeping workflows, document intelligence, reporting systems, and practical technical enablement." />
+        <title>Jake Magri | Software Developer</title>
+        <meta key="description" name="description" content="Software development, application implementation, testing, and enterprise delivery." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="author" content="Jake Magri" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#10261c" />
       </Head>
-      {!isExteriorServicesPage && <NavTabs />}
-      <Component {...pageProps} />
+      {!isExteriorServicesPage && <><a className="skip-link" href="#main-content">Skip to content</a><NavTabs /></>}
+      <div id="main-content" tabIndex={-1}><Component {...pageProps} /></div>
       {!isExteriorServicesPage && <Footer />}
     </>
   );

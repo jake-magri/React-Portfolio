@@ -1,23 +1,4 @@
 import Resume from '../components/Resume';
-import Head from 'next/head';
+import SiteHead from '../components/SiteHead';
 
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
-}
-
-const ResumePage = () => (
-  <>
-    <Head>
-      <title>Experience | Jake Magri | Product Analyst & Business Systems</title>
-      <meta name="description" content="Experience in product analysis, requirements gathering, stakeholder collaboration, workflow improvement, and practical business solutions across operations and delivery." />
-      <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Experience | Jake Magri" />
-      <meta property="og:description" content="Experience in business analysis, process improvement, requirements gathering, and cross-functional delivery for product and operations teams." />
-    </Head>
-    <Resume />
-  </>
-);
-
-export default ResumePage;
+export default function Page() { return <><SiteHead title="Jake Magri | Experience & Résumé" description="Software implementation, test automation, release coordination, education, and technical skills." /><Resume /></>; }

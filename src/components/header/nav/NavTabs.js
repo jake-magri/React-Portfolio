@@ -1,150 +1,17 @@
-// components/NavTabs.js
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-const useMediaQuery = (query) => {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    media.addEventListener('change', listener);
-    return () => media.removeEventListener('change', listener);
-  }, [matches, query]);
-
-  return matches;
-};
-
-const NavTabs = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+const links = [['/portfolio', 'Projects'], ['/resume', 'Experience'], ['/blogs', 'Notes'], ['/contact', 'Contact']];
+export default function NavTabs() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  const button = useRef(null);
   const router = useRouter();
-  const isMobile = useMediaQuery('(max-width: 767px)'); // Mobile breakpoint
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsMenuOpen(false);
-    }
-  };
-
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  return (
-    <nav className="navbar custom-dark-green z-1030">
-      <div className="nav-container">
-        <span className="navbar-brand">Jake Magri</span>
-        {isMobile && !isMenuOpen && (
-          <button
-            className="navbar-toggler"
-            type="button"
-            aria-label="Toggle navigation"
-            onClick={toggleMenu}
-          >
-            <img
-              className="nav-bar-button-icon"
-              src="https://img.icons8.com/?size=100&id=120374&format=png&color=FFFFFF"
-              alt="Toggle Menu"
-            />
-          </button>
-        )}
-      
-      <div
-        className={`${isMobile ? 'navbar-collapse' : 'navbar-extend'} ${isMenuOpen ? 'show' : ''}`}
-        id="navbarNav"
-        ref={menuRef}
-      >
-        {isMobile && (
-          <button
-            className="close-button"
-            type="button"
-            aria-label="Close navigation"
-            onClick={toggleMenu}
-          >
-            ×
-          </button>
-        )}
-        <ul className="nav">
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/' ? 'active' : ''}`} 
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile 
-              href="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/resume' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
-              href="/resume"
-            >
-              Experience
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/portfolio' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
-              href="/portfolio"
-            >
-              Case Studies
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/blogs' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
-              href="/blogs"
-            >
-              Writing
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/resources' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
-              href="/resources"
-            >
-              Resources
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link service-link ${router.pathname === '/exterior-services' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null}
-              href="/exterior-services"
-            >
-              Exterior Services
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className={`nav-link ${router.pathname === '/contact' ? 'active' : ''}`}
-              onClick={isMobile ? toggleMenu : null} // Toggle menu only on mobile
-              href="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-      </div>
-    </nav>
-  );
-};
-
-export default NavTabs;
+    const outside = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    const escape = e => { if (e.key === 'Escape' && open) { setOpen(false); button.current?.focus(); } };
+    document.addEventListener('pointerdown', outside); document.addEventListener('keydown', escape);
+    return () => { document.removeEventListener('pointerdown', outside); document.removeEventListener('keydown', escape); };
+  }, [open]);
+  return <nav className="site-nav" aria-label="Main navigation" ref={ref}><div className="site-nav-inner"><Link className="site-brand" href="/" onClick={() => setOpen(false)}>Jake Magri<span>Software Developer</span></Link><button ref={button} className="site-menu-button" type="button" aria-expanded={open} aria-controls="site-menu" onClick={() => setOpen(!open)}>{open ? 'Close' : 'Menu'}</button><ul id="site-menu" className={`site-menu ${open ? 'is-open' : ''}`}>{links.map(([href,label]) => { const active=router.pathname===href || (href==='/portfolio' && router.pathname.startsWith('/projects/')); return <li key={href}><Link href={href} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link></li>; })}</ul></div></nav>;
+}
