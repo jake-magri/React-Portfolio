@@ -1,4 +1,5 @@
 \documentclass[letterpaper,11pt]{article}
+
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
@@ -8,75 +9,193 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-\pagestyle{fancy}\fancyhf{}\fancyfoot{}
+
+\pagestyle{fancy}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
+\addtolength{\topmargin}{-0.7in}
 \addtolength{\textheight}{1.4in}
-\urlstyle{same}\raggedbottom\raggedright
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
 \setlength{\tabcolsep}{0in}
-\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+\setlength{\footskip}{5pt}
 \pdfgentounicode=1
-\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+
+\titleformat{\section}
+  {\vspace{-4pt}\scshape\raggedright\large\bfseries}
+  {}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0in,label={}]
+}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt]}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt]
+}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
-\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-\textbf{#1}&\textbf{\small #2}\\
-\textit{\small #3}&\textit{\small #4}\\
-\end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2}\\
+    \textit{\small #3} & \textit{\small #4}\\
+  \end{tabular*}\vspace{-7pt}
+}
+
 \begin{document}
+
 \begin{center}
-{\Huge\scshape Jake Magri}\\\vspace{3pt}
-\textbf{Software Development \;|\; Business Applications \& Integrations}\\\vspace{3pt}
-\small Charlotte, NC\enspace$|$\enspace (704) 421-8832\enspace$|$\enspace
-\href{mailto:jake.magri2@gmail.com}{jake.magri2@gmail.com}\\
-\href{https://www.linkedin.com/in/jakemagri/}{linkedin.com/in/jakemagri}\enspace$|$\enspace
-\href{https://jakemagri.dev}{jakemagri.dev}\enspace$|$\enspace
-\href{https://github.com/jake-magri}{github.com/jake-magri}
+  {\Huge\scshape Jake Magri}\\\vspace{3pt}
+  \textbf{Software Development | Business Applications \& Integrations}\\
+  \vspace{3pt}
+  \small
+  Charlotte, NC\enspace$|$\enspace
+  (704) 421-8832\enspace$|$\enspace
+  \href{mailto:jake.magri2@gmail.com}{jake.magri2@gmail.com}\\
+  \href{https://www.linkedin.com/in/jakemagri/}{linkedin.com/in/jakemagri}
+  \enspace$|$\enspace
+  \href{https://jakemagri.dev}{jakemagri.dev}
+  \enspace$|$\enspace
+  \href{https://github.com/jake-magri}{github.com/jake-magri}
 \end{center}
-\section{Summary}
-\small{Software professional with experience in AI-enabled business applications, document-processing workflows, enterprise testing, and release coordination. Core tools include C\#/.NET, SQL, Python, and APIs, with JavaScript/TypeScript web-development training. Brings business context, technical documentation, and clear cross-team communication to implementation work. Seeking an associate software development or application implementation role on a collaborative team.}
+
+\section{Professional Summary}
+\small{
+Software developer with professional experience building business
+application functionality using C\#/.NET, SQL/T-SQL, Python, and APIs.
+Holds a BSBA in Management Information Systems and a Full-Stack
+Development Certificate from UNC Charlotte. Combines hands-on
+implementation, testing, and debugging with business requirements
+analysis, technical documentation, and cross-team release coordination.
+}
+
+\vspace{-5pt}
+
 \section{Technical Skills}
-\small{\textbf{Development:} C\#/.NET, SQL/T-SQL, Python, JavaScript, TypeScript, React\\
-\textbf{Applications \& Integration:} REST APIs, AI/LLM integrations, document intelligence, business systems\\
-\textbf{Quality \& Delivery:} SDLC, test automation, defect documentation, release readiness, technical documentation}
-\section{Professional Experience}
+\small{
+\textbf{Languages \& Data:}
+C\#, SQL/T-SQL, Python, JavaScript, TypeScript, GraphQL, JSON\\
+\textbf{Applications \& Integrations:}
+.NET, WinUI, React, Next.js, REST APIs, OpenAI APIs, AWS Lambda\\
+\textbf{Quality \& Delivery:}
+Git, application testing and debugging, test automation,
+data validation, defect documentation, SDLC, release coordination
+}
+
+\vspace{-5pt}
+
+\section{Relevant Professional Experience}
 \resumeSubHeadingListStart
-\resumeSubheading{ImagineSoftware}{Mar 2025 -- May 2026}{AI Specialist}{Charlotte, NC}
+
+\resumeSubheading
+  {ImagineSoftware}{Mar 2025 -- May 2026}
+  {AI Specialist}{Charlotte, NC}
 \resumeItemListStart
-\resumeItem{Contributed to AI-enabled reporting, document intelligence, and enterprise knowledge-retrieval initiatives, connecting business needs with solution development, validation, UAT, and handoff.}
-\resumeItem{Worked with C\#/.NET, SQL, Python, and APIs across application and automation work; communicated implementation constraints and findings to technical and business stakeholders.}
-\resumeItem{Translated a radiology customer's document-processing challenges into a validated multimodal workflow supporting a complex medical-billing software opportunity.}
+  \resumeItem{
+    Developed a natural-language reporting application using C\#,
+    WinUI, .NET, OpenAI APIs, and T-SQL to translate business
+    reporting questions into database queries.
+  }
+  \resumeItem{
+    Built Python and AWS Lambda document-processing workflows
+    that extracted medical billing charges and demographic
+    information into structured fields.
+  }
+  \resumeItem{
+    Tested generated queries and extracted outputs, investigated
+    failures, and refined application behavior through iterative
+    debugging and validation.
+  }
+  \resumeItem{
+    Collaborated with technical and business stakeholders to
+    clarify requirements, demonstrate prototypes, communicate
+    implementation tradeoffs, and support UAT and handoff.
+  }
 \resumeItemListEnd
-\resumeSubheading{Brooksource at Ally Financial}{Feb 2024 -- Sep 2024}{Technical Release Coordinator}{Charlotte, NC}
+
+\resumeSubheading
+  {Brooksource at Ally Financial}{Feb 2024 -- Sep 2024}
+  {Technical Release Coordinator}{Charlotte, NC}
 \resumeItemListStart
-\resumeItem{Coordinated enterprise release readiness across 15+ engineering teams, tracking dependencies, approvals, implementation status, and production readiness.}
-\resumeItem{Communicated delivery status, escalated blockers, clarified ownership, and supported standardized release reporting and handoffs.}
+  \resumeItem{
+    Coordinated software release readiness across 15+ engineering
+    teams, tracking dependencies, approvals, implementation
+    status, and production readiness.
+  }
+  \resumeItem{
+    Communicated delivery status, escalated blockers, clarified
+    ownership, and maintained release documentation to support
+    deployment planning and cross-team handoffs.
+  }
 \resumeItemListEnd
-\resumeSubheading{Domtar}{May 2023 -- Aug 2023}{Test Automation Engineer Intern}{Charlotte, NC}
+
+\resumeSubheading
+  {Domtar}{May 2023 -- Aug 2023}
+  {Test Automation Engineer Intern}{Charlotte, NC}
 \resumeItemListStart
-\resumeItem{Supported SAP ERP workflows through test automation, workflow analysis, system-issue identification, and defect documentation.}
-\resumeItem{Communicated testing findings and operational risks with enterprise teams to support quality controls and release readiness.}
+  \resumeItem{
+    Supported SAP ERP workflows through test automation,
+    workflow analysis, system-issue identification, and defect
+    documentation; communicated findings to enterprise teams.
+  }
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
+
 \section{Selected Web Projects}
-\small{\textbf{Volt Underground:} E-commerce application using React, TypeScript, MongoDB, and Apollo GraphQL, with cart/checkout workflows and Cypress testing.\\[3pt]
-\textbf{HiPub:} Conversational discovery application integrating the OpenAI API, LangChain.js, Google Places, PostgreSQL, and JWT authentication.}
+\small{
+\textbf{Volt Underground:}
+E-commerce application using React, TypeScript, MongoDB, and
+Apollo GraphQL, with shopping-cart and checkout workflows
+and Cypress testing.\\[3pt]
+\textbf{HiPub:}
+Conversational discovery application integrating the OpenAI API,
+LangChain.js, Google Places, PostgreSQL, and JWT authentication.
+}
+
 \section{Additional Experience}
-\small{\textbf{Magri Exterior Services --- Founder} \hfill Jul 2026 -- Present\\
-Operate an exterior-services business; manage customer communication, scheduling, pricing, and service delivery.\\[4pt]
-\textbf{Army National Guard --- Combat Medic} \hfill Mar 2019 -- Feb 2021\\
-Supported medical readiness and documentation in structured team environments, developing accountability and clear communication under pressure.}
-\section{Education \& Credentials}
-\small{\textbf{University of North Carolina at Charlotte} \hfill Dec 2023\\
-BSBA, Management Information Systems\\[3pt]
-JavaScript/TypeScript full-stack bootcamp training\\
-Certified Scrum Product Owner (CSPO), Scrum Alliance \hfill Aug 2026}
+\small{
+\textbf{Magri Exterior Services --- Owner / Field Operations Lead}
+\hfill Jul 2026 -- Present\\
+Manage customer communication, scheduling, pricing, equipment
+readiness, and exterior-cleaning service delivery.
+}
+
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {University of North Carolina at Charlotte}{Dec 2023}
+  {BSBA, Management Information Systems}{Charlotte, NC}
+
+\resumeSubheading
+  {University of North Carolina at Charlotte}{Dec 2024}
+  {Full-Stack Development Certificate}{Charlotte, NC}
+
+\resumeSubHeadingListEnd
+
+\section{Certification \& Military Service}
+\small{
+\textbf{Certification:}
+Certified Scrum Product Owner (CSPO), Scrum Alliance
+\hfill Aug 2026\\[3pt]
+\textbf{Military Service:}
+Army National Guard, Combat Medic
+\hfill Mar 2019 -- Feb 2021
+}
+
 \end{document}
