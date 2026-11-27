@@ -2,8 +2,8 @@ import styles from './Resume.module.css';
 const skillGroups = [
   { title: 'Core stack', skills: ['C# / .NET', 'SQL / T-SQL', 'Azure', 'ASP.NET Core', 'Blazor', 'EF Core'] },
   { title: 'Development & cloud tools', skills: ['AWS Lambda / S3', 'Python', 'JavaScript / TypeScript', 'React', 'Git / GitHub Actions'] },
-  { title: 'Integrations & automation', skills: ['Python', 'REST APIs', 'AI integrations', 'Document processing'] },
-  { title: 'Quality & delivery', skills: ['Test automation', 'SDLC', 'Release coordination', 'Technical documentation'] },
+  { title: 'Integrations & automation', skills: ['REST APIs', 'GraphQL', 'AI integrations', 'Document processing'] },
+  { title: 'Quality & delivery', skills: ['Automated testing', 'Playwright', 'Data validation', 'CI/CD', 'Release coordination', 'Technical documentation'] },
 ];
 const experience = [
   ['ImagineSoftware', 'AI Specialist', 'Mar 2025 – May 2026', 'Developed a C#/.NET WinUI reporting application integrating OpenAI APIs and SQL Server; validated generated queries against 79 business questions across four formal testing rounds. Built AWS document processing and API integrations, developed multimodal extraction workflows, and collaborated with business and engineering teams on requirements, testing, and troubleshooting.'],
