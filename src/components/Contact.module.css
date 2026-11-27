@@ -146,25 +146,3 @@
     padding-right: 1rem;
   }
 }
-
-.projectInquiry > summary {
-  cursor: pointer;
-  list-style: none;
-}
-
-.projectInquiry > summary::-webkit-details-marker {
-  display: none;
-}
-
-.projectInquiry .contactCard {
-  max-width: 38rem;
-  margin-top: 1rem;
-}
-
-.draftNote {
-  color: #fff;
-}
-
-.draftNote:empty {
-  margin-top: -0.75rem;
-}
