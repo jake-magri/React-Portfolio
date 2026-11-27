@@ -1,6 +1,6 @@
 # Jake Magri — software portfolio
 
-A Next.js Pages Router portfolio focused on software development, business applications, and application implementation. The existing green/cream visual identity and separate Magri Exterior Services landing page are preserved.
+A Next.js Pages Router portfolio focused on software development, business applications, and application implementation. The existing green/cream visual identity is preserved.
 
 ## Run locally
 
@@ -23,7 +23,7 @@ npm start
 ## Content and structure
 
 - `src/pages`: page routes and per-page metadata.
-- `src/components`: homepage, experience, contact, navigation, footer, notes, project cards, and the separate exterior-services page.
+- `src/components`: homepage, experience, contact, navigation, footer, notes, project cards.
 - `src/data/projects.js`: project summaries, contribution descriptions, tools, validation considerations, and boundaries. Detail pages are generated from this data at `/projects/[slug]/`.
 - `src/data/blogData.js`: engineering design notes. HTML is authored locally, not accepted from users. Sanitize it before using untrusted CMS content.
 - `src/components/SiteHead.js`: canonical URLs and social/search metadata for career pages.
@@ -35,7 +35,7 @@ npm start
 
 ## Routes
 
-`/`, `/portfolio/`, `/projects/[slug]/`, `/resume/`, `/blogs/`, `/blogs/[slug]/`, `/case-studies/` (how I work), `/resources/`, `/contact/`, `/exterior-services/`.
+`/`, `/portfolio/`, `/projects/[slug]/`, `/resume/`, `/blogs/`, `/blogs/[slug]/`, `/case-studies/` (how I work), `/resources/`, `/contact/`.
 
 The contact form opens an email draft using the visitor's email application. It has no submission backend and does not send or store messages itself. Direct email is also visible.
 
