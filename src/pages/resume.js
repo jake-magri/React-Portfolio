@@ -1,4 +1,4 @@
 import Resume from '../components/Resume';
 import SiteHead from '../components/SiteHead';
 
-export default function Page() { return <><SiteHead title="Jake Magri | Experience & Résumé" description="Software implementation, test automation, release coordination, education, and technical skills." /><Resume /></>; }
+export default function Page() { return <><SiteHead title="Jake Magri | Experience & Résumé" description="C#/.NET, SQL, Azure, AWS, software implementation, testing, release coordination, and professional credentials." /><Resume /></>; }
