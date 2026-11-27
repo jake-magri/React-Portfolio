@@ -2,6 +2,7 @@ import styles from './Resources.module.css';
 const references = [
  ['C# documentation', 'C# / .NET', 'Language reference, examples, and .NET development guidance.', 'https://learn.microsoft.com/en-us/dotnet/csharp/'],
  ['SQL Server documentation', 'SQL', 'T-SQL reference, database concepts, and query documentation.', 'https://learn.microsoft.com/en-us/sql/'],
+ ['Azure documentation', 'Azure', 'Cloud services, architecture, administration, and reliability guidance.', 'https://learn.microsoft.com/en-us/azure/'],
  ['Python documentation', 'Python', 'Language and standard library references for scripts and integrations.', 'https://docs.python.org/3/'],
  ['TypeScript documentation', 'TypeScript', 'The handbook and reference for typed JavaScript applications.', 'https://www.typescriptlang.org/docs/'],
 ];
