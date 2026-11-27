@@ -11,7 +11,7 @@ export default function ConsultingPage() {
     <>
       <SiteHead
         title="Independent Software Consulting | Jake Magri"
-        description="Independent business software consulting in Charlotte, NC. Explore completed demonstrations and discuss operational problems."
+        description="Independent business software consulting in Charlotte, NC. Discuss practical improvements to existing business operations."
       />
       <main className={styles.pageShell}>
         <header className={styles.heroBlock}>
@@ -26,13 +26,11 @@ export default function ConsultingPage() {
         <section className={styles.detailShell} aria-labelledby="offerings-heading">
           <div className={styles.detailSection}>
             <h2 id="offerings-heading">Services &amp; demonstrations</h2>
-            <p>
-              Each offering is backed by a completed demonstration using sample
-              or otherwise approved data.
-            </p>
-            {publishedOfferings.length === 0 && (
+            {publishedOfferings.length > 0 ? (
+              <p>Explore working demonstrations of the solutions I offer.</p>
+            ) : (
               <p className={styles.detailNote}>
-                No offerings are listed yet. Demonstrations will be added as they are completed.
+                Demonstrations will be added as they are completed.
               </p>
             )}
           </div>
