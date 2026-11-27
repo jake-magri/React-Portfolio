@@ -2,195 +2,59 @@ import Image from 'next/image';
 import styles from './ExteriorServices.module.css';
 
 const serviceCards = [
-  {
-    title: 'Lawn Mowing & Edging',
-    description:
-      'Regular mowing, edging, and basic cleanup to keep the property looking maintained.',
-  },
-  {
-    title: 'Pressure Washing',
-    description:
-      'Driveways, walkways, patios, exterior surfaces, and other appropriate hard-surface cleaning.',
-  },
-  {
-    title: 'Gutter Cleaning',
-    description:
-      'Removal of leaves and debris to help keep gutters flowing properly.',
-  },
-  {
-    title: 'Leaf & Yard Cleanup',
-    description:
-      'Seasonal leaf removal, debris cleanup, and general exterior property cleanup.',
-  },
-];
-
-const galleryPairs = [
-  {
-    title: 'Lawn cleanup',
-    items: [
-      {
-        src: '/images/exterior-services/IMG_9912.jpg',
-        alt: 'Before lawn cleanup photo showing overgrown grass near the front of the property',
-        caption: 'Before',
-        width: 3024,
-        height: 4032,
-      },
-      {
-        src: '/images/exterior-services/Lawn_Front_Right_After_2.jpg',
-        alt: 'After lawn cleanup photo showing the trimmed front-right side of the yard',
-        caption: 'After',
-        width: 3024,
-        height: 4032,
-      },
-    ],
-  },
-  {
-    title: 'Concrete cleaning',
-    items: [
-      {
-        src: '/images/exterior-services/IMG_9741.jpg',
-        alt: 'Before pressure washing photo showing dirty concrete',
-        caption: 'Before',
-        width: 3024,
-        height: 4032,
-      },
-      {
-        src: '/images/exterior-services/IMG_9742.jpg',
-        alt: 'After pressure washing photo showing clean concrete',
-        caption: 'After',
-        width: 3024,
-        height: 4032,
-      },
-    ],
-  },
-  {
-    title: 'Wood cleaning',
-    items: [
-      {
-        src: '/images/exterior-services/IMG_9745.jpg',
-        alt: 'Before wood cleaning photo showing green buildup on a wood post',
-        caption: 'Before',
-        width: 3024,
-        height: 4032,
-      },
-      {
-        src: '/images/exterior-services/IMG_9746.jpg',
-        alt: 'After wood cleaning photo showing the cleaned wood post',
-        caption: 'After',
-        width: 3024,
-        height: 4032,
-      },
-    ],
-  },
+  { title: 'Mobile fleet washing', description: 'On-site exterior washing for service vans, delivery vehicles and commercial trucks. Larger vehicles and equipment are evaluated by scope and site conditions.' },
+  { title: 'Recurring wash programs', description: 'Plan regular visits around vehicle availability, fleet size and operating hours rather than sending vehicles away for cleaning.' },
+  { title: 'Commercial exterior cleaning', description: 'Ask about targeted cleaning of suitable commercial surfaces and equipment as part of your site maintenance needs.' },
 ];
 
 const workflowSteps = [
-  {
-    number: '1',
-    title: 'Send me the job',
-    description:
-      'Call or text a photo and short description of what you need done.',
-  },
-  {
-    number: '2',
-    title: 'Get a quote',
-    description: 'I’ll review the job and give you a straightforward quote.',
-  },
-  {
-    number: '3',
-    title: 'Get it handled',
-    description:
-      'We schedule the work and I take care of the exterior cleanup.',
-  },
+  { number: '1', title: 'Review your fleet', description: 'Tell us your location, vehicle types, approximate unit count, preferred frequency and available wash area.' },
+  { number: '2', title: 'Agree on a service plan', description: 'Confirm scope, pricing, site access, water supply and an appropriate wastewater management approach before scheduling.' },
+  { number: '3', title: 'Wash, document and repeat', description: 'Coordinate the visit and agree on how completed units, exceptions and future visits will be communicated.' },
 ];
 
-const serviceAreas = [
-  'Charlotte, NC',
-  'South Charlotte',
-  'Steele Creek',
-  'Palisades',
-  'Nearby surrounding areas',
-];
+const serviceAreas = ['Charlotte, NC', 'Steele Creek', 'Pineville', 'Southwest Charlotte', 'Nearby industrial corridors'];
 
-const renderComparison = (item) => (
-  <article key={item.title} className={styles.galleryPair}>
-    <h3 className={styles.galleryPairTitle}>{item.title}</h3>
-    <div className={styles.galleryPairGrid}>
-      {item.items.map((entry) => (
-        <figure key={entry.src} className={styles.galleryCard}>
-          <div className={styles.galleryLabel}>{entry.caption}</div>
-          <Image
-            src={entry.src}
-            alt={entry.alt}
-            width={entry.width}
-            height={entry.height}
-            sizes="(min-width: 768px) 320px, 50vw"
-            className={styles.galleryImage}
-          />
-        </figure>
-      ))}
-    </div>
-  </article>
-);
+const audiences = ['Field service & construction fleets', 'Delivery & distribution operators', 'Equipment rental & material handling', 'Fleet maintenance & contracting partners'];
 
-export default function ExteriorServices() {
+export default function ExteriorServices({ photos = [] }) {
+  const hero = photos.find(photo => photo.id === 'fleet-wash') || photos[0];
+  const gallery = photos.filter(photo => photo.id !== hero?.id);
   return (
     <main className={styles.pageShell}>
       <header className={styles.localHeader}>
         <a href="#hero-heading" className={styles.localBrand} aria-label="Magri Exterior Services home">
           <span className={styles.localBrandMark}>Magri Exterior Services</span>
-          <span className={styles.localBrandMeta}>South Charlotte</span>
+          <span className={styles.localBrandMeta}>Commercial fleet washing</span>
         </a>
-        <a className={styles.localHeaderCta} href="sms:7044218832" aria-label="Text Magri Exterior Services for a quote">
-          Text for Quote
-        </a>
+        <a className={styles.localHeaderCta} href="sms:7044218832">Text for Quote</a>
       </header>
 
-      <section className={styles.heroSection} aria-labelledby="hero-heading">
+      <section className={`${styles.heroSection} ${!hero ? styles.textOnlyHero : ''}`} aria-labelledby="hero-heading">
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>MAGRI EXTERIOR SERVICES • SOUTH CHARLOTTE</p>
-          <h1 id="hero-heading">Your property, cleaned up.</h1>
-          <p className={styles.heroText}>
-            Lawn mowing &amp; edging, pressure washing, gutter cleaning and exterior cleanup in South Charlotte.
-          </p>
+          <p className={styles.eyebrow}>MOBILE FLEET WASHING · CHARLOTTE, NC</p>
+          <h1 id="hero-heading">Clean fleets. Less disruption.</h1>
+          <p className={styles.heroText}>On-site commercial vehicle washing designed around your fleet, your facility and your operating schedule.</p>
           <div className={styles.heroActions}>
-            <a
-              className={styles.primaryButton}
-              href="sms:7044218832"
-              aria-label="Text Magri Exterior Services for a free quote"
-            >
-              Text for a Free Quote
-            </a>
-            <a
-              className={styles.secondaryButton}
-              href="tel:7044218832"
-              aria-label="Call Magri Exterior Services"
-            >
-              Call 704-421-8832
-            </a>
+            <a className={styles.primaryButton} href="sms:7044218832">Request a Fleet Quote</a>
+            <a className={styles.secondaryButton} href="tel:7044218832">Call 704-421-8832</a>
           </div>
-          <p className={styles.heroSupport}>Send a photo of what you need done.</p>
+          <p className={styles.heroSupport}>One-time washes, recurring service and vendor partnership inquiries welcome.</p>
         </div>
-
-        <div className={styles.heroVisual}>
-          <div className={styles.heroImageFrame}>
-            <Image
-              src="/images/exterior-services/EC0E0496-8002-4125-9DB3-5B54385A5D80.PNG"
-              alt="Placeholder for exterior services before and after photo"
-              width={1200}
-              height={900}
-              className={styles.heroImage}
-            />
+        {hero && (
+          <div className={styles.heroVisual}>
+            <figure className={styles.fleetHeroFrame}>
+              <Image src={hero.src} alt={hero.alt} width={hero.width} height={hero.height} sizes="(min-width: 768px) 420px, 100vw" className={styles.fleetHeroImage} priority />
+              <figcaption className={styles.fleetCaption}>{hero.caption}</figcaption>
+            </figure>
           </div>
-        </div>
+        )}
       </section>
 
       <section className={styles.servicesSection} aria-labelledby="services-heading">
-        <header className={styles.sectionHeader}>
-          <h2 id="services-heading">Services</h2>
-        </header>
+        <header className={styles.sectionHeader}><h2 id="services-heading">Commercial services</h2></header>
         <div className={styles.servicesGrid}>
-          {serviceCards.map((service) => (
+          {serviceCards.map(service => (
             <article key={service.title} className={styles.serviceCard}>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>
@@ -199,72 +63,68 @@ export default function ExteriorServices() {
         </div>
       </section>
 
-      <section className={styles.gallerySection} aria-labelledby="gallery-heading">
-        <header className={styles.sectionHeader}>
-          <h2 id="gallery-heading">Recent work</h2>
-          <p className={styles.sectionIntro}>
-            Real before &amp; afters from exterior projects around Charlotte.
-          </p>
-        </header>
-        <div className={styles.galleryGrid}>
-          {galleryPairs.map(renderComparison)}
+      <section className={styles.areaSection} aria-labelledby="customers-heading">
+        <header className={styles.sectionHeader}><h2 id="customers-heading">Who we work with</h2></header>
+        <p className={styles.sectionIntro}>For businesses that operate vehicles or equipment from a yard, depot or commercial facility.</p>
+        <ul className={styles.areaList}>{audiences.map(audience => <li key={audience}>{audience}</li>)}</ul>
+      </section>
+
+      <section className={styles.areaSection} aria-labelledby="visibility-heading">
+        <header className={styles.sectionHeader}><h2 id="visibility-heading">More than a clean vehicle</h2></header>
+        <p className={styles.sectionIntro}>A reliable wash program should be easy to coordinate and easy to account for. Drawing on prior commercial fleet-washing experience and a background in management information systems, Magri Exterior Services focuses on practical service organization, clear communication and accountability.</p>
+        <div className={styles.servicesGrid}>
+          {[
+            ['Operational convenience', 'Coordinate service windows around vehicles already parked at your facility.'],
+            ['Service visibility', 'Agree on vehicle identification, completed work, exceptions and visit summaries with your fleet contact.'],
+            ['Site responsibility', 'Review access, water availability and wastewater handling requirements before work begins.'],
+          ].map(([title, description]) => (
+            <article key={title} className={styles.serviceCard}><h3 className={styles.serviceTitle}>{title}</h3><p className={styles.serviceDescription}>{description}</p></article>
+          ))}
         </div>
       </section>
 
+      {gallery.length > 0 && (
+        <section className={styles.gallerySection} aria-labelledby="gallery-heading">
+          <header className={styles.sectionHeader}>
+            <h2 id="gallery-heading">Fleet washing in practice</h2>
+            <p className={styles.sectionIntro}>Illustrations of hands-on fleet washing experience. Some images have been edited to remove customer branding; they are not a customer endorsement or a claim of a Magri service contract.</p>
+          </header>
+          <div className={styles.fleetGallery}>
+            {gallery.map(photo => (
+              <figure key={photo.id} className={styles.fleetPhoto}>
+                <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(min-width: 768px) 33vw, 100vw" className={styles.fleetPhotoImage} />
+                <figcaption className={styles.fleetCaption}>{photo.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className={styles.howWorksSection} aria-labelledby="how-it-works-heading">
-        <header className={styles.sectionHeader}>
-          <h2 id="how-it-works-heading">How it works</h2>
-        </header>
-        <div className={styles.stepGrid}>
-          {workflowSteps.map((step) => (
-            <article key={step.number} className={styles.stepCard}>
-              <div className={styles.stepNumber}>{step.number}</div>
-              <div>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDescription}>{step.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <header className={styles.sectionHeader}><h2 id="how-it-works-heading">How it works</h2></header>
+        <div className={styles.stepGrid}>{workflowSteps.map(step => (
+          <article key={step.number} className={styles.stepCard}>
+            <div className={styles.stepNumber}>{step.number}</div>
+            <div><h3 className={styles.stepTitle}>{step.title}</h3><p className={styles.stepDescription}>{step.description}</p></div>
+          </article>
+        ))}</div>
       </section>
 
       <section className={styles.areaSection} aria-labelledby="service-area-heading">
-        <header className={styles.sectionHeader}>
-          <h2 id="service-area-heading">Serving South Charlotte</h2>
-        </header>
-        <p className={styles.sectionIntro}>
-          Based in the Charlotte area and focused primarily on South Charlotte and nearby neighborhoods.
-        </p>
-        <ul className={styles.areaList}>
-          {serviceAreas.map((area) => (
-            <li key={area}>{area}</li>
-          ))}
-        </ul>
+        <header className={styles.sectionHeader}><h2 id="service-area-heading">Serving the Charlotte area</h2></header>
+        <p className={styles.sectionIntro}>Based in South Charlotte. Contact us to discuss your site and service requirements.</p>
+        <ul className={styles.areaList}>{serviceAreas.map(area => <li key={area}>{area}</li>)}</ul>
       </section>
 
       <section className={styles.finalCtaSection} aria-labelledby="final-cta-heading">
         <div className={styles.finalCtaContent}>
           <div>
-            <h2 id="final-cta-heading">Need something outside cleaned up?</h2>
-            <p className={styles.finalCtaText}>
-              Send me a photo of what you need done and I&apos;ll let you know what I can do.
-            </p>
+            <h2 id="final-cta-heading">Request a fleet washing quote</h2>
+            <p className={styles.finalCtaText}>Send your location, vehicle types, approximate fleet size and preferred wash frequency. We can discuss a trial wash, recurring service or a supplemental vendor arrangement.</p>
           </div>
           <div className={styles.finalCtaActions}>
-            <a
-              className={styles.finalCtaButton}
-              href="sms:7044218832"
-              aria-label="Text Magri Exterior Services for a free quote"
-            >
-              Text for a Free Quote
-            </a>
-            <a
-              className={styles.finalCtaButtonSecondary}
-              href="tel:7044218832"
-              aria-label="Call Magri Exterior Services"
-            >
-              Call 704-421-8832
-            </a>
+            <a className={styles.finalCtaButton} href="sms:7044218832">Text for a Quote</a>
+            <a className={styles.finalCtaButtonSecondary} href="tel:7044218832">Call 704-421-8832</a>
           </div>
         </div>
       </section>
@@ -272,47 +132,20 @@ export default function ExteriorServices() {
       <footer className={styles.localFooter}>
         <div className={styles.localFooterBrand}>Magri Exterior Services</div>
         <div className={styles.localFooterRight}>
-          <div className={styles.localFooterMeta}>South Charlotte, NC • 704-421-8832</div>
+          <div className={styles.localFooterMeta}>Charlotte, NC · 704-421-8832</div>
           <div className={styles.localFooterLinks}>
-            <a
-              className={styles.localFooterReviewButton}
-              href="https://g.page/r/CbrBCnWqGdD5EAE/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Leave a Google review for Magri Exterior Services"
-            >
-              Leave a Google Review
-            </a>
+            <a className={styles.localFooterReviewButton} href="https://g.page/r/CbrBCnWqGdD5EAE/review" target="_blank" rel="noopener noreferrer">Leave a Google Review</a>
             <div className={styles.localFooterSocial} aria-label="Magri Exterior Services social links">
-              <a
-                href="https://www.facebook.com/profile.php?id=61592680299659&mibextid=wwXIfr&mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-              <a
-                href="https://www.instagram.com/super_clean_77"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
+              <a href="https://www.facebook.com/profile.php?id=61592680299659&amp;mibextid=wwXIfr&amp;mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/super_clean_77" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
-          <div className={styles.localFooterSubtle}>
-            Part of <a href="/">JakeMagri.dev</a>
-          </div>
+          <div className={styles.localFooterSubtle}>Part of <a href="/">JakeMagri.dev</a></div>
         </div>
       </footer>
-
       <nav className={styles.mobileContactBar} aria-label="Exterior services contact bar">
-        <a href="sms:7044218832" className={styles.mobileContactButton} aria-label="Text Magri Exterior Services for a free quote">
-          Text Quote
-        </a>
-        <a href="tel:7044218832" className={styles.mobileContactButtonSecondary} aria-label="Call Magri Exterior Services">
-          Call
-        </a>
+        <a href="sms:7044218832" className={styles.mobileContactButton}>Text Quote</a>
+        <a href="tel:7044218832" className={styles.mobileContactButtonSecondary}>Call</a>
       </nav>
     </main>
   );
