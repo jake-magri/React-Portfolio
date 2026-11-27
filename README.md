@@ -37,7 +37,7 @@ npm start
 
 `/`, `/portfolio/`, `/projects/[slug]/`, `/resume/`, `/blogs/`, `/blogs/[slug]/`, `/case-studies/` (how I work), `/resources/`, `/contact/`.
 
-The contact form opens an email draft using the visitor's email application. It has no submission backend and does not send or store messages itself. Direct email is also visible.
+The contact and consulting forms can open a Gmail draft, use the visitor’s email app, or copy the draft text. It has no submission backend and does not send or store messages itself. Direct email is also visible.
 
 ## Deployment
 

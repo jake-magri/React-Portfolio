@@ -1,3 +1,5 @@
+import InquiryForm from '../components/InquiryForm';
+import contactStyles from '../components/Contact.module.css';
 import SiteHead from '../components/SiteHead';
 import styles from '../components/Projects-Page/Projects.module.css';
 
@@ -51,9 +53,12 @@ export default function ConsultingPage() {
               Tell me about the work your team is trying to improve. We can discuss
               whether a small, focused project would be a good fit.
             </p>
-            <a className={styles.primaryCta} href="mailto:jake.magri2@gmail.com?subject=Business%20software%20inquiry">
-              Discuss a project
-            </a>
+            <details className={contactStyles.projectInquiry}>
+              <summary className={styles.primaryCta}>Discuss a project</summary>
+              <div className={contactStyles.contactCard}>
+                <InquiryForm consulting />
+              </div>
+            </details>
           </div>
         </section>
       </main>
