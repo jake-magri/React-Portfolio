@@ -4,18 +4,19 @@ import styles from './ExteriorServices.module.css';
 const serviceCards = [
   { title: 'Mobile fleet washing', description: 'On-site exterior washing for service vans, delivery vehicles and commercial trucks. Larger vehicles and equipment are evaluated by scope and site conditions.' },
   { title: 'Recurring wash programs', description: 'Plan regular visits around vehicle availability, fleet size and operating hours rather than sending vehicles away for cleaning.' },
+  { title: 'Construction flatwork cleaning', description: 'Pressure washing for suitable concrete sidewalks, driveways, loading areas and other hard surfaces, including construction cleanup and project turnover. Scope is reviewed for surface condition, access and wastewater handling before quoting.' },
   { title: 'Commercial exterior cleaning', description: 'Ask about targeted cleaning of suitable commercial surfaces and equipment as part of your site maintenance needs.' },
 ];
 
 const workflowSteps = [
-  { number: '1', title: 'Review your fleet', description: 'Tell us your location, vehicle types, approximate unit count, preferred frequency and available wash area.' },
+  { number: '1', title: 'Review your site and needs', description: 'Tell us your location, fleet size and wash frequency, or the flatwork area and project timeline.' },
   { number: '2', title: 'Agree on a service plan', description: 'Confirm scope, pricing, site access, water supply and an appropriate wastewater management approach before scheduling.' },
   { number: '3', title: 'Wash, document and repeat', description: 'Coordinate the visit and agree on how completed units, exceptions and future visits will be communicated.' },
 ];
 
 const serviceAreas = ['Charlotte, NC', 'Steele Creek', 'Pineville', 'Southwest Charlotte', 'Nearby industrial corridors'];
 
-const audiences = ['Field service & construction fleets', 'Delivery & distribution operators', 'Equipment rental & material handling', 'Fleet maintenance & contracting partners'];
+const audiences = ['Field service & construction fleets', 'General contractors & site superintendents', 'Delivery & distribution operators', 'Equipment rental & material handling', 'Fleet maintenance & contracting partners'];
 
 export default function ExteriorServices({ photos = [] }) {
   const hero = photos.find(photo => photo.id === 'fleet-wash') || photos[0];
@@ -39,7 +40,7 @@ export default function ExteriorServices({ photos = [] }) {
             <a className={styles.primaryButton} href="sms:7044218832">Request a Fleet Quote</a>
             <a className={styles.secondaryButton} href="tel:7044218832">Call 704-421-8832</a>
           </div>
-          <p className={styles.heroSupport}>One-time washes, recurring service and vendor partnership inquiries welcome.</p>
+          <p className={styles.heroSupport}>One-time washes, recurring service, construction flatwork and vendor partnership inquiries welcome.</p>
         </div>
         {hero && (
           <div className={styles.heroVisual}>
@@ -65,7 +66,7 @@ export default function ExteriorServices({ photos = [] }) {
 
       <section className={styles.areaSection} aria-labelledby="customers-heading">
         <header className={styles.sectionHeader}><h2 id="customers-heading">Who we work with</h2></header>
-        <p className={styles.sectionIntro}>For businesses that operate vehicles or equipment from a yard, depot or commercial facility.</p>
+        <p className={styles.sectionIntro}>For businesses that operate fleets from a yard, depot or commercial facility, and contractors needing hard-surface cleaning.</p>
         <ul className={styles.areaList}>{audiences.map(audience => <li key={audience}>{audience}</li>)}</ul>
       </section>
 
@@ -119,8 +120,8 @@ export default function ExteriorServices({ photos = [] }) {
       <section className={styles.finalCtaSection} aria-labelledby="final-cta-heading">
         <div className={styles.finalCtaContent}>
           <div>
-            <h2 id="final-cta-heading">Request a fleet washing quote</h2>
-            <p className={styles.finalCtaText}>Send your location, vehicle types, approximate fleet size and preferred wash frequency. We can discuss a trial wash, recurring service or a supplemental vendor arrangement.</p>
+            <h2 id="final-cta-heading">Request a commercial washing quote</h2>
+            <p className={styles.finalCtaText}>Send your location, vehicle types, fleet size and preferred wash frequency, or describe the flatwork surfaces and project timeline. We can discuss a trial wash, recurring service or a supplemental vendor arrangement.</p>
           </div>
           <div className={styles.finalCtaActions}>
             <a className={styles.finalCtaButton} href="sms:7044218832">Text for a Quote</a>
