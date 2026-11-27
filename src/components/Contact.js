@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Contact.module.css';
 import SlidingText from './SlidingText';
 
-const contactReasons = ['Associate software development', 'Application implementation', 'Business applications & integrations', 'Charlotte · Hybrid · Remote'];
+const contactReasons = ['Software development', 'Technical analyst', 'Application implementation', 'Business applications & integrations', 'Charlotte · Hybrid · Remote'];
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -38,7 +38,7 @@ export default function Contact() {
             direction="fade"
             text={
               <p className={styles.heroText}>
-                I’m exploring software development and application implementation opportunities. I’m especially interested in teams with shared context, thoughtful reviews, and clear ownership of work.
+                I’m exploring software development, technical analyst, and application implementation opportunities. I’m especially interested in teams with shared context, thoughtful reviews, and clear ownership of work.
               </p>
             }
           />
