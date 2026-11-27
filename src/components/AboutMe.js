@@ -1,4 +1,4 @@
-import Link from 'next/link';
+ import Link from 'next/link';
 import styles from './AboutMe.module.css';
 const focusAreas = [
   { title: 'Business applications', text: 'C#/.NET and SQL for applications that help people complete real operational work.' },
