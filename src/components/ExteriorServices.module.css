@@ -145,6 +145,10 @@
   border: 1px solid transparent;
 }
 
+.primaryButton:hover {
+  color: #ffffff;
+}
+
 .localHeaderCta:hover,
 .primaryButton:hover,
 .secondaryButton:hover,
