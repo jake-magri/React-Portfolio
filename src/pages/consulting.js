@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import useEmailFallback from '../hooks/useEmailFallback';
 import SiteHead from '../components/SiteHead';
 import styles from '../components/Projects-Page/Projects.module.css';
 
@@ -11,26 +11,10 @@ const emailDraft = 'mailto:jake.magri2@gmail.com?subject=Business%20software%20i
 const gmailDraft = 'https://mail.google.com/mail/?view=cm&fs=1&to=jake.magri2%40gmail.com&su=Business%20software%20inquiry';
 
 export default function ConsultingPage() {
-  const [showFallback, setShowFallback] = useState(false);
-  const pendingHint = useRef(null);
+  const { fallbackUrl, scheduleHint } = useEmailFallback();
 
-  useEffect(() => {
-    function cancelWhenHidden() {
-      if (document.hidden) window.clearTimeout(pendingHint.current);
-    }
-    document.addEventListener('visibilitychange', cancelWhenHidden);
-    return () => {
-      document.removeEventListener('visibilitychange', cancelWhenHidden);
-      window.clearTimeout(pendingHint.current);
-    };
-  }, []);
-
-  function scheduleHint(event) {
-    if (showFallback || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    window.clearTimeout(pendingHint.current);
-    pendingHint.current = window.setTimeout(() => {
-      if (!document.hidden) setShowFallback(true);
-    }, 1500);
+  function handleEmailClick(event) {
+    if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) scheduleHint(gmailDraft);
   }
 
   return (
@@ -77,11 +61,11 @@ export default function ConsultingPage() {
               Tell me about the work your team is trying to improve. We can discuss
               whether a small, focused project would be a good fit.
             </p>
-            <a className={styles.primaryCta} href={emailDraft} onClick={scheduleHint}>
+            <a className={styles.primaryCta} href={emailDraft} onClick={handleEmailClick}>
               Discuss a project
             </a>
             <div className={styles.emailHint} aria-live="polite">
-              {showFallback && <>Nothing opened? <a href={gmailDraft}>Open in Gmail</a></>}
+              {fallbackUrl && <>Nothing opened? <a href={fallbackUrl}>Open in Gmail</a></>}
             </div>
           </div>
         </section>

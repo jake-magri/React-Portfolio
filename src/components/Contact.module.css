@@ -146,3 +146,17 @@
     padding-right: 1rem;
   }
 }
+
+.emailHint {
+  min-height: 1.75rem;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.emailHint a {
+  display: inline-block;
+  min-height: 1.75rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
