@@ -111,3 +111,18 @@
 .detailSection { padding: 1.5rem 0; border-top: 1px solid #cbd6cd; line-height: 1.8; }
 .detailSection h2 { font-size: 1.5rem; }
 .detailNote { background: #e6eee6; padding: 1.25rem; border-radius: 1rem; margin: 1rem 0 2rem; line-height: 1.7; }
+
+.emailHint {
+  min-height: 2.5rem;
+  padding-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #45574d;
+}
+
+.emailHint a {
+  display: inline-block;
+  min-height: 1.75rem;
+  color: #24573f;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
