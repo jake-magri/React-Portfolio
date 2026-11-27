@@ -62,7 +62,7 @@ export default function ConsultingPage() {
               whether a small, focused project would be a good fit.
             </p>
             <a className={styles.primaryCta} href={emailDraft} onClick={handleEmailClick}>
-              Discuss a project
+              Email me about a project
             </a>
             <div className={styles.emailHint} aria-live="polite">
               {fallbackUrl && <>Nothing opened? <a href={fallbackUrl}>Open in Gmail</a></>}
