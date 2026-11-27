@@ -4,7 +4,7 @@ import path from 'node:path';
 import ExteriorServices from '../components/ExteriorServices';
 
 const title = 'Magri Exterior Services | Mobile Fleet Washing | Charlotte NC';
-const description = 'On-site commercial fleet washing in Charlotte, NC. Request a quote for service vans, commercial vehicles, recurring wash programs and commercial exterior cleaning. Call or text 704-421-8832.';
+const description = 'On-site commercial fleet washing in Charlotte, NC. Request a quote for service vans, commercial vehicles, recurring wash programs, construction flatwork and commercial exterior cleaning. Call or text 704-421-8832.';
 const photoCatalog = [
   { id: 'fleet-wash', file: 'fleet-wash.jpg', alt: 'On-site washing of a white commercial cargo van', caption: 'Commercial fleet washing experience — branding removed', width: 1200, height: 900 },
   { id: 'front-scrub', file: 'front-scrub.jpg', alt: 'Hand scrubbing a commercial van windshield', caption: 'Hands-on windshield cleaning', width: 900, height: 1200 },
