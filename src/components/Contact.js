@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useEmailFallback from '../hooks/useEmailFallback';
 import styles from './Contact.module.css';
 import SlidingText from './SlidingText';
 
@@ -9,6 +10,8 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const { fallbackUrl, scheduleHint, resetHint } = useEmailFallback();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
@@ -18,6 +21,7 @@ export default function Contact() {
 
     const subject = encodeURIComponent('Career inquiry - jakemagri.dev');
     const body = encodeURIComponent(`Hi Jake,\n\nName: ${name}\nEmail: ${email}\n\nOpportunity:\n${message}`);
+    scheduleHint(`https://mail.google.com/mail/?view=cm&fs=1&to=jake.magri2%40gmail.com&su=${subject}&body=${body}`);
     window.location.href = `mailto:jake.magri2@gmail.com?subject=${subject}&body=${body}`;
   };
 
@@ -48,7 +52,7 @@ export default function Contact() {
         </div>
 
         <div className={styles.contactCard}>
-          <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <form className={styles.contactForm} onSubmit={handleSubmit} onChange={resetHint}>
             <label htmlFor="name">Name</label>
             <input
               className={styles.contactFormInput}
@@ -86,7 +90,11 @@ export default function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             />
 
-            <button className={styles.submitButton} type="submit">Open email draft</button><p>This opens your email app with a draft. Nothing is sent until you send it there. You can also email me directly above.</p>
+            <button className={styles.submitButton} type="submit">Open email draft</button>
+            <div className={styles.emailHint} aria-live="polite">
+              {fallbackUrl && <>Nothing opened? <a href={fallbackUrl}>Open in Gmail</a></>}
+            </div>
+            <p>This opens your email app with a draft. Nothing is sent until you send it there. You can also email me directly above.</p>
           </form>
         </div>
       </section>

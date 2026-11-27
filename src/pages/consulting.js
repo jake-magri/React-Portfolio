@@ -1,3 +1,4 @@
+import useEmailFallback from '../hooks/useEmailFallback';
 import SiteHead from '../components/SiteHead';
 import styles from '../components/Projects-Page/Projects.module.css';
 
@@ -6,7 +7,16 @@ import styles from '../components/Projects-Page/Projects.module.css';
 // Each entry needs: id, title, description, demoUrl.
 const publishedOfferings = [];
 
+const emailDraft = 'mailto:jake.magri2@gmail.com?subject=Business%20software%20inquiry';
+const gmailDraft = 'https://mail.google.com/mail/?view=cm&fs=1&to=jake.magri2%40gmail.com&su=Business%20software%20inquiry';
+
 export default function ConsultingPage() {
+  const { fallbackUrl, scheduleHint } = useEmailFallback();
+
+  function handleEmailClick(event) {
+    if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) scheduleHint(gmailDraft);
+  }
+
   return (
     <>
       <SiteHead
@@ -51,9 +61,12 @@ export default function ConsultingPage() {
               Tell me about the work your team is trying to improve. We can discuss
               whether a small, focused project would be a good fit.
             </p>
-            <a className={styles.primaryCta} href="mailto:jake.magri2@gmail.com?subject=Business%20software%20inquiry">
+            <a className={styles.primaryCta} href={emailDraft} onClick={handleEmailClick}>
               Discuss a project
             </a>
+            <div className={styles.emailHint} aria-live="polite">
+              {fallbackUrl && <>Nothing opened? <a href={fallbackUrl}>Open in Gmail</a></>}
+            </div>
           </div>
         </section>
       </main>
