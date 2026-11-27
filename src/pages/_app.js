@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>Jake Magri | Software Developer</title>
-        <meta key="description" name="description" content="Software development, application implementation, testing, and enterprise delivery." />
+        <meta key="description" name="description" content="C#/.NET, SQL, Azure, application implementation, testing, and enterprise delivery." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="author" content="Jake Magri" />
