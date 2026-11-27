@@ -669,3 +669,17 @@
     gap: 1.1rem;
   }
 }
+
+/* Commercial fleet layout */
+.textOnlyHero { grid-template-columns: 1fr !important; }
+.heroSection h1 { max-width: 15ch; }
+.fleetHeroFrame, .fleetPhoto { margin: 0; overflow: hidden; border-radius: 1.2rem; background: #fff; border: 1px solid var(--line); }
+.fleetHeroImage, .fleetPhotoImage { display: block; width: 100%; height: auto; }
+.fleetPhotoImage { aspect-ratio: 3 / 4; object-fit: cover; }
+.fleetCaption { padding: .75rem 1rem; color: #4b5a53; font-size: .85rem; line-height: 1.5; }
+.fleetGallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 1rem; }
+.gallerySection, .howWorksSection, .servicesSection { margin-top: 2rem; }
+.finalCtaButton { background: #8fcb9b; color: #10261c; }
+.finalCtaButton:hover { background: #a6dbb0; color: #10261c; }
+.heroActions { grid-template-columns: 1fr; }
+@media (min-width: 1024px) { .heroActions { grid-template-columns: auto auto; } .heroActions a { min-width: 0; padding: 0 1rem; } }
