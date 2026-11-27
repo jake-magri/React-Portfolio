@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-export default function SiteHead({ title = 'Jake Magri | Software Developer', description = 'Charlotte software developer working with C#/.NET, SQL, APIs, Python, and web technologies. Experience in implementation, testing, and enterprise delivery.' }) {
+export default function SiteHead({ title = 'Jake Magri | Software Developer', description = 'Charlotte software developer working with C#/.NET, SQL, Azure, APIs, Python, and web technologies. Experience in implementation, testing, and enterprise delivery.' }) {
   const { asPath } = useRouter();
   const path = asPath.split(/[?#]/)[0];
   const canonical = `https://jakemagri.dev${path === '/' ? '/' : `${path.replace(/\/$/, '')}/`}`;
