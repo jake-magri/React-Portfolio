@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import SiteHead from '../components/SiteHead';
 import styles from '../components/Projects-Page/Projects.module.css';
 
@@ -6,7 +7,19 @@ import styles from '../components/Projects-Page/Projects.module.css';
 // Each entry needs: id, title, description, demoUrl.
 const publishedOfferings = [];
 
+const emailDraft = 'mailto:jake.magri2@gmail.com?subject=Business%20software%20inquiry';
+const gmailDraft = 'https://mail.google.com/mail/?view=cm&fs=1&to=jake.magri2%40gmail.com&su=Business%20software%20inquiry';
+
 export default function ConsultingPage() {
+  const [triedEmailApp, setTriedEmailApp] = useState(false);
+
+  function openEmailApp(event) {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    window.location.assign(emailDraft);
+    setTriedEmailApp(true);
+  }
+
   return (
     <>
       <SiteHead
@@ -51,11 +64,12 @@ export default function ConsultingPage() {
               Tell me about the work your team is trying to improve. We can discuss
               whether a small, focused project would be a good fit.
             </p>
-            <a className={styles.primaryCta} href="mailto:jake.magri2@gmail.com?subject=Business%20software%20inquiry">
-              Discuss a project
-            </a>{' '}
-            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jake.magri2%40gmail.com&amp;su=Business%20software%20inquiry" target="_blank" rel="noopener noreferrer">
-              Open in Gmail
+            <a
+              className={styles.primaryCta}
+              href={triedEmailApp ? gmailDraft : emailDraft}
+              onClick={triedEmailApp ? undefined : openEmailApp}
+            >
+              {triedEmailApp ? 'Open in Gmail instead' : 'Discuss a project'}
             </a>
           </div>
         </section>
